@@ -8,18 +8,11 @@ En tu Tienda Oficial Deportiva, nos enorgullecemos de ofrecer una selección cui
 Línea Especial del Club Asociado
 Como parte de nuestra dedicación a la comunidad deportiva, estamos emocionados de presentar nuestra Línea Especial del Club Asociado. Esta exclusiva colección de productos ha sido cuidadosamente diseñada en colaboración con nuestro club asociado, Digital House Club. Estos productos no solo representan la pasión y el espíritu del club, sino que también ofrecen un rendimiento superior y estilo inigualable. Al elegir productos de nuestra Línea Especial del Club Asociado, estás mostrando tu apoyo directo a tu equipo favorito y llevando contigo un pedazo de la historia del club a cada actividad deportiva.
 
-Ropa Deportiva de Última Moda 🎽
-Descubre nuestra colección de ropa deportiva de las mejores marcas. Desde camisetas y pantalones hasta ropa de compresión y ropa de yoga, tenemos todo lo que necesitas para mantenerte cómodo y con estilo mientras practicas tu deporte favorito.
-
-Calzado para Todas las Actividades 🏃‍♂️
-Ya sea que necesites zapatillas para correr, zapatos de entrenamiento o botas de fútbol, nuestra amplia gama de calzado deportivo te garantiza el mejor rendimiento y comodidad en el campo, la pista o el gimnasio.
-
 Equipamiento Deportivo de Calidad 🏑
 Desde raquetas y pelotas hasta balones y accesorios de entrenamiento, nuestro catálogo cuenta con equipos de las mejores marcas para deportes como tenis, fútbol, baloncesto y mucho más. Garantizamos durabilidad y rendimiento excepcional en cada producto que vendemos.
 
 Accesorios Deportivos 🎧
 Descubre nuestra gama de accesorios deportivos, que incluyen auriculares resistentes al sudor, monitores de actividad, relojes inteligentes y más. Estos gadgets están diseñados para mejorar tu experiencia de entrenamiento y ayudarte a alcanzar tus metas de fitness.
-
 
 Socio de tu Tienda Oficial Deportiva
 En Tienda Oficial Deportiva, no solo ofrecemos productos excepcionales, sino también oportunidades emocionantes para socios. Si tienes un negocio relacionado con el deporte y te gustaría asociarte con nosotros, estamos encantados de discutir posibles colaboraciones. Al convertirte en socio de tu Tienda Oficial Deportiva, tendrás acceso a beneficios exclusivos, como:
@@ -35,4 +28,44 @@ Nos emociona ser tu destino deportivo en línea, donde la pasión por el deporte
 
 ¡Prepárate para superar tus límites y alcanzar tus metas con Tienda Oficial Deportiva - Donde los Sueños Deportivos se Hacen Realidad! 🚴‍♂️🏀🏋️‍♀️
 
-Agregando Texto Prueba
+Sitios de referencias principales:
+
+https://adhoconline.com.ar/
+Por distribución del contenido (carrusel, botones).
+
+https://www.tiendariver.com/
+Por estética de su paleta de colores. La elección de colores junto con el contraste cuidadosamente aplicado en los botones y títulos representa una estética elegante y fácil de entender para los usuarios. Esta simplicidad y claridad en el diseño nos inspiraron para crear una experiencia de usuario igualmente intuitiva y atractiva en nuestra página web.
+
+https://www.dexter.com.ar/
+Interfaz sencilla, intuitiva.
+
+https://www.mccenterdeportes.com.ar/
+La presentación de productos. Estos elementos dinámicos y visualmente atractivos nos motivaron a implementar un enfoque similar para captar la atención de nuestros visitantes desde el primer momento y mostrar nuestra gama de productos de manera impactante.
+
+https://www.cacentralcordoba.com/
+Su enfoque creativo y moderno en los banners y la exhibición de productos. Nos maravilló su habilidad para utilizar imágenes de alta calidad y diseño gráfico innovador para crear una estética única y atractiva.
+
+
+Integrantes:
+
+- Alustiza Fernando 
+
+
+- Alvarez Ivan
+29 años, estudiante de la tecnicatura Superior en Programación en el ITSE.
+Experiencia menor en html, css, javascript, git.
+
+- Ardilez Natalia
+26 años, profesora en educación secundaria (matemáticas).
+
+- Chapa Elizabeth
+
+
+- Chara Maria
+Me apasiona la programación. Soy Ingeniera y trabajo en proyectos del sector público.
+
+- D`Arcangelo Carolina
+
+
+- Molina José Luis
+Soy profesor de informática, y trabajo en la administración pública. 
