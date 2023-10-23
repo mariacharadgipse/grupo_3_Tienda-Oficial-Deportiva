@@ -65,7 +65,7 @@ Experiencia menor en html, css, javascript, git.
 Me apasiona la programación. Soy Ingeniera y trabajo en proyectos del sector público.
 
 - D`Arcangelo Carolina
-
+Soy contadora, doy clases en una escuela primaria y trabajo en la administración pública.
 
 - Molina José Luis
 Soy profesor de informática, y trabajo en la administración pública. 
