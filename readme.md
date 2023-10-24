@@ -3,7 +3,7 @@ Bienvenido a tu Tienda Oficial Deportiva - Tu Destino Deportivo en Línea 🏆
  Somos tu destino definitivo para todas tus necesidades deportivas en línea. En nuestra tienda deportiva en línea, ofrecemos una amplia gama de productos y servicios para satisfacer todas tus necesidades deportivas, ya seas un atleta profesional o un entusiasta del fitness.
 
 Nuestra Oferta de Productos y Servicios
-En tu Tienda Oficial Deportiva, nos enorgullecemos de ofrecer una selección cuidadosamente cuidada de productos de alta calidad que abarcan una variedad de deportes y actividades físicas. Algunas de nuestras categorías principales incluyen:
+En tu Tienda Oficial Deportiva, nos enorgullecemos de ofrecer una selección cuidada de productos de alta calidad que abarcan una variedad de deportes y actividades físicas. Algunas de nuestras categorías principales incluyen:
 
 Línea Especial del Club Asociado
 Como parte de nuestra dedicación a la comunidad deportiva, estamos emocionados de presentar nuestra Línea Especial del Club Asociado. Esta exclusiva colección de productos ha sido cuidadosamente diseñada en colaboración con nuestro club asociado, Digital House Club. Estos productos no solo representan la pasión y el espíritu del club, sino que también ofrecen un rendimiento superior y estilo inigualable. Al elegir productos de nuestra Línea Especial del Club Asociado, estás mostrando tu apoyo directo a tu equipo favorito y llevando contigo un pedazo de la historia del club a cada actividad deportiva.
@@ -56,7 +56,7 @@ Integrantes:
 Experiencia menor en html, css, javascript, git.
 
 - Ardilez Natalia
-26 años, profesora en educación secundaria (matemáticas).
+Profesora de educación secundaria en Matemáticas, me interesa la programacion y las nuevas tecnologias.
 
 - Chapa Elizabeth
 
@@ -65,7 +65,7 @@ Experiencia menor en html, css, javascript, git.
 Me apasiona la programación. Soy Ingeniera y trabajo en proyectos del sector público.
 
 - D`Arcangelo Carolina
-
+Soy contadora, doy clases en una escuela primaria y trabajo en la administración pública.
 
 - Molina José Luis
 Soy profesor de informática, y trabajo en la administración pública. 
