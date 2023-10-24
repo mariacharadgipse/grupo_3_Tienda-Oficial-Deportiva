@@ -56,7 +56,7 @@ Integrantes:
 Experiencia menor en html, css, javascript, git.
 
 - Ardilez Natalia
-26 años, profesora en educación secundaria (matemáticas).
+Profesora de educación secundaria en Matemáticas, me interesa la programacion y las nuevas tecnologias.
 
 - Chapa Elizabeth
 
