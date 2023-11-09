@@ -9,9 +9,11 @@ Prácticas que aportan valor. Ampliar las prácticas exitosas y valiosas que hem
 3. Seguir haciendo
 
 Mantener las prácticas actuales que contribuyen positivamente al proyecto, como por ejemplo las estrategias de colaboración efectivas, que hubo entre los integrantes del grupo.
+
 Continuar con la actitud colaborativa y de generosidad de algunos de los integrantes del grupo, de tal forma de alentar a la participación, y aumentar la cohesión y solidaridad grupal.
 
 4. Menos de
+
 Podría haber sido más organizado en la administración de mi tiempo, para poder hacer aportes oportunos al proyecto.
 
 
