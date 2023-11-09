@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primario:  #db0034 ;
+    --secundario: #eeeeee;
+    --links: #ada9a9;
+    --bg-primario:  #424242;
+    --bg-secundario: #101010;
+}
+
+a {
+    color: var(--links);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+
+}
+
