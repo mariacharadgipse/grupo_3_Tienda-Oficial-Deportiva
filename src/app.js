@@ -6,21 +6,21 @@ const port = 3000
 // Config static folder
 app.use(express.static(path.join(__dirname, 'public')))
 
-/*app.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'))
 })
 
-app.get('/detail', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'productDetail.html'))
 })
 
-app.get('/detail', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'productCart.html'))
   })
   
-  app.get('/detail', (req, res) => {
+  app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'register.html'))
-  })*/
+  })
   
   app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'login.html'))
