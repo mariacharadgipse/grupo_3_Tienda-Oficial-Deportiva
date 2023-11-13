@@ -1,0 +1,35 @@
+:root {
+    --primario: #db0034;
+    --secundario: #eeeeee;
+    --links: #ada9a9;
+    --bg-primario: #424242;
+    --bg-secundario: #101010;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}    
+
+.nav {
+    display: flex;
+    
+
+}
+
+.nav-top__logo {
+    width: 200px;
+}
+
+.my-products {
+    display: flex;
+}
+
+.product {
+    direction: column;
+}
