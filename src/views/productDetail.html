@@ -2,52 +2,131 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto Seleccionado</title>
-    <link rel="stylesheet" href="/css/productDetail.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="css/productDetail.css" />
 </head>
 
 <body>
-    <h2 class="titulo"> Producto Seleccionado</h2>
-    <main>
-        <section class="mainn">
-            <div class="One"> <img src="img/img-mistery.jpg" width="100%" alt="Producto Misterioso"
-                    class="productos">
+    <header>
+        <input type="search" name="" id="search-1" />
+        <div class="logo">
+            <h1>Tienda Deportiva</h1>
+        </div>
+        <div class="search-box">
+            <form>
+                <input type="text" name="search" id="srch" placeholder="Buscar.." />
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li>
+                <a href="/login"><i class="fa fa-user"></i></a>
+                <a href="/productCart"><i class="fa fa-shopping-cart"></i></a>
+                <a href="#"><i class="fa fa-heart"></i></a>
+            </li>
+        </ul>
+        <div class="menu">
+            <label for="search-1">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header>
+
+    <body>
+        <h2 class="titulo"> Producto Seleccionado</h2>
+        <main class="granContenedor">
+
+            <div class="foto">
+                <img src="img/img-mistery.jpg" width="100%" height="400px" alt="Producto Misterioso">
             </div>
-            <div class="contenedor">
 
-                <div class="des">
-                    <h4>Producto Misterioso</h4>
+            <div class="contenedorGris">
+                <h2 class="subtitulo">Detalles del producto</h2>
+                <div class="DPS">    
+                    <h4 class="des">Producto Misterioso</h4>
+                    <h4 class="des">Precio = $6.770</h4>
+                    <p class="des">40% off</p>
                 </div>
-                <div class="des">
-                    <h4>Precio = $6.770</h4>
+
+                <div class="DPA">
+                    <h4>Descripcion</h4>
+                    <p>Caja misteriosa con elementos de origen Argentino. Cada caja contiene 10 productos, amplia variedad de categorias.</p>
                 </div>
-                <div class="des">
-                    <p>40% off</p>
+
+                <div class="botones"> 
+                    <button type="submit">
+                        <label for="Lugar">Opciones de envio</label>
+                        <select name="Envio" id="Lugar">
+                            <option>Envio a domicilio</option>
+                            <option>Retiro en sucursal</option>
+                        </select>
+                    </button>
+                    <a href="productCart" class="enlaceDDP"><button class="boton" width="90%"><strong>COMPRAR</strong> </button></a>
                 </div>
-                <div class="des"><button type="submit">Comprar</button></div>
             </div>
-        </section>
 
-        <section class="detalle">
-            <h4>Descripcion</h4>
-            <p>Caja misteriosa con elementos de origen Argentino. Cada caja contiene 10 productos, amplia variedad de
-                categorias.</p>
-        </section>
+        </main>
 
-</main>
-    <footer>
-    <section class="foot">
+        <footer class="footer-distributed">
+            <div class="footer-left">
+                <h3>Tienda<span>Deportiva</span></h3>
 
-        <h3>Envío gratis desde $40000</h3>
+                <p class="footer-links">
+                    <a href="#">Home</a>
+                    |
+                    <a href="#">Sobre Nosotros</a>
+                    |
+                    <a href="#">Contacto</a>
+                    |
+                    <a href="#">Ayuda</a>
+                </p>
 
-        <h3>Seguridad, de principio a fin</h3>
+                <p class="footer-company-name">
+                    Copyright © 2023 <strong>TiendaOficialDeportiva</strong> All rights reserved
+                </p>
+            </div>
 
-        <h4>Copyright © 1999-2020 TiendaOficialDeportiva S.R.L.</h4>
-    </section>
-</footer>
-</body>
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Argentina</span> Santiago del Estero</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+54 38547**1*8</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    <span>Sobre Tienda Oficial</span>
+                    <strong>Tienda Oficial</strong> Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Mollitia nostrum nesciunt laudantium
+                    quod rem maxime incidunt soluta libero rerum. Neque delectus nisi
+                    pariatur in quis dolore architecto molestias deleniti ipsam!
+                </p>
+                <div class="footer-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+
 
 
 </html>
