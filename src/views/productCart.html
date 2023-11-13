@@ -21,15 +21,33 @@
 <body>
     <main>
         <header>
-                <nav class="nav-top">
-                    <img class="nav-top__logo" src="/img/Tienda-oficial-deportiva-logo.jpeg" alt="logo-Tienda-deportiva">
-                    <p><input type="text" placeholder="Search..."></p><i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-regular fa-user"></i>
-                </nav>
-            <h2 class="Título">Mi Carrito de Compras</h2>
+            <input type="search" name="" id="search-1" />
+            <div class="logo"><h1>Tienda Deportiva</h1></div>
+            <div class="search-box">
+        <form>
+          <input type="text" name="search" id="srch" placeholder="Buscar.." />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+            </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li>
+          <a href="/login"><i class="fa fa-user"></i></a>
+          <a href="/productCart"><i class="fa fa-shopping-cart"></i></a>
+          <a href="#"><i class="fa fa-heart"></i></a>
+        </li>
+      </ul>
+      <div class="menu">
+        <label for="search-1">
+          <i class="fa fa-bars"></i>
+        </label>
+      </div>     
         </header>
-        
+           
+        <h2 class="Título">Mi Carrito de Compras</h2>
                 <nav class="my-products">
                     <section class="product">
                         <h4>Cantidad de Productos</h4>
