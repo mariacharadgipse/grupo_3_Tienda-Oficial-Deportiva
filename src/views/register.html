@@ -1,56 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/register.css">
-    <title>Document</title>
 </head>
+
 <body>
-    
-</body>
-<header class="header">
-    <div class="encabezado">
-        <img class="logo-tienda-deportiva" src="img/Tienda-oficial-deportiva-logo.jpeg" alt="Logo de Tienda Oficial Deportiva">
-
-    </div>
-
-    <div class="burguer-contenedor">
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
+    <header>
+        <input type="search" name="" id="search-1" />
+        <div class="logo">
+            <h1>Tienda Deportiva</h1>
         </div>
-    </div>
-</header>
+        <div class="search-box">
+            <form>
+                <input type="text" name="search" id="srch" placeholder="Buscar.." />
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li>
+                <a href="#"><i class="fa fa-user"></i></a>
+                <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                <a href="#"><i class="fa fa-heart"></i></a>
+            </li>
+        </ul>
+        <div class="menu">
+            <label for="search-1">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header>
 
-<main>
-    <div class="register-container">
-        <form action="/register" method="POST">
-            <label for="labelNombre">Nombre:</label> 
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-            
-            <label for="labelApellido">Apellido:</label> 
-            <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+    <main>
+        <div class="register-container">
+          <h2 class="titulo">Tienda Oficial</h2>
+            <div class="register">
+                <div class="conteiner-imagen">
+                    <img class="ml__img sombra img__tamaño" src="/img/Tienda-oficial-deportiva-logo.jpeg" alt="logo">
+                </div>
+                <h2>Creá una nueva cuenta</h2>
+                <form action="/register" method="POST">
+                    <label for="labelNombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="color-input equal-size">
 
-            <label for="labelEmail">Correo electrónico:</label> 
-            <input type="text" name="email" id="email" placeholder="Correo electrónico">
+                    <label for="labelApellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="color-input equal-size">
 
-            <label for="labelDireccion">Dirección:</label> 
-            <input type="text" name="direccion" id="direccion" placeholder="Dirección">
+                    <label for="labelEmail">Correo electrónico:</label>
+                    <input type="text" name="email" id="email" placeholder="Correo electrónico" class="color-input equal-size">
 
-            <label for="labelContraseña">Contraseña de Ingreso:</label> 
-            <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-                        
-            <label for="labelConfirmarContraseña">Confirmar Contraseña:</label> 
-            <input type="password" name="confirmar_contraseña" id="confirmar_contraseña" placeholder="Reingrese Contraseña">
+                    <label for="labelDireccion">Dirección:</label>
+                    <input type="text" name="direccion" id="direccion" placeholder="Dirección" class="color-input equal-size">
+
+                    <label for="labelContraseña">Contraseña de Ingreso:</label>
+                    <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" class="color-input equal-size">
+
+                    <label for="labelConfirmarContraseña">Confirmar Contraseña:</label>
+                    <input type="password" name="confirmar_contraseña" id="confirmar_contraseña"
+                        placeholder="Reingrese Contraseña" class="color-input equal-size">
+                    <button type="submit">Crear Cuenta</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-distributed">
+        <div class="footer-left">
+          <h3>Tienda<span>Deportiva</span></h3>
+    
+          <p class="footer-links">
+            <a href="#">Home</a>
+            |
+            <a href="#">Sobre Nosotros</a>
+            |
+            <a href="#">Contacto</a>
+            |
+            <a href="#">Ayuda</a>
+          </p>
+    
+          <p class="footer-company-name">
+            Copyright © 2023 <strong>Alvarez Ivan</strong> All rights reserved
+          </p>
+        </div>
+    
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Argentina</span> Santiago del Estero</p>
+          </div>
+    
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+54 38547**1*8</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>Sobre Tienda Oficial</span>
+            <strong>Tienda Oficial</strong> Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Mollitia nostrum nesciunt laudantium
+            quod rem maxime incidunt soluta libero rerum. Neque delectus nisi
+            pariatur in quis dolore architecto molestias deleniti ipsam!
+          </p>
+          <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+      </footer>
+</body>
 
 
-
-            <button type="submit">Crear Cuenta</button>
-        </form>
-    </div>
-</main>
-
-<footer>
-   
-</footer>
 </html>
