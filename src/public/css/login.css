@@ -21,14 +21,21 @@ h3{
 
 .titulo{
     display: flex;
-    margin-right: 200px;
+    margin-right: 300px;
+}
+
+.lema{
+    display: flex;
+    position: absolute; /* Se posiciona de manera absoluta con respecto al contenedor */
+    top: 500px; /* Ajusta la posición desde la parte superior del contenedor */
+    left: 500px; /* Ajusta la posición desde la parte izquierda del contenedor */
+    
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    display: flex;
+    /*display: flex;*/
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -41,6 +48,9 @@ body {
     justify-content: right;
     background-color: var(--links);
     padding: 20px;
+    width: 80%;
+    margin-left: 250px;
+
 }
 
 
@@ -114,6 +124,10 @@ input {
     width: 40%; /* ajusta el ancho */
 }
 
+.img__tamaño2 {
+    height: 15%; /* ajusta la altura */
+    width: 25%; /* ajusta el ancho */
+}
 
 
 form {
