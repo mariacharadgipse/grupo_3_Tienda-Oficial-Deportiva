@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'))
 })
 
- HEAD
+ 
  app.get('/detail', (req, res) => {
    res.sendFile(path.join(__dirname, 'views', 'productDetail.html'))
  })
@@ -19,30 +19,10 @@ app.get('/cart', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'productCart.html'))
   })
   
-<<<<<<< HEAD
   app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'register.html'))
   })
   
-=======
-   app.get('/detail', (req, res) => {
-     res.sendFile(path.join(__dirname, 'views', 'register.html'))
-   })
-
-app.get('/productDetail', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'productDetail.html'))
-})
-
-app.get('/productCart', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'productCart.html'))
-  })
-  
-  app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'register.html'))
-  })
-
-  
->>>>>>> 4f90818b2bbb41d91553d9b71c2847a26693e788
   app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'login.html'))
   })
