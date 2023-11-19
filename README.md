@@ -50,6 +50,6 @@ Nos emociona ser tu destino deportivo en línea, donde la pasión por el deporte
 - Molina José Luis, Profesor de Informática y trabajador en la administración pública.
 
 **Tablero de Trabajo:**
-https://trello.com/b/4rB1lk3J/espacio-de-trabajo-grupo3
+https://trello.com/b/udIK82wu/grupo-3-tienda-oficial-deportiva
 
 ¡Gracias por confiar en **Tienda Oficial Deportiva** como tu destino deportivo en línea! 🎉
