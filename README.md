@@ -43,13 +43,13 @@ Nos emociona ser tu destino deportivo en línea, donde la pasión por el deporte
 **Integrantes:**
 - Alustiza Fernando
 - Alvarez Ivan, estudiante de Programación en el ITSE. Experiencia en HTML, CSS, JavaScript, Git.
-- Ardilez Natalia, profesora de Matemáticas con interés en programación y tecnologías.
+- Ardilez Natalia, profesora de Matemáticas con interés en programación y nuevas tecnologías.
 - Chapa Elizabeth, estudiante de la carrera Contador Publico Nacional en la UNSE, con interes en la programacion.
 - Chara Maria, Ingeniera apasionada por la programación, trabajando en proyectos del sector público.
 - D'Arcangelo Carolina, Contadora y profesora de escuela primaria, interesada en administración pública.
 - Molina José Luis, Profesor de Informática y trabajador en la administración pública.
 
 **Tablero de Trabajo:**
-https://trello.com/b/4rB1lk3J/espacio-de-trabajo-grupo3
+https://trello.com/b/udIK82wu/grupo-3-tienda-oficial-deportiva
 
 ¡Gracias por confiar en **Tienda Oficial Deportiva** como tu destino deportivo en línea! 🎉
