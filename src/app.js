@@ -7,24 +7,24 @@ const port = 5000
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'))
+  res.render(path.join(__dirname, 'views/users', 'index.ejs'))
 })
 
  
  app.get('/productDetail', (req, res) => {
-   res.sendFile(path.join(__dirname, 'views', 'productDetail.html'))
+   res.render(path.join(__dirname, 'views/products', 'productDetail.ejs'))
  })
 
 app.get('/productCart', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'productCart.html'))
+    res.render(path.join(__dirname, 'views/products', 'productCart.ejs'))
   })
   
   app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'register.html'))
+    res.render(path.join(__dirname, 'views/users', 'register.ejs'))
   })
   
   app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'login.html'))
+    res.render(path.join(__dirname, 'views/users', 'login.ejs'))
   })
   
 
@@ -36,6 +36,7 @@ app.get('*', (req, res)=>{
   </div>  
   `)
 })
+
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`)
