@@ -117,3 +117,16 @@ main {
 
 }
 
+
+@media (max-width: 768px) {
+    .granContenedor {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:1280px) {
+.granContenedor{
+    display: flex;
+}
+}
