@@ -6,27 +6,25 @@ const port = 5000
 // Config static folder
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/', (req, res) => {
-  res.render(path.join(__dirname, 'views/users', 'index.ejs'))
-})
+let indexRoutes= require('./routers/index')
 
- 
- app.get('/productDetail', (req, res) => {
-   res.render(path.join(__dirname, 'views/products', 'productDetail.ejs'))
- })
+let productsRoutes= require('./routers/products')
 
-app.get('/productCart', (req, res) => {
-    res.render(path.join(__dirname, 'views/products', 'productCart.ejs'))
-  })
-  
-  app.get('/register', (req, res) => {
-    res.render(path.join(__dirname, 'views/users', 'register.ejs'))
-  })
-  
-  app.get('/login', (req, res) => {
-    res.render(path.join(__dirname, 'views/users', 'login.ejs'))
-  })
-  
+let usersRoutes= require('./routers/users')
+
+
+app.use('/', indexRoutes)
+
+app.use('/', productsRoutes)
+
+app.use('/', usersRoutes)
+
+app.set('view engine', 'ejs')
+
+app.set('views', path.join (__dirname, './views'))
+
+
+
 
 app.get('*', (req, res)=>{
   res.send(`
