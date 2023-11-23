@@ -22,3 +22,8 @@ Semana 2
    Resumen: Solucionamos errores en algunos puntos y problemas en las rutas.
    Inconvenientes: Dudas en la consigna del punto 7.
    Participantes: Ardilez Natalia, Chara Maria, D'Arcangelo Carolina y Molina Jose.
+
+-Miercoles 22/11/2023
+   Resumen: Implementar EJS al archivo productCreate.
+   Inconvenientes: Dudas para crear el formulario de edicion.
+   Participantes: Ardilez Natalia, y Chara Maria.
