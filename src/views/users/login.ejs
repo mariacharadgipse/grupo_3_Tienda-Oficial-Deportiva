@@ -1,78 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head', { title: 'Login', stylesheet: ['/css/styles.css','/css/login.css']}) %>
+<%- include('../partials/head', { title: 'Login' , stylesheet: ['/css/styles.css','/css/login.css']}) %>
 
-<body>
-    <header>
-        <input type="search" name="" id="search-1" />
-        <div class="logo">
-            <h1>Tienda Deportiva</h1>
-        </div>
-        <div class="search-box">
-            <form>
-                <input type="text" name="search" id="srch" placeholder="Buscar.." />
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Sobre Nosotros</a></li>
-            <li>
-                <a href="/login"><i class="fa fa-user"></i></a>
-                <a href="/productCart"><i class="fa fa-shopping-cart"></i></a>
-                <a href="#"><i class="fa fa-heart"></i></a>
-            </li>
-        </ul>
-        <div class="menu">
-            <label for="search-1">
-                <i class="fa fa-bars"></i>
-            </label>
-        </div>
-    </header>
+    <body>
+        <%- include('../partials/header') %>
+            <main>
 
-    <main>
-
-        <div class="login-container">
-            <div>
-                <h2 class="titulo">Tienda Oficial</h2>
-            </div>
-            <div>
-                <img class="lema img__tamaño2" src="/img/lema.png" alt="lema">
-            </div>
-            <div class="login">
-                <div class="conteiner-imagen">
-                    <img class="ml__img sombra img__tamaño" src="/img/Tienda-oficial-deportiva-logo.jpeg" alt="logo">
-                </div>
-                <h2>Login to your account</h2>
-                <form action="/login" method="POST">
-                    <p>
-                        <label>Username</label>
-                        <input type="text" name="usuario" class="color-input equal-size ">
-                    </p>
-                    <p>
-                        <label>Password</label>
-                        <input type="password" name="password" class="color-input equal-size ">
-                    </p>
-                    <div class="contenedor-checkbox">
-                        <label for="Remember me?"><input type="checkbox" name="Remember" value="Remember me?"> Remember
-                            me?</label>
-                        <a href="#">Forgot password?</a>
+                <div class="login-container">
+                    <div>
+                        <h2 class="titulo">TIENDA OFICIAL</h2>
                     </div>
+                    <div>
+                        <img  src="/img/LogoSinFondo.png" alt="logoSinLetras">
+                    </div>
+                    <div>
 
-                    <p>
-                        <button type="submit" class="equal-size">LOGIN</button>
-                    </p>
-                    <a href="/register">New member? Register</a>
-                </form>
-            </div>
-        </div>
+                        <img class="lema img__tamaño2" src="/img/lema.png" alt="lema">
+                    </div>
+                    <div class="login">
+                        <div class="conteiner-imagen">
+                            <img class="ml__img sombra img__tamaño" src="/img/Tienda-oficial-deportiva-logo.jpeg"
+                                alt="logo">
+                        </div>
+                        <h2>Login to your account</h2>
+                        <form action="/login" method="POST">
+                            <p>
+                                <label>Username</label>
+                                <input type="text" name="usuario" class="color-input equal-size ">
+                            </p>
+                            <p>
+                                <label>Password</label>
+                                <input type="password" name="password" class="color-input equal-size ">
+                            </p>
+                            <div class="contenedor-checkbox">
+                                <label for="Remember me?"><input type="checkbox" name="Remember" value="Remember me?">
+                                    Remember
+                                    me?</label>
+                                <a href="#">Forgot password?</a>
+                            </div>
 
-    </main>
-    <%- include('../partials/footer') %>	
+                            <p>
+                                <button type="submit" class="equal-size">LOGIN</button>
+                            </p>
+                            <a href="/register">New member? Register</a>
+                        </form>
+                    </div>
+                </div>
 
-</body>
+            </main>
+            <%- include('../partials/footer') %>
+
+    </body>
 
 </html>
