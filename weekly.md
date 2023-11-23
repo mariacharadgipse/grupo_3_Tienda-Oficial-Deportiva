@@ -27,3 +27,5 @@ Semana 2
    Resumen: Implementar EJS al archivo productCreate.
    Inconvenientes: Dudas para crear el formulario de edicion.
    Participantes: Ardilez Natalia, y Chara Maria.
+
+ver el weekly en su contexto: https://app.mural.co/t/tiendaoficialdeportiva1545/m/tiendaoficialdeportiva1545/1700682602599/19b655146e74af58e117e08e45ea4536528c158e?sender=uba9d0c1dc7efe41329ec7445
