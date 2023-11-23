@@ -7,5 +7,6 @@ router.get('/detail', productController.getDetail);
 
 router.get('/cart', productController.getCart);
 
+router.get('/create', productController.postCreate);
 
 module.exports=router;

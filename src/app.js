@@ -35,3 +35,16 @@ app.get('*', (req, res)=>{
   `)
 })
 
+app.post('*', (req, res)=>{
+  res.send(`
+  <div style="display:flex; flex-direction:column; align-items:center">
+  <h1>Esta pagina no existe</h1>
+  <img style="width:50%" src="/img/not-found.webp" alt="error-404">
+  </div>  
+  `)
+})
+
+app.listen(port, () => {
+  console.log(`Servidor corriendo en http://localhost:${port}`)
+})
+

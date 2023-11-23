@@ -6,6 +6,11 @@ const controller = {
   getCart: (req, res) => {
     // Lógica del controlador para la página de inicio
     res.render('products/productCart'); // Renderiza la plantilla 'productCart.ejs' en la carpeta 'views'
+  },
+
+  postCreate: (req, res) => {
+    // Lógica del controlador para la página de inicio
+    res.render('products/productCreate'); // Renderiza la plantilla 'productCreate.ejs' en la carpeta 'views'
   }
 };
 
