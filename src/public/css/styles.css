@@ -103,13 +103,16 @@ header .menu {
   overflow: scroll;
   margin: 10px;
   position: relative;
+  width: 95vw;
 }
 .elemento {
   flex: 1 0 auto;
   margin: 0 50px;
   background-color: red;
-  width: 500px;
-  height: 500px;
+  width: 95%;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
@@ -264,6 +267,11 @@ footer {
   margin-bottom: 5px;
 }
 
+.footer-company-about {
+  text-align: justify;
+  color: #eeeeee;
+}
+
 .footer-distributed .footer-icons a:hover {
   background-color: #3f71ea;
 }
@@ -295,4 +303,73 @@ footer {
   #search-1:checked ~ ul {
     right: 0;
   }
+}
+
+
+@media (max-width: 481px) {
+
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.elemento {
+  width: 100%
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10 px;
+}
+
+.footer-distributed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  }
+
+.footer-center {
+  display: none;
+}
+
+.contactFoot {
+  display: none;
+}
+
+}
+
+@media (min-width:481px) and (max-width:769px) {
+  .elemento {
+    width: 40%;
+  }
+
+  .footer-center {
+    display: none;
+  }
+
+  .contactFoot {
+    display: none;
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+
+  }
+
+
+@media (min-width:770px) {
+.elemento {
+  width: 25%;
+}
 }
