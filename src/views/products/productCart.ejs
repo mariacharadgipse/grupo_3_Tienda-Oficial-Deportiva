@@ -3,35 +3,8 @@
 
 <%- include('../partials/head', { title: 'Cart', stylesheet: ['/css/styles.css','/css/productCart.css']}) %>
 
-  <header>
-    <input type="search" name="" id="search-1" />
-    <div class="logo">
-      <h1>Tienda Deportiva</h1>
-    </div>
-    <div class="search-box">
-      <form>
-        <input type="text" name="search" id="srch" placeholder="Buscar.." />
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Contacto</a></li>
-      <li><a href="#">Sobre Nosotros</a></li>
-      <li>
-        <a href="/login"><i class="fa fa-user"></i></a>
-        <a href="/Cart"><i class="fa fa-shopping-cart"></i></a>
-        <a href="#"><i class="fa fa-heart"></i></a>
-      </li>
-    </ul>
-    <div class="menu">
-      <label for="search-1">
-        <i class="fa fa-bars"></i>
-      </label>
-    </div>
-  </header>
   <body>
+    <%- include('../partials/header') %>	
   <main>
     <h2 class="Título">Mi Carrito de Compras</h2>
     <nav class="my-products">
