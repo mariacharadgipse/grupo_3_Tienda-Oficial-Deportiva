@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head', { title: 'Registro', stylesheet: ['/css/styles.css','/css/register.css']}) %>
+
+<body>
+    <%- include('../partials/header') %>	
+    <main>
+        <div class="register-container">
+          <h2 class="titulo">Tienda Oficial</h2>
+            <div class="register">
+                <div class="conteiner-imagen">
+                    <img class="ml__img sombra img__tamaño" src="/img/Tienda-oficial-deportiva-logo.jpeg" alt="logo">
+                </div>
+                <h2>Creá una nueva cuenta</h2>
+                <form action="/register" method="POST">
+                    <label for="labelNombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="color-input equal-size">
+
+                    <label for="labelApellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="color-input equal-size">
+
+                    <label for="labelEmail">Correo electrónico:</label>
+                    <input type="text" name="email" id="email" placeholder="Correo electrónico" class="color-input equal-size">
+
+                    <label for="labelDireccion">Dirección:</label>
+                    <input type="text" name="direccion" id="direccion" placeholder="Dirección" class="color-input equal-size">
+
+                    <label for="labelContraseña">Contraseña de Ingreso:</label>
+                    <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" class="color-input equal-size">
+
+                    <label for="labelConfirmarContraseña">Confirmar Contraseña:</label>
+                    <input type="password" name="confirmar_contraseña" id="confirmar_contraseña"
+                        placeholder="Reingrese Contraseña" class="color-input equal-size">
+                    <button type="submit">Crear Cuenta</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>	
+    
+</body>
+
+
+</html>

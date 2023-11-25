@@ -7,11 +7,9 @@
 }
 
 
-
 h2 {
     color: #333;
     padding: 20px;
-
 }
 
 
@@ -19,21 +17,33 @@ h3{
     text-align: left;
 }
 
+
 .titulo{
-    display: flex;
-    margin-right: 200px;
+    /*display: flex;*/
+    position: absolute; /* Se posiciona de manera absoluta con respecto al contenedor */
+    top: 100px; /* Ajusta la posición desde la parte superior del contenedor */
+    left: 400px; /* Ajusta la posición desde la parte izquierda del contenedor */    
+    /*margin-left: 250px;*/
+    font-size: 20px;
 }
+
+
+.lema{
+    display: flex;
+    position: absolute; /* Se posiciona de manera absoluta con respecto al contenedor */
+    top: 500px; /* Ajusta la posición desde la parte superior del contenedor */
+    left: 350px; /* Ajusta la posición desde la parte izquierda del contenedor */    
+}
+
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    display: flex;
+    /*display: flex;*/
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
-
 
 
 .login-container {
@@ -41,8 +51,9 @@ body {
     justify-content: right;
     background-color: var(--links);
     padding: 20px;
+    width: 80%;
+    margin-left: 250px;
 }
-
 
 
 .login{
@@ -83,11 +94,13 @@ input {
     border: 1px solid var(--bg-primario);
 }
 
+
 .equal-size {
     padding: 8px;
     border: 1px solid #ccc;
     width: 300px; /* Establece el ancho */
 }
+
 
 .contenedor-checkbox label{
     display: inline-flex;
@@ -109,11 +122,17 @@ input {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
+
 .img__tamaño {
     height: 20%; /* ajusta la altura */
     width: 40%; /* ajusta el ancho */
 }
 
+
+.img__tamaño2 {
+    height: 15%; /* ajusta la altura */
+    width: 25%; /* ajusta el ancho */
+}
 
 
 form {
@@ -127,7 +146,7 @@ form {
     .titulo{
         display: none;
     }
-    .
+    
     .login {
         flex: 0 0 100%; /* El contenedor ocupa el 100% del ancho del cuerpo */  ;
 

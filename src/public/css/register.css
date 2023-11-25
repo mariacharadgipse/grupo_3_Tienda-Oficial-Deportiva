@@ -1,65 +1,140 @@
-* {
+*{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
   }
 
-  .register-container {
+  
+  :root {
+    --primario: #db0034;
+    --secundario: #eeeeee;
+    --links: #ada9a9;
+    --bg-primario: #424242;
+    --bg-secundario: #101010;
+}
+
+h2 {
+    color: #333;
+    padding: 20px;
+
+}
+
+
+h3{
+    text-align: left;
+}
+
+.titulo{
+    display: flex;
+    margin-right: 200px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.register-container {
+    display: flex;
+    justify-content: left;
     background-color: var(--links);
     padding: 20px;
+}
+
+.register{
+    flex: 0 0 50%; /* El contenedor ocupa el 50% del ancho del cuerpo */  
+    background-color: #fff;
+    padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    height: 100%;
-    text-align: left;
+}
+
+
+button {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    background-color: var(--bg-primario);
+    transition: background-color 0.3s ease; /* Transición suave para un cambio gradual */
+}
+
+
+
+button:hover {
+    background-color: var(--primario); /* Cambia este valor al color deseado al pasar el mouse por encima */
+  }
+
+
+input {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    border-style: solid;
+}
+
+.color-input {
+    background-color: var(--links); 
+    padding: 8px;
+    border: 1px solid var(--bg-primario);
+}
+
+.equal-size {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 300px; /* Establece el ancho */
+}
+
+.contenedor-checkbox label{
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+
+
+.conteiner-imagen{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.logo-tienda-deportiva {
-    width: 80%;
-    padding: 5px;
-
+    padding: 20px;
 }
 
 
-form{
-	width:80%;
-	padding:16px;
-	border-radius:10px;
-	margin:auto;
-	background-color:#ccc;
+.sombra {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-form label{
-	width:125px;
-	font-weight:bold;
-	display:inline-block;
+.img__tamaño {
+    height: 20%; /* ajusta la altura */
+    width: 40%; /* ajusta el ancho */
 }
 
-form input[type="text"],
-form input[type="email"]{
-	width:180px;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;
-	margin:8px 0;
-	display:inline-block;
+
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-form input[type="submit"]{
-	width:100%;
-	padding:8px 16px;
-	margin-top:32px;
-	border:1px solid #000;
-	border-radius:5px;
-	display:block;
-	color:#fff;
-	background-color:#000;
-} 
 
-form input[type="submit"]:hover{
-	cursor:pointer;
+/* Media queries */
+@media (max-width: 440px) {
+    .titulo{
+        display: none;
+    }
+    
+    .login {
+        flex: 0 0 100%; /* El contenedor ocupa el 100% del ancho del cuerpo */
+
+    }
 }
+
+
 

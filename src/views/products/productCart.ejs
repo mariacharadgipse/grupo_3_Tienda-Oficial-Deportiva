@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head', { title: 'Cart' , stylesheet: ['/css/styles.css','/css/productCart.css']}) %>
+
+  <body>
+    <%- include('../partials/header') %>
+      <main>
+        <h2 class="Título">Mi Carrito de Compras</h2>
+
+        <section class="contenedorN">
+
+          <nav class="my-products">
+            <section class="product">
+              <h4>Cantidad de Productos</h4>
+              <article></article>
+              <p>Seguir comprando</p>
+            </section>
+            <article>
+              <img src="#" alt="picture-product">
+              <h3>Producto</h3>
+              <h4>Descripción del Producto</h4>
+            </article>
+
+            <section class="quantity">
+              <h4>Cantidad</h4>
+              <form action="procesar_formulario.php" method="post">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+                <input type="submit" value="Agregar al Carrito">
+              </form>
+            </section>
+
+          </nav>
+
+          <nav class="Total">
+            <section class="subtotal">
+              <h4>Subtotal</h4>
+              <div class="formulario">
+                <h4>Código de descuento y código postal</h4>
+                <form id="formularioEnvio">
+                  <label for="codigoDescuento">Código de Descuento:</label>
+                  <input type="text" id="codigoDescuento" name="codigoDescuento">
+                  <input type="submit" value="Validar"></input>
+
+                  <label for="codigoPostal">Código Postal:</label>
+                  <input type="text" id="codigoPostal" name="codigoPostal">
+
+                  <button type="button" onclick="calcularCostoEnvio()">Calcular Costo de Envío</button>
+                </form>
+                <h3>Total</h3>
+
+                <button onclick="realizarCompra()">Comprar</button>
+
+          </nav>
+        </section>
+      </main>
+  </body>
+  <%- include('../partials/footer') %>
+
+</html>

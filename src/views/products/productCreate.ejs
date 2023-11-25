@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head', { title: 'Create' , stylesheet: ['/css/styles.css','/css/productCreate.css']}) %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <main class="formContenedor">
+                <h1 class="tituloCreate"><strong>Nuevo Producto</strong></h1>
+                <form action="/crear-producto" method="POST" class="createForm">
+
+                    <div class="elementForm">
+                        <label>Nombre del Producto</label>
+                        <input type="text" name="Nombre" class="control"></input>
+                    </div>
+
+                    <div class="elementForm">
+                        <label>Descripción</label>
+                        <textarea name="descripcion" class="control"></textarea>
+                    </div>
+
+                    <div class="elementForm">
+                        <label>Categoría</label>
+                        <select name="categoria" class="control">
+                            <option value="calzados">Calzados</option>
+                            <option value="indumentaria">Indumentaria</option>
+                            <option value="accesorios">Accesorios</option>
+                        </select>
+                    </div>
+
+                    <div class="elementForm">
+                        <label>Colores</label>
+                        <input type="text" name="Colores" class="control"></input>
+                    </div>
+
+                    <div class="elementForm">
+                        <label>Genero</label>
+                        <input type="text" class="control"></input>
+                    </div>
+
+                    <div class="elementForm">
+                        <label>Talles</label>
+                        <input type="text" bame="Talles" class="control"></input>
+                    </div>
+
+                    <div class="elementForm">
+                        <label>Precio</label>
+                        <input type="text" name="Precio" class="control"></input>
+                    </div>
+
+                    <div class="elementForm">
+                        <label>Imágenes del producto</label>
+                        <input type="file" name="Imagenes" class="control" accept=".jpg, .png" multiple></input>
+                    </div>
+
+                    <button type="reset" class="botonForm">Borrar</button>
+                    <button type="submit" class="botonForm">Guardar</button>
+
+                </form>
+            </main>
+
+    </body>
+    <%- include('../partials/footer')%>
+
+</html>

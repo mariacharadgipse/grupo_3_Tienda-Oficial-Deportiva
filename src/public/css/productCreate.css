@@ -1,0 +1,63 @@
+:root {
+    --primario: #db0034;
+    --secundario: #eeeeee;
+    --links: #ada9a9;
+    --bg-primario: #424242;
+    --bg-secundario: #101010;
+}
+
+.tituloCreate{
+    color:#424242;
+    font-style: oblique;
+}
+.formContenedor {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 15px auto;
+    border: 0px 15px;
+    background-color: #eeeeee;
+    height: max-content 450px;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.createForm {
+    padding: 20px 15px;
+    align-items: center auto;
+    padding: 15% 20%;
+    width: 100%;
+    align-items: center;
+}
+
+.control {
+    width: 100%;
+    align-items: center;
+}
+
+.elementForm {
+    margin-bottom: 15px;
+
+
+}
+
+.elementForm label {
+    margin-bottom: 5px;
+    display: block;
+    align-items: center;
+}
+
+.espacios {
+    width: 100%;
+    padding: 8px;
+    align-items: center;
+}
+
+.botonForm {
+    background-color: var(--primario);
+    width: 20vw;
+    color: #eeeeee;
+    align-items: right;
+    justify-content: center
+}
+
