@@ -9,4 +9,8 @@ router.get('/cart', productController.getCart);
 
 router.get('/create', productController.postCreate);
 
+//router.post("/create", (req, res)=>(productController.postCreate));
+
+router.get('/edit', productController.postEdit);
+
 module.exports=router;
