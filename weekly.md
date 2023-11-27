@@ -23,9 +23,19 @@ Semana 2
    Inconvenientes: Dudas en la consigna del punto 7.
    Participantes: Ardilez Natalia, Chara Maria, D'Arcangelo Carolina y Molina Jose.
 
--Miercoles 22/11/2023
+-Miércoles 22/11/2023
    Resumen: Implementar EJS al archivo productCreate.
    Inconvenientes: Dudas para crear el formulario de edicion.
    Participantes: Ardilez Natalia, y Chara Maria.
+
+-Sábado 25/11/2023
+   Resumen: Identificación de faltantes en CSS 
+   Inconvenientes: Dudas sobre mejoras en CSS (Header y Responsive).
+   Participantes: Ardilez Natalia, Chara Maria, D'Arcangelo Carolina y Molina Jose.
+
+-Domingo 26/11/2023
+   Resumen: Commit finales con la finalización del SPRINT 3.
+   Inconvenientes: No hubo dudas.
+   Participantes: Ardilez Natalia, Chara Maria, D'Arcangelo Carolina y Molina Jose.   
 
 ver el weekly en su contexto: https://app.mural.co/t/tiendaoficialdeportiva1545/m/tiendaoficialdeportiva1545/1700682602599/19b655146e74af58e117e08e45ea4536528c158e?sender=uba9d0c1dc7efe41329ec7445
