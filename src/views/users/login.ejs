@@ -8,42 +8,32 @@
             <main>
 
                 <div class="login-container">
-                    <div>
-                        <h2 class="titulo">TIENDA OFICIAL</h2>
-                    </div>
-                    <div>
-                        <img  src="/img/LogoSinFondo.png" alt="logoSinLetras">
-                    </div>
-                    <div>
+                    <img class="tienda" src="/img/Tienda.png" alt="">
 
-                        <img class="lema img__tamaño2" src="/img/lema.png" alt="lema">
-                    </div>
                     <div class="login">
-                        <div class="conteiner-imagen">
-                            <img class="ml__img sombra img__tamaño" src="/img/Tienda-oficial-deportiva-logo.jpeg"
-                                alt="logo">
-                        </div>
-                        <h2>Login to your account</h2>
+                        <p>
+                            <img class="logoSinFondo" src="/img/LogoSinFondo.png" alt="logoSinFondo">
+                        <h2>Ingresá a tu cuenta</h2>
+                        </p>
                         <form action="/login" method="POST">
                             <p>
-                                <label>Username</label>
+                                <label>Usuario</label>
                                 <input type="text" name="usuario" class="color-input equal-size ">
                             </p>
                             <p>
-                                <label>Password</label>
+                                <label>Clave</label>
                                 <input type="password" name="password" class="color-input equal-size ">
                             </p>
                             <div class="contenedor-checkbox">
-                                <label for="Remember me?"><input type="checkbox" name="Remember" value="Remember me?">
-                                    Remember
-                                    me?</label>
-                                <a href="#">Forgot password?</a>
+                                <label for="¿Recordar?"><input type="checkbox" name="Remember" value="¿Recordar?">
+                                    Recordar?</label>
+                                <a href="#">¿Olvidó la clave?</a>
                             </div>
 
                             <p>
                                 <button type="submit" class="equal-size">LOGIN</button>
                             </p>
-                            <a href="/register">New member? Register</a>
+                            <a href="/register">Nuevo miembro? Registrarse</a>
                         </form>
                     </div>
                 </div>

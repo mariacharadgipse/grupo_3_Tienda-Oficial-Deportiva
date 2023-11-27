@@ -4,7 +4,24 @@
     --links: #ada9a9;
     --bg-primario:  #424242;
     --bg-secundario: #101010;
+    --Negro: #000000;
+    --Blanco: #FFFFFF;
+    --GrisOscuro: #333333;
+    --Gris: #808080;
+    --GrisClaro: #CCCCCC;
+    --Rojo: #FF0000;
+    --Violeta: #800080;
+    --Amarillo: #FFFF00;
 }
+
+.logoCompletoSinFondo {
+  margin-left: 0;
+  padding: 0%;
+  width: 350px;
+  height: 150px;
+}
+
+
 
  * {
   margin: 0;
@@ -12,12 +29,14 @@
   box-sizing: border-box;
   font-family: Arial;
 }
+
 body {
   background-color: lightgray;
   background-size: cover;
   height: 100vh;
   background-position: center;
 }
+
 header {
   width: 100%;
   height: 100px;
@@ -29,9 +48,13 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.5);
 }
-#search-1 {
+
+
+#search-1{
   display: none;
 }
+
+
 i {
   color: #fff;
   cursor: pointer;
@@ -44,10 +67,13 @@ header .logo {
   text-transform: uppercase;
   font-size: 15px;
 }
+
 header .search-box {
   flex: 1;
   position: relative;
 }
+
+
 .search-box input {
   width: 100%;
   height: 40px;
@@ -75,14 +101,20 @@ header .search-box {
   background: #e0ac1c;
   color: #fff;
 }
+
+
 header ul {
   flex: 2;
   display: flex;
   justify-content: space-evenly;
 }
+
+
 header ul li {
   list-style: none;
 }
+
+
 header ul li a {
   text-decoration: none;
   color: #fff;
@@ -90,13 +122,18 @@ header ul li a {
   text-transform: uppercase;
   padding: 10px 15px;
 }
+
+
 header ul li a:hover {
   border-bottom: 2px solid rgb(255, 255, 255);
 }
+
 header .menu {
   font-size: 2.5em;
   display: none;
 }
+
+
 .carrusel {
   display: flex;
   flex-wrap: nowrap;
@@ -105,6 +142,8 @@ header .menu {
   position: relative;
   width: 95vw;
 }
+
+
 .elemento {
   flex: 1 0 auto;
   margin: 0 50px;
@@ -114,6 +153,7 @@ header .menu {
   align-items: center;
   justify-content: center;
 }
+
 
 footer {
   position: relative;
@@ -139,6 +179,7 @@ footer {
   margin-top: 30px;
 }
 
+
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
 .footer-distributed .footer-right {
@@ -146,11 +187,12 @@ footer {
   vertical-align: top;
 }
 
-/* Footer left */
+/* Footer Left */
 
 .footer-distributed .footer-left {
   width: 30%;
 }
+
 
 .footer-distributed h3 {
   color: #ffffff;
@@ -164,10 +206,12 @@ footer {
 
 /* Footer links */
 
+
 .footer-distributed .footer-links {
   color: #ffffff;
   margin: 20px 0 12px;
 }
+
 
 .footer-distributed .footer-links a {
   display: inline-block;
@@ -175,6 +219,7 @@ footer {
   text-decoration: none;
   color: inherit;
 }
+
 
 .footer-distributed .footer-company-name {
   color: #8f9296;
@@ -220,6 +265,7 @@ footer {
   font-size: 14px;
   line-height: 2;
 }
+
 
 .footer-distributed .footer-center p a {
   color: #e0ac1c;
@@ -283,6 +329,7 @@ footer {
   .search-box button {
     position: absolute;
   }
+
   header ul {
     position: fixed;
     top: 100px;
@@ -295,11 +342,14 @@ footer {
     transition: right 0.5s linear;
   }
 
+
   header .menu {
     display: block;
     width: 100px;
     text-align: center;
   }
+
+
   #search-1:checked ~ ul {
     right: 0;
   }
@@ -363,13 +413,22 @@ footer {
     align-items: center;
     justify-content: left;
   }
-  
-
+ 
   }
 
 
 @media (min-width:770px) {
 .elemento {
   width: 25%;
+}
+}
+
+
+@media (max-width:440px) {
+.logoCompletoSinFondo {
+  margin-left: 0;
+  padding: 0%;
+  width: 150px;
+  height: 80px;
 }
 }
