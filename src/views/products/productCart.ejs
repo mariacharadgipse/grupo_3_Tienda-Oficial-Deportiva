@@ -6,54 +6,69 @@
   <body>
     <%- include('../partials/header') %>
       <main>
-        <h2 class="Título">Mi Carrito de Compras</h2>
+        <ul type="none">
+          <li>
+            <h2 class="title">Mi Carrito de Compras</h2>
+          </li>
+          <li>
+            <a href="/"><h3 class="subtitle">Seguir Comprando</h3></a>
+          </li>
+        </ul>
 
-        <section class="contenedorN">
-
-          <nav class="my-products">
-            <section class="product">
-              <h4>Cantidad de Productos</h4>
-              <article></article>
-              <p>Seguir comprando</p>
-            </section>
-            <article>
-              <img src="#" alt="picture-product">
-              <h3>Producto</h3>
-              <h4>Descripción del Producto</h4>
+        <div class="container">
+          <div class="products">
+            <article class="productImage">
+              <img src="img/img-mistery.jpg" alt="product image" width="200px" height="200px">
             </article>
 
+            <section class="productDescription">
+              <h3>Producto Misterioso</h3>
+              <p>Caja misteriosa con elementos de origen Argentino. Cada caja contiene 10 productos, amplia
+              variedad de categorías.</p>
+            </section>
+            
             <section class="quantity">
               <h4>Cantidad</h4>
-              <form action="procesar_formulario.php" method="post">
+              <form id="quantity" method="post">
                 <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" name="cantidad" min="1" value="1">
-                <input type="submit" value="Agregar al Carrito">
+                <select type="number">
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                  <option value="4"></option>
+                  <option value="5"></option>
+                  <option value="6"></option>
+                  <option value="7"></option>
+                  <option value="8"></option>
+                  <option value="9"></option>
+                  <option value="10"></option>
+                </select>
               </form>
             </section>
+          </div>
+          <div class="calculations">
 
-          </nav>
+            <h4>Subtotal</h4>
+            <div class="formulario">
+              <h4>Código de descuento y código postal</h4>
+              <form id="formularioEnvio">
+                <label for="codigoDescuento">Código de Descuento:</label>
+                <input type="text" id="codigoDescuento" name="codigoDescuento">
+                <input type="submit" value="Validar"></input>
 
-          <nav class="Total">
-            <section class="subtotal">
-              <h4>Subtotal</h4>
-              <div class="formulario">
-                <h4>Código de descuento y código postal</h4>
-                <form id="formularioEnvio">
-                  <label for="codigoDescuento">Código de Descuento:</label>
-                  <input type="text" id="codigoDescuento" name="codigoDescuento">
-                  <input type="submit" value="Validar"></input>
+                <label for="codigoPostal">Código Postal:</label>
+                <input type="text" id="codigoPostal" name="codigoPostal">
 
-                  <label for="codigoPostal">Código Postal:</label>
-                  <input type="text" id="codigoPostal" name="codigoPostal">
+                <button type="button" onclick="calcularCostoEnvio()">Calcular Costo de Envío</button>
+              </form>
+              <h3>Total</h3>
 
-                  <button type="button" onclick="calcularCostoEnvio()">Calcular Costo de Envío</button>
-                </form>
-                <h3>Total</h3>
+            </div>
 
-                <button onclick="realizarCompra()">Comprar</button>
+            <button onclick="realizarCompra()">Comprar</button>
 
-          </nav>
-        </section>
+          </div>
+        </div>
       </main>
   </body>
   <%- include('../partials/footer') %>
