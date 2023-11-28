@@ -6,7 +6,7 @@
     --bg-secundario: #101010;
 }
 
-.tituloCreate{
+.tituloEdit{
     color:#424242;
     font-style: oblique;
 }
@@ -22,7 +22,7 @@
     padding: 20px 0px;
 }
 
-.createForm {
+.editForm {
     padding: 20px 15px;
     align-items: center auto;
     padding: 15% 20%;
@@ -54,7 +54,7 @@
 }
 
 .botonForm {
-    background-color: var(--primario);
+    background-color: #800080;
     width: 20vw;
     color: #eeeeee;
     align-items: right;
