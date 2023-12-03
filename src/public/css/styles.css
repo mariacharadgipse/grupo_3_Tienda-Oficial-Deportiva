@@ -17,11 +17,14 @@
 .logoCompletoSinFondo {
   margin-left: 0;
   padding: 0%;
-  width: 350px;
-  height: 150px;
+  width: 15vw;
+  height: 5vw;
 }
 
-
+.contenedorDelLogo {
+  width: 50%;
+  height: auto;
+}
 
  * {
   margin: 0;
