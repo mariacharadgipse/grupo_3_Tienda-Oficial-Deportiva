@@ -12,6 +12,17 @@ let productsRoutes= require('./routers/products')
 
 let usersRoutes= require('./routers/users')
 
+//0912
+const session = require('express-session');
+
+app.use(session({
+secret: 'Nombre del sitio',
+resave: false,
+saveUninitialized: true,
+}));
+
+//app.use(cookieParser())
+//
 
 app.use('/', indexRoutes)
 
