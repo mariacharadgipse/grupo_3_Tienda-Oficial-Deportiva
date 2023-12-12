@@ -150,7 +150,7 @@ header .menu {
 .elemento {
   flex: 1 0 auto;
   margin: 0 50px;
-  background-color: red;
+  /*background-color: red;*/
   width: 95%;
   height: 400px;
   align-items: center;

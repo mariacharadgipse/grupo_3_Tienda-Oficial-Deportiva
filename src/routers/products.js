@@ -15,7 +15,7 @@ router.get('/products', productController.getIndex);
 
 /*** CREATE ONE PRODUCT http://localhost:3000/products/create ***/
 router.get('/create', productController.getCreate);
-router.post('/create', upload.single('image'),validateProducts, productController.store);
+//router.post('/create', upload.single('image'),validateProducts, productController.store);
 
 
 router.get('/detail', productController.getDetail);
