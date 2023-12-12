@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
@@ -22,13 +23,14 @@ const controller = {
   },
 
 	// Create -  Method to store
-	store: (req, res) => {
+	postStore: (req, res) => {
 		let results = validationResult(req)
 		// console.log('1- errors', results);
 		// console.log('-------------------------------');
 		// console.log('2- errors mapped', results.mapped());
 
 		if(results.isEmpty()){
+      console.log(results)
 		// creamos nuevo producto del formulario con req.body
 		const newProduct = {
 			// id: products.length + 1,
@@ -43,8 +45,9 @@ const controller = {
 		// redireccionamos al listado de productos
 		res.redirect('/products')
 		} else {
+      console.log(results),
 			// res.render('product-create-form.ejs', {errors: results.errors, oldData: req.body})
-			res.render('productCreate.ejs', {errors: results.mapped(), oldData: req.body})
+			res.render('products/productCreate.ejs', {errors: results.mapped(), oldData: req.body})
 		}
 
 	},

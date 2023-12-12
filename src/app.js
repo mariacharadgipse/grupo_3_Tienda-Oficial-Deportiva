@@ -26,9 +26,9 @@ saveUninitialized: true,
 
 app.use('/', indexRoutes)
 
-app.use('/', productsRoutes)
+app.use('/products', productsRoutes)
 
-app.use('/', usersRoutes)
+app.use('/users', usersRoutes)
 
 app.set('view engine', 'ejs')
 
