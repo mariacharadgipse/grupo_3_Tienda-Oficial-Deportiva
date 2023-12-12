@@ -226,5 +226,15 @@
  {
   "id": "cf3f08f0-30b5-44bf-a888-22cc5da9c8b6",
   "image": "default-image.png"
+ },
+ {
+  "id": "6b9c6d13-0eed-4d5c-a6ad-1a4779f5e507",
+  "image": "1702410718224-img-image2.png",
+  "name": "balon",
+  "price": "123",
+  "discount": "10",
+  "description": "ko",
+  "category": "accesorios",
+  "colors": "mm"
  }
 ]

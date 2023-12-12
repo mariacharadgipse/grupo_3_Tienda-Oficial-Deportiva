@@ -1,4 +1,8 @@
-const products = require('../data/products')
+const fs = require('fs')
+const path= require('path')
+const products=JSON.parse(fs.readFileSync(path.join (__dirname, '../data/products.json'),'utf-8'))
+
+
 const controller = {
   getHome: (req, res) => {
     // Lógica del controlador para la página de inicio
