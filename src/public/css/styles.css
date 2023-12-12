@@ -150,11 +150,14 @@ header .menu {
 .elemento {
   flex: 1 0 auto;
   margin: 0 50px;
-  background-color: red;
+  background-color: #eeeeee;
   width: 95%;
-  height: 400px;
+  height: auto;
   align-items: center;
   justify-content: center;
+  border: solid 5px var(--primario);
+  padding: 10px 12px;
+  border-radius: 5%;
 }
 
 
@@ -424,6 +427,19 @@ footer {
 .elemento {
   width: 25%;
 }
+
+.product-box {
+  width:25%;
+ 
+
+}
+}
+
+.contAllProducts{
+   display: flex;
+   flex-wrap: wrap;
+   padding: 15px;
+   justify-content: space-between;
 }
 
 
