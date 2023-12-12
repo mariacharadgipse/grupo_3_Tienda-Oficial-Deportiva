@@ -27,8 +27,14 @@ router.get('/cart', productController.getCart);
 
 
 
+/***Create one product http://localhost:5000/products/create ***/
 
-router.get('/create', productController.postCreate);
+router.get("/create", productController.create);
+router.post("/products/create", productController.store);
+//router.post("/products/create", update.single('image'), productController.store);
+router.post('/product/create', (req,res)=> {
+    console.log(req.body)
+})
 
 //router.post("/create", (req, res)=>(productController.postCreate));
 

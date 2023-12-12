@@ -11,12 +11,19 @@
     --links: #ada9a9;
     --bg-primario: #424242;
     --bg-secundario: #101010;
+    --Negro: #000000;
+    --Blanco: #FFFFFF;
+    --GrisOscuro: #333333;
+    --Gris: #808080;
+    --GrisClaro: #CCCCCC;
+    --Rojo: #FF0000;
+    --Violeta: #800080;
+    --Amarillo: #FFFF00;
 }
 
 h2 {
     color: #333;
     padding: 20px;
-
 }
 
 
@@ -24,9 +31,26 @@ h3{
     text-align: left;
 }
 
+
 .titulo{
+    /*display: flex;*/
+    position: absolute; /* Se posiciona de manera absoluta con respecto al contenedor */
+    top: 150px; /* Ajusta la posición desde la parte superior del contenedor */
+    left: 300px; /* Ajusta la posición desde la parte izquierda del contenedor */    
+    /*margin-left: 250px;*/
+    font-size: 20px;
+}
+
+.logoSinFondo{
+    width: 50px;
+    height: 50px;
+}
+
+main{
+    flex:1;
     display: flex;
-    margin-right: 200px;
+    align-items: center;
+    justify-content: center;
 }
 
 body {
@@ -39,11 +63,14 @@ body {
     height: 100%;
 }
 
+
 .register-container {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     background-color: var(--links);
     padding: 20px;
+    margin: auto;
+    width: 100%;
 }
 
 .register{
@@ -51,6 +78,11 @@ body {
     background-color: #fff;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
 }
 
 
@@ -116,7 +148,10 @@ input {
     width: 40%; /* ajusta el ancho */
 }
 
-
+.img__tamaño2 {
+    height: 15%; /* ajusta la altura */
+    width: 25%; /* ajusta el ancho */
+}
 
 form {
     display: flex;
@@ -132,7 +167,24 @@ form {
     
     .login {
         flex: 0 0 100%; /* El contenedor ocupa el 100% del ancho del cuerpo */
+        padding: 5px;
+    }
+}
 
+@media (max-width: 800px) {
+    .tienda{
+        display: none;
+    }
+
+    
+    .register-conteiner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+
+        /* Cambia la dirección del flex container a columna */
+        /*justify-content: flex-star;*/
     }
 }
 
