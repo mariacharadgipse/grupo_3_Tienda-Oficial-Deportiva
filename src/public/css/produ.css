@@ -61,10 +61,17 @@ body {
   width: 300px;
   height: auto;
   align-items: center;
-  justify-content: center;
   border: solid 5px red;
   border-radius: 8px;
   margin: 10px
+}
+
+.fa-truck{
+  color:green;
+  border-radius: 100%;
+  border: 1px #39b54a;
+  background-color: solid #ebebeb;
+  font-size: 20px;
 }
 
 

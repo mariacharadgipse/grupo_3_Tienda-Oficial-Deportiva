@@ -62,49 +62,43 @@ main {
     text-align: center;
 }
 
-.foto {
-    padding: 15px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
 
 .contenedorGris {
     background-color: var(--links);
     margin: 15px;
     height: 400%;
     width: 90%;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.DPS {
+.product-detail-img {
+    padding: 15px;
+    height: auto;
+    display: Block;
+    align-items: center;
+    justify-content: center;
     background-color: #eeeeee;
-    width: 98%;
-    height: 40%;
+    border: solid 5px red;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.product-detail {
+    background-color: #eeeeee;
+    width: 100%;
+    height: auto;
     margin: 5px auto;
     text-align: center;
     align-items: center;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
+    display: block;
     padding: 5px;
 
 }
 
-.DPA {
-    background-color: var(--secundario);
-    width: 98%;
-    margin: 5px auto;
-    height: 30%;
-    padding: 15px;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
 
 .botones {
     background-color: var(--links);
@@ -119,14 +113,16 @@ main {
 
 
 @media (max-width: 768px) {
-    .granContenedor {
+    .contenedorGris {
         display: flex;
         flex-direction: column;
     }
 }
 
 @media (min-width:1280px) {
-.granContenedor{
-    display: flex;
-}
+    .contenedorGris {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 }

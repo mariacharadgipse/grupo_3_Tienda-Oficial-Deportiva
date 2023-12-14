@@ -278,6 +278,22 @@ footer {
   text-decoration: none;
 }
 
+/*Productos*/
+
+.price {
+  color: green;
+}
+
+.fa-truck{
+  color:green;
+  border-radius: 100%;
+  background-color: #eeeeee;
+  border: #000000;
+  border: 1px #39b54a;
+  font-size: 20px;
+}
+
+
 /* Footer Right */
 
 .footer-distributed .footer-right {
@@ -400,6 +416,8 @@ footer {
 }
 
 }
+
+
 
 @media (min-width:481px) and (max-width:769px) {
   .elemento {

@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head', { title: 'Detalle', stylesheet: ['/css/styles.css','/css/productDetail.css']}) %>
-  
+<%- include('../partials/head', { title: 'Detalle' , stylesheet: ['/css/styles.css','/css/productDetail.css']}) %>
+
     <body>
-        <%- include('../partials/header') %>	
-        <h2 class="titulo">Producto Seleccionado</h2>
-        <main class="granContenedor">
-                                         
-            <div class="foto">
-                <img src="img/img-mistery.jpg" width="100%" height="400px" alt="Producto Misterioso">
-            </div>
+        <%- include('../partials/header') %>
+            <h2 class="titulo">Producto Seleccionado</h2>
+            <main>
+                <div class="contenedorGris">
+                    <h2 class="subtitulo">Detalles del producto</h2>
+                    <div class="contImgDes">
+                        <div class="row">
+                            
+                            <img src="/img/products/<%= pSelected.image %>" alt="product image"
+                                    class="product-detail-img" width="300px" height="300px">
+                                
+                            
+                            <div class="product-detail">
+                                <article class="product-detail-info">
+                                    <p class="product-detail-description">
+                                    <%= pSelected.description %>
+                                </p>
+                                
+                                <h2 class="product-detail-title">
+                                        <%= pSelected.name %>
+                                    </h2>
 
-            <div class="contenedorGris">
-                <h2 class="subtitulo">Detalles del producto</h2>
-                <div class="DPS">
-                    <h4 class="des">Producto Misterioso</h4>
-                    <h4 class="des">Precio = $6.770</h4>
-                    <p class="des">40% off</p>
+                                    <p class="product-detail-price small">
+                                        <span>$<%= pSelected.price %></span>
+                                        /
+                                        <b>
+                                            <%= pSelected.discount %>% OFF
+                                        </b>
+                                    </p>
+                                    <p class="product-detail-price">
+                                        $<%= pSelected.price %>
+                                            <!-- falta final price (Calculo) -->
+                                    </p>
+
+                                    <ul class="actions-list">
+                                        <li>
+                                            <i class="fas fa-credit-card"></i>
+                                            <p>Pagá en 12 cuotas sin interes</p>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-store"></i>
+                                            <p>Retiro gratis en locales del vendedor</p>
+                                        </li>
+                                    </ul>
+
+                                    <a href="#" class="boton">COMPRAR AHORA</a>
+                                    <hr>
+
+                                    <a href="/products/edit/<%= pSelected.id %>" class="boton">EDITAR
+                                        PRODUCTO</a>
+                                    <form action="/products/delete/<%= pSelected.id %>?_method=DELETE" method="POST"
+                                        style="display: inline-flex">
+                                        <button type="submit" class="boton">ELIMINAR</button>
+                                    </form>
+                                
+                            </div>
+                        </article>
+                    </div>
+                    <div>
                 </div>
 
-                <div class="DPA">
-                    <h4>Descripcion</h4>
-                    <p>Caja misteriosa con elementos de origen Argentino. Cada caja contiene 10 productos, amplia
-                        variedad de categorias.</p>
-                </div>
-
-                <div class="botones">
-                    <button type="submit">
-                        <label for="Lugar">Opciones de envio</label>
-                        <select name="Envio" id="Lugar">
-                            <option>Envio a domicilio</option>
-                            <option>Retiro en sucursal</option>
-                        </select>
-                    </button>
-                    <a href="Cart" class="enlaceDDP"><button class="boton" width="90%"><strong>COMPRAR</strong>
-                        </button></a>
-                </div>
-            </div>
-        </main>
-        <%- include('../partials/footer') %>	
+            </main>
+            <%- include('../partials/footer') %>
     </body>
+
 </html>

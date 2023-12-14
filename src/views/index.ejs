@@ -9,21 +9,25 @@
       <div class="carrusel">
         <% products.forEach(product => { %>
         <div class="elemento" class="elementCarrusel">
-          <a href='/products/detail/:id' class=""><img src="img/products/<%= product.image %>" width="100%" height="400px"></a>
-          <h2>$<%= product.price %>
-          </h2>
-          <p>
-              <%= product.description %>
-          </p>
-          <p>
+          <a href='/products/detail/<%= product.id %>' class=""> <img src="img/products/<%= product.image %>" width="100%" height="300px"></a>
+          
+          <article>         
+          <p class="name">
               <%= product.name %>
           </p>
-          <p>
+          <p class="category">
               <%= product.category %>
           </p>
-          <p>
+          <h2 class="price">$<%= product.price %>
+          </h2>
+          <p class="description">
+              <%= product.description %>
+          </p>
+          <p class="colors">
               <%= product.colors %>
           </p>
+         </article>
+         <i class="fas fa-truck"></i>
         </div>         
         <% }) %>
       
