@@ -60,24 +60,30 @@ const controller = {
 
 	},
 
+  // Update - Form to edit
+	edit: (req, res) => {
+		const pToEdit = products.find(product => product.id == req.params.id)
+		res.render('productEdit.ejs', { pToEdit })
+	},
+	// Update - Method to update
+	update: (req, res) => {
+		// JSON de productos
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		// Buscar el producto a editar
+		const pToEdit = products.find(product => product.id == req.params.id)
+		// Actualiza o deja el valor original del producto
+		pToEdit.name = req.body.name || pToEdit.name
+		pToEdit.price = req.body.price || pToEdit.price
+		pToEdit.discount = req.body.discount || pToEdit.discount
+		pToEdit.category = req.body.category || pToEdit.category
+		pToEdit.description = req.body.description || pToEdit.description
+		pToEdit.image = req.file?.filename || pToEdit.image
+		// Escribe el nuevo JSON de productos
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
+		res.redirect('/products')
+	},
 
-  // Update - Method to update
-  update: (req, res) => {
-    // JSON de productos
-    const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-    // Buscar el producto a editar
-    const pToEdit = products.find(product => product.id == req.params.id)
-    // Actualiza o deja el valor original del producto
-    pToEdit.name = req.body.name || pToEdit.name
-    pToEdit.price = req.body.price || pToEdit.price
-    pToEdit.discount = req.body.discount || pToEdit.discount
-    pToEdit.category = req.body.category || pToEdit.category
-    pToEdit.description = req.body.description || pToEdit.description
-    pToEdit.image = req.file?.filename || pToEdit.image
-    // Escribe el nuevo JSON de productos
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
-    res.redirect('/products')
-  },
+
 
 
   getCart: (req, res) => {

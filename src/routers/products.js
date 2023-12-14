@@ -22,7 +22,11 @@ router.post('/create', upload.single('images'),validateProducts, productControll
 
 
 router.get('/detail/:id', productController.getDetail);
-
 router.get('/cart', productController.getCart);
+
+/*** EDIT ONE PRODUCT http://localhost:3000/products/edit/1 ***/
+router.get('/edit/:id', productController.edit);
+router.put('/edit/:id', upload.single('img'), productController.update);
+
 
 module.exports=router;
