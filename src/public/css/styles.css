@@ -423,31 +423,31 @@ footer {
   }
 
 
-@media (min-width:770px) {
-.elemento {
-  width: 25%;
-}
-
-.product-box {
-  width:25%;
- 
-
-}
-}
-
-.contAllProducts{
-   display: flex;
-   flex-wrap: wrap;
-   padding: 15px;
-   justify-content: space-between;
-}
-
-
-@media (max-width:440px) {
-.logoCompletoSinFondo {
-  margin-left: 0;
-  padding: 0%;
-  width: 150px;
-  height: 80px;
-}
-}
+  @media (min-width:770px) {
+    .elemento {
+      width: 25%;
+    }
+    
+    .product-box {
+      width:25%;
+     
+    
+    }
+    }
+    
+    .contAllProducts{
+       display: flex;
+       flex-wrap: wrap;
+       padding: 15px;
+       justify-content: space-between;
+    }
+    
+    
+    @media (max-width:440px) {
+    .logoCompletoSinFondo {
+      margin-left: 0;
+      padding: 0%;
+      width: 150px;
+      height: 80px;
+    }
+    }

@@ -9,7 +9,7 @@
       <div class="carrusel">
         <% products.forEach(product => { %>
         <div class="elemento" class="elementCarrusel">
-          <a href='/Detail' class=""><img src="img/products/<%= product.image %>" width="100%" height="400px"></a>
+          <a href='/products/detail/:id' class=""><img src="img/products/<%= product.image %>" width="100%" height="400px"></a>
           <h2>$<%= product.price %>
           </h2>
           <p>
