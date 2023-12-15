@@ -63,7 +63,7 @@ const controller = {
   // Update - Form to edit
 	edit: (req, res) => {
 		const pToEdit = products.find(product => product.id == req.params.id)
-		res.render('productEdit.ejs', { pToEdit })
+		res.render('products/productEdit.ejs', { pToEdit })
 	},
 	// Update - Method to update
 	update: (req, res) => {
@@ -82,8 +82,6 @@ const controller = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
 		res.redirect('/products')
 	},
-
-
 
 
   getCart: (req, res) => {

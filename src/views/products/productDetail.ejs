@@ -46,22 +46,23 @@
                                     <p><strong>Retiro gratis en locales del vendedor</p></strong>
                                 </li>
                             </ul>
-
-
-                            <a href="/products/cart" class="boton">COMPRAR AHORA</a>
-                        <div class="botones">
-                            <a href="/products/edit/<%= pSelected.id %>" class="boton">EDITAR PRODUCTO</a>
-                            <form action="/products/delete/<%= pSelected.id %>?_method=DELETE" method="POST"
-                                style="display: inline-flex">
-                            <button type="submit" class="boton">ELIMINAR</button>
-                            </form>
+                            <div class="boton"></div>
+                            <a href="/products/cart" class="boton"><button type="submit" class="boton">COMPRAR</button></a>
                         </div>
+                            
                         </article>
+                        
                     </div>
 
                 </div>
-
+                <div class="adm">
+                            <a href="/products/edit/<%= pSelected.id %>" class="enlace"><button type="submit" class="boton">EDITAR</button></a>
+                            <form action="/products/delete/<%= pSelected.id %>?_method=DELETE" method="POST"
+                                    style="display: inline-flex"> <button type="submit" class="boton">ELIMINAR</button>
+                            </form>
+                        </div>
             </main>
+
             <%- include('../partials/footer') %>
     </body>
 

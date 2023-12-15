@@ -26,7 +26,7 @@ router.get('/cart', productController.getCart);
 
 /*** EDIT ONE PRODUCT http://localhost:3000/products/edit/1 ***/
 router.get('/edit/:id', productController.edit);
-router.put('/edit/:id', upload.single('img'), productController.update);
+router.put('/edit/:id', upload.single('images'), productController.update);
 
 
 module.exports=router;

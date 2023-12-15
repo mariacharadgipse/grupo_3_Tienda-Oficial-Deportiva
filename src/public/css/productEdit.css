@@ -13,13 +13,13 @@
 .formContenedor {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
     margin: 15px auto;
     border: 0px 15px;
     background-color: #eeeeee;
     height: max-content 450px;
     align-items: center;
-    padding: 20px 0px;
+    padding: 20px;
 }
 
 .editForm {
@@ -55,7 +55,7 @@
 
 .botonForm {
     background-color: #800080;
-    width: 20vw;
+    width: 50px;
     color: #eeeeee;
     align-items: right;
     justify-content: center
