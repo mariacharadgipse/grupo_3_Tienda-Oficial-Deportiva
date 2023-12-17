@@ -28,5 +28,7 @@ router.get('/cart', productController.getCart);
 router.get('/edit/:id', productController.edit);
 router.put('/edit/:id', upload.single('images'), productController.update);
 
+router.delete('/delete/:id', productController.deleDestroy)
+
 
 module.exports=router;

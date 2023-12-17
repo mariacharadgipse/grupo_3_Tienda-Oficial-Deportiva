@@ -2,10 +2,13 @@ const express = require('express')
 const path = require('path')
 const app = express()
 const port = 5000
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+
+
 
 // Config static folder
 app.use(express.static(path.join(__dirname, 'public')))
-
+app.use(methodOverride('_method'))
 let indexRoutes= require('./routers/index')
 
 let productsRoutes= require('./routers/products')

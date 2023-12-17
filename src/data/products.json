@@ -1,15 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "libero",
-  "description": "suspendisse potenti in eleifend quam a odio in",
-  "image": "image1.png",
-  "category": "calzado",
-  "colors": "Yellow",
-  "price": 6118,
-  "size": 4
- },
- {
   "id": 2,
   "name": "nisl venenatis",
   "description": "primis in faucibus orci luctus et ultrices posuere",
@@ -21,22 +11,22 @@
  },
  {
   "id": 3,
-  "name": "sit",
-  "description": "sapien cursus vestibulum proin eu mi",
+  "name": "sitio de ",
+  "description": " sit ",
   "image": "image3.png",
-  "category": "indumentaria",
+  "category": "calzados",
   "colors": "Puce",
-  "price": 2376,
+  "price": "2376",
   "size": 2
  },
  {
   "id": 4,
   "name": "diam cras",
-  "description": "ut erat id mauris vulputate elementum nullam varius",
-  "image": "image4.png",
-  "category": "calzado",
+  "description": " diam cras ",
+  "image": "1702668488032-img-image1.png",
+  "category": "calzados",
   "colors": "Aquamarine",
-  "price": 8512,
+  "price": "5000",
   "size": 2
  },
  {
@@ -198,43 +188,5 @@
   "colors": "Indigo",
   "price": 2267,
   "size": 4
- },
- {
-  "id": "a3a748cd-85ec-4420-b283-e89cf6aab0b2",
-  "image": "default-image.png"
- },
- {
-  "id": "9a23fb4f-e701-47f4-a76b-3043a3cded31",
-  "image": "default-image.png"
- },
- {
-  "id": "518917c1-5dd4-4ad0-979d-9f6bb966b6df",
-  "image": "default-image.png"
- },
- {
-  "id": "c7b78488-4991-4a3f-8ef7-24b06208a103",
-  "image": "default-image.png"
- },
- {
-  "id": "0a7cbc64-5245-43e5-b608-a75a4ddfd2df",
-  "image": "default-image.png"
- },
- {
-  "id": "8d1ab120-f1fa-4c42-9061-5af4503e4a7b",
-  "image": "default-image.png"
- },
- {
-  "id": "cf3f08f0-30b5-44bf-a888-22cc5da9c8b6",
-  "image": "default-image.png"
- },
- {
-  "id": "6b9c6d13-0eed-4d5c-a6ad-1a4779f5e507",
-  "image": "1702410718224-img-image2.png",
-  "name": "balon",
-  "price": "123",
-  "discount": "10",
-  "description": "ko",
-  "category": "accesorios",
-  "colors": "mm"
  }
 ]

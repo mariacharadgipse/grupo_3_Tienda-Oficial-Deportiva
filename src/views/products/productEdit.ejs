@@ -8,7 +8,7 @@
 
             <main class="formContenedor">
                 <h2 class="tituloEdit"><strong>Editar el producto:</strong> <i><%= pToEdit.name %></i></h1>
-                <form action="/products/<%= pToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/products/edit/<%= pToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                     <div class="elementForm">
                         <label for="name" class="label-form">Nombre del Producto</label>
@@ -46,7 +46,7 @@
 
                     <div class="elementForm">
                         <label for="image" >Imágenes del producto</label>
-                        <input type="file" name="image" id="image" class="control" accept=".jpg, .png" multiple></input>
+                        <input type="file" name="images" id="images" class="control" accept=".jpg, .png" multiple></input>
                     </div>
 
                     <button type="reset" class="botonForm">Restablecer</button>
