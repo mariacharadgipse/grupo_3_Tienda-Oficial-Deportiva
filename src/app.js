@@ -9,11 +9,11 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 // Config static folder
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
-let indexRoutes= require('./routers/index')
+let indexRoutes= require('./routes/index')
 
-let productsRoutes= require('./routers/products')
+let productsRoutes= require('./routes/products')
 
-let usersRoutes= require('./routers/users')
+let usersRoutes= require('./routes/usersRoutes')
 
 //0912
 const session = require('express-session');
