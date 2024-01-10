@@ -88,15 +88,14 @@ const controller = {
 		});
 	},
 	profile: (req, res) => {
-		return res.render('userProfile', {
-			user: req.session.userLogged
-		});
+		res.render('users/profile.ejs', { user: req.session.userLogged })
 	},
 
 	logout: (req, res) => {
-		res.clearCookie('userEmail');
-		req.session.destroy();
-		return res.redirect('/');
+		req.session.userLogged = undefined
+		// req.session.destroy()
+		res.clearCookie('rememberme')
+		res.redirect('/')
 	},
 };
 
