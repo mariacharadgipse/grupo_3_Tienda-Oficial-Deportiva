@@ -1,62 +1,54 @@
+const fs = require('fs')
+const path = require('path')
+const { v4: uuidv4 } = require('uuid');
+const bcryptjs = require('bcryptjs')
+
+const usersPath = path.join(__dirname, '../data/users.json')
+const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
+
 const controller = {
-  getLogin: (req, res) => {
-    // Lógica del controlador para la página de inicio
-    res.render('users/login'); // Renderiza la plantilla 'login.ejs' en la carpeta 'views'
-  },
-  
-  
-  postLogin: (req, res) => {
-    res.send(req.body);
+	getLogin: (req, res) => {
+		// Lógica del controlador para la página de inicio
+		res.render('users/login'); // Renderiza la plantilla 'login.ejs' en la carpeta 'views'
+	},
 
-		let userToLogin = User.findByField('email', req.body.email);
-		
-		if(userToLogin) {
-			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
-
-				if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-				}
-
-				return res.redirect('/user/profile');
-			} 
-			return res.render('Login', {
-				errors: {
-					email: {
-						msg: 'Las credenciales son inválidas'
-					}
-				}
-			});
+	postLogin: (req, res) => {
+		// obtener los datos del form
+		let { email, password, rememberme } = req.body
+		//  buscar usuario y checkear password y email si coincide con alguno de nuestra base
+		let userFound = users.find(user => user.email == email)
+		if (userFound && bcryptjs.compareSync(password, userFound.password)) {
+			// si existe, guardalo en session
+			req.session.userLogged = userFound
+			// el usuario puso recordarme?
+			if (rememberme == 'on') {
+				res.cookie('rememberme', userFound.email, { maxAge: 60000 * 60 })
+			}
+			// redireccione al home
+			console.log('Todo salió ok, estas logueado');
+			res.redirect('/users/profile')
+		} else {
+			res.send('El password o email es incorrecto')
 		}
 
-		return res.render('Login', {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			}
-		});
 	},
+
 	profile: (req, res) => {
-		return res.render('userProfile', {
-			user: req.session.userLogged
-		});
+		res.render('users/profile.ejs', { user: req.session.userLogged })
 	},
 
 	logout: (req, res) => {
-		res.clearCookie('userEmail');
-		req.session.destroy();
-		return res.redirect('/');
+		req.session.userLogged = undefined
+		// req.session.destroy()
+		res.clearCookie('rememberme')
+		res.redirect('/')
 	},
-
 
   
   getRegister: (req, res) => {
-    // Lógica del controlador para la página de inicio
-    res.render('users/register'); // Renderiza la plantilla 'register.ejs' en la carpeta 'views'
-  },
+		// Lógica del controlador para la página de inicio
+		res.render('users/register'); // Renderiza la plantilla 'register.ejs' en la carpeta 'views'
+	},
 };
 
 module.exports = controller;
