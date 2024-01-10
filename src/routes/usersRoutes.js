@@ -1,6 +1,18 @@
 const express = require('express');
 const router=express.Router();
 
+//REGISTER
+
+const {getRegister, register, postRegister} = require('../controllers/userController.js')
+
+router.get('/register', getRegister);
+
+router.post('/register', postRegister)
+
+
+
+//LOGIN
+
 //let userController=require('../controllers/userController.js');
 const { getLogin, postLogin, profile, logout } = require('../controllers/userController.js')
 
@@ -15,7 +27,5 @@ router.post('/login', postLogin);
 
 // Logout
 //router.get('/logout/', userController.logout);
-
-//router.get('/register', userController.getRegister);
 
 module.exports=router;

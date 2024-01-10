@@ -1,10 +1,129 @@
-[{"id":1,"first_name":"Harwilll","last_name":"Pearch","email":"hpearch0@geocities.com","password":"xX3!EgCMPO","category":"vendedor","image":"image5.jpg"},
-{"id":2,"first_name":"Elias","last_name":"Calan","email":"ecalan1@arizona.edu","password":"sR7&R/B.","category":"vendedor","image":"image7.jpg"},
-{"id":3,"first_name":"Poppy","last_name":"Detoile","email":"pdetoile2@yale.edu","password":"aK5<gXlW/9XIub","category":"administrador","image":"image7.jpg"},
-{"id":4,"first_name":"Cathyleen","last_name":"McKim","email":"cmckim3@paginegialle.it","password":"jQ8(KLel","category":"cliente","image":"image10.jpg"},
-{"id":5,"first_name":"Dalis","last_name":"Caslake","email":"dcaslake4@timesonline.co.uk","password":"xB8=7ChFU~","category":"administrador","image":"image6.jpg"},
-{"id":6,"first_name":"Niel","last_name":"Maddrah","email":"nmaddrah5@tiny.cc","password":"cH6&kEAU","category":"cliente","image":"image9.jpg"},
-{"id":7,"first_name":"Binky","last_name":"Nicholas","email":"bnicholas6@shareasale.com","password":"pA7<6+er.z3#ZQ","category":"administrador","image":"image6.jpg"},
-{"id":8,"first_name":"Marice","last_name":"Blazi","email":"mblazi7@issuu.com","password":"nG8`ftwDdOd7","category":"administrador","image":"image5.jpg"},
-{"id":9,"first_name":"Mord","last_name":"Cankett","email":"mcankett8@wisc.edu","password":"yS0.k`eNg","category":"vendedor","image":"image3.jpg"},
-{"id":10,"first_name":"Kailey","last_name":"Tuppeny","email":"ktuppeny9@storify.com","password":"rT8&.%eQn\"6B)gE","category":"administrador","image":"image5.jpg"}]
+[
+ {
+  "id": 1,
+  "first_name": "Harwilll",
+  "last_name": "Pearch",
+  "email": "hpearch0@geocities.com",
+  "password": "xX3!EgCMPO",
+  "category": "vendedor",
+  "image": "image5.jpg"
+ },
+ {
+  "id": 2,
+  "first_name": "Elias",
+  "last_name": "Calan",
+  "email": "ecalan1@arizona.edu",
+  "password": "sR7&R/B.",
+  "category": "vendedor",
+  "image": "image7.jpg"
+ },
+ {
+  "id": 3,
+  "first_name": "Poppy",
+  "last_name": "Detoile",
+  "email": "pdetoile2@yale.edu",
+  "password": "aK5<gXlW/9XIub",
+  "category": "administrador",
+  "image": "image7.jpg"
+ },
+ {
+  "id": 4,
+  "first_name": "Cathyleen",
+  "last_name": "McKim",
+  "email": "cmckim3@paginegialle.it",
+  "password": "jQ8(KLel",
+  "category": "cliente",
+  "image": "image10.jpg"
+ },
+ {
+  "id": 5,
+  "first_name": "Dalis",
+  "last_name": "Caslake",
+  "email": "dcaslake4@timesonline.co.uk",
+  "password": "xB8=7ChFU~",
+  "category": "administrador",
+  "image": "image6.jpg"
+ },
+ {
+  "id": 6,
+  "first_name": "Niel",
+  "last_name": "Maddrah",
+  "email": "nmaddrah5@tiny.cc",
+  "password": "cH6&kEAU",
+  "category": "cliente",
+  "image": "image9.jpg"
+ },
+ {
+  "id": 7,
+  "first_name": "Binky",
+  "last_name": "Nicholas",
+  "email": "bnicholas6@shareasale.com",
+  "password": "pA7<6+er.z3#ZQ",
+  "category": "administrador",
+  "image": "image6.jpg"
+ },
+ {
+  "id": 8,
+  "first_name": "Marice",
+  "last_name": "Blazi",
+  "email": "mblazi7@issuu.com",
+  "password": "nG8`ftwDdOd7",
+  "category": "administrador",
+  "image": "image5.jpg"
+ },
+ {
+  "id": 9,
+  "first_name": "Mord",
+  "last_name": "Cankett",
+  "email": "mcankett8@wisc.edu",
+  "password": "yS0.k`eNg",
+  "category": "vendedor",
+  "image": "image3.jpg"
+ },
+ {
+  "id": 10,
+  "first_name": "Kailey",
+  "last_name": "Tuppeny",
+  "email": "ktuppeny9@storify.com",
+  "password": "rT8&.%eQn\"6B)gE",
+  "category": "administrador",
+  "image": "image5.jpg"
+ },
+ {
+  "id": "3bdaa2ca-6e4f-479d-b3e9-4b0adffa4435",
+  "email": "patitosea@gmail.com",
+  "password": "$2a$10$VcaPB9.MGr5S8M8omgWgsOeynsG6s94ugWsvGSI.oxTReb17QXjWO"
+ },
+ {
+  "id": "1f499dad-1c63-4e08-b3b7-fb846c776ace",
+  "email": "tod@gmail.com",
+  "password": "$2a$10$3T6eo8SXSODpGR2u5h.SNOsSA1iE0fd1Xwha3SWjuVCCv89xrExXy"
+ },
+ {
+  "id": "085ef98f-669c-4ada-a122-c01870721a93",
+  "email": "maurolopez@gmail.com",
+  "password": "maurolopez",
+  "image": "topper-azul.jpg",
+  "first_name": "Mauro",
+  "last_name": "Lopez",
+  "category": "vendedor"
+ },
+ {
+  "id": "9eb2338a-7cfd-488e-b58c-31a1c8231337",
+  "email": "mariajl@gmail.com",
+  "password": "maria",
+  "image": "topper-rosa.jpg",
+  "first_name": "Maria Jose",
+  "last_name": "Lombardo",
+  "category": "cliente"
+ },
+ {
+  "id": "19418352-4622-4395-9534-37786d353781",
+  "email": "alexlombardo@gmail.com",
+  "image": "topper-azul.jpg",
+  "first_name": "Alex",
+  "last_name": "Lombardo",
+  "password": "$2a$10$LQBnBCedGsRIEImhJu/ZyeKSZKTZfFdXjWbz3PCziFjt4KhMqE1Xe",
+  "category": "vendedor"
+ }
+]
