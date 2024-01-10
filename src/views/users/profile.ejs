@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
+    <%- include('../partials/head', { title: 'perfil' , stylesheet: ['/css/styles.css','/css/profile.css']}) %>       
 <body>
-         <h1>Bievenidos a la vista de perfil de <%= user.email %></h1>
+    <%- include('../partials/header') %> 
+        
+    <main class="contPerfil">         
+         <h2 class="titulo">Bievenidos a la vista de perfil de <%= user.email %></h2>
          <p><%= user.id %></p>
          <p><%= user.password %></p>      
          
-         <a href="/users/logout">Cerrar sesión</a>
+         <div class="enlaces"><a href="/users/logout">Cerrar sesión</a></div>
+        </main>
+        <%- include('../partials/footer') %>
 </body>
 </html>
+

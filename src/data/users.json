@@ -125,5 +125,14 @@
   "last_name": "Lombardo",
   "password": "$2a$10$LQBnBCedGsRIEImhJu/ZyeKSZKTZfFdXjWbz3PCziFjt4KhMqE1Xe",
   "category": "vendedor"
+ },
+ {
+  "id": "aeb62404-15aa-4343-8260-4efe13a86cdf",
+  "email": "brunolombardo@gmail.com",
+  "image": "",
+  "first_name": "bruno",
+  "last_name": "lombardo",
+  "password": "$2a$10$TtIRTTTRL0sLEdMjLbguMOTTnv7Lqu78oweT.aqhewxA7lvqVSsyK",
+  "category": "cliente"
  }
 ]
