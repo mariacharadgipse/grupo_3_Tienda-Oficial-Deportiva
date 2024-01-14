@@ -134,5 +134,14 @@
   "last_name": "lombardo",
   "password": "$2a$10$TtIRTTTRL0sLEdMjLbguMOTTnv7Lqu78oweT.aqhewxA7lvqVSsyK",
   "category": "cliente"
+ },
+ {
+  "id": "a95db82f-64bb-4b39-a682-d879981e539b",
+  "email": "GUILLIRIOS.PROFE@GMAIL.COM",
+  "image": "una-taza-de-javascript.png",
+  "first_name": "GUILLEMO",
+  "last_name": "RIOS",
+  "password": "$2a$10$3AMQRAXAbJH2jHlcq9cLveJdj5zu9YjlDk2fsGqqmkASwq56rTLhq",
+  "category": "administrador"
  }
 ]

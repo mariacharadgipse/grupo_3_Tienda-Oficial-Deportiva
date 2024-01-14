@@ -2,9 +2,9 @@
  {
   "id": 2,
   "name": "nisl venenatis",
-  "description": "primis in faucibus orci luctus et ultrices posuere",
+  "description": " nisl venenatis ",
   "image": "image2.png",
-  "category": "accesorio",
+  "category": "calzados",
   "colors": "Turquoise",
   "price": 8800,
   "size": 4
@@ -21,7 +21,7 @@
  },
  {
   "id": 4,
-  "name": "diam cras",
+  "name": "diam cras ASFDASD",
   "description": " diam cras ",
   "image": "1702668488032-img-image1.png",
   "category": "calzados",
@@ -188,5 +188,45 @@
   "colors": "Indigo",
   "price": 2267,
   "size": 4
+ },
+ {
+  "id": "170e77cb-84f0-47ba-b449-084b41e12ce2",
+  "image": "1705189087595-img-botin_negro.jpg",
+  "name": "  canillera",
+  "price": "2000",
+  "discount": "0",
+  "description": "  canillera ",
+  "category": "calzados",
+  "colors": "azul"
+ },
+ {
+  "id": "ebd9444d-c549-4ede-afb7-97790d4328b7",
+  "image": "1705194091317-img-botin_negro.jpg",
+  "name": "  rodillera roja chica",
+  "price": "5000",
+  "discount": "10%",
+  "description": "     rodillera colorada chica para niños          ",
+  "category": "calzados",
+  "colors": "  colorado tirando a bordó"
+ },
+ {
+  "id": "4020492c-15d9-4d99-b02c-051aae8f9a97",
+  "name": "Raquetas Yonex",
+  "description": " raqueta orientada al control combina la precisión de efectos con una potente velocidad. ",
+  "image": "1705198292077-img-raqueta_yonex.jpg",
+  "category": "accesorios",
+  "colors": "colorado tirando a bordó",
+  "price": "405000",
+  "discount": "10"
+ },
+ {
+  "id": "d0c8f47d-4f0b-4fa2-ad42-1f0be127bea3",
+  "name": "Canillera Puma Evoforce",
+  "description": "El modelo evoFORCE III es una canillera ligera y altamente protectora para entrenar y jugar partidos\r\nPosee ajuste de velcro.",
+  "image": "1705198887419-img-canilleras_futbol.jpg",
+  "category": "accesorios",
+  "colors": "blanca",
+  "price": "14000",
+  "discount": "10"
  }
 ]
