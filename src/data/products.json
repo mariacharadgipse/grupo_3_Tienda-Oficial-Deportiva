@@ -190,26 +190,6 @@
   "size": 4
  },
  {
-  "id": "170e77cb-84f0-47ba-b449-084b41e12ce2",
-  "image": "1705189087595-img-botin_negro.jpg",
-  "name": "  canillera",
-  "price": "2000",
-  "discount": "0",
-  "description": "  canillera ",
-  "category": "calzados",
-  "colors": "azul"
- },
- {
-  "id": "ebd9444d-c549-4ede-afb7-97790d4328b7",
-  "image": "1705194091317-img-botin_negro.jpg",
-  "name": "  rodillera roja chica",
-  "price": "5000",
-  "discount": "10%",
-  "description": "     rodillera colorada chica para niños          ",
-  "category": "calzados",
-  "colors": "  colorado tirando a bordó"
- },
- {
   "id": "4020492c-15d9-4d99-b02c-051aae8f9a97",
   "name": "Raquetas Yonex",
   "description": " raqueta orientada al control combina la precisión de efectos con una potente velocidad. ",
@@ -227,6 +207,16 @@
   "category": "accesorios",
   "colors": "blanca",
   "price": "14000",
+  "discount": "10"
+ },
+ {
+  "id": "f00875d5-93d5-43e8-a1a6-8b5263ff350f",
+  "name": "   Colchon Inflable 2 Plazas con Almohadas Inflador Portátil",
+  "description": "   Este colchón inflable de dos plazas es ideal para acampar o para recibir visitas en casa. Viene con dos almohadas para mayor comodidad y un inflador portátil para facilitar su uso. Su color azul le da un toque de estilo y modernidad.   ",
+  "image": "1705199741445-img-colchÃ³n_inflable.jpg",
+  "category": "accesorios",
+  "colors": "   azul",
+  "price": "34000",
   "discount": "10"
  }
 ]
