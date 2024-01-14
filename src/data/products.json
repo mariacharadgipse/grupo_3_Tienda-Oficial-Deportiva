@@ -41,13 +41,14 @@
  },
  {
   "id": 6,
-  "name": "in faucibus orci",
-  "description": "at lorem integer tincidunt ante",
+  "name": "   camiseta selección argentina",
+  "description": "    at lorem integer tincidunt ante    ",
   "image": "image6.png",
   "category": "indumentaria",
-  "colors": "Goldenrod",
-  "price": 6425,
-  "size": 3
+  "colors": "    Goldenrod",
+  "price": "10000",
+  "size": 3,
+  "discount": "10"
  },
  {
   "id": 7,
@@ -218,5 +219,15 @@
   "colors": "   azul",
   "price": "34000",
   "discount": "10"
+ },
+ {
+  "id": "9d445c46-fb7e-4fd3-89d8-9e7416cbb979",
+  "name": "Kit Entrenamiento Futbol Conos Vallas Aros Escalera",
+  "description": "Se entrega:\r\n\r\n-2 CONOS 30 CM EF-A110\r\n-1 VALLA SALTO EF-A121\r\n-1 ESCALERA COORDINACION EF-A102\r\n-2 AROS PLANOS 60 CM EF-A117\r\n-2 VALLAS SALTO 15 CM EF-A114\r\n-1 VALLA SALTO 30 CM EF-A115\r\n-4 CONOS 23 CM EF-A107\r\n-12 CONOS TORTUGA EF-A103\r\n-6 CONOS SLALOM EF-A106",
+  "image": "1705270340422-img-kit_entrenamiento.jpg",
+  "category": "accesorios",
+  "colors": "varios",
+  "price": "50000",
+  "discount": "0"
  }
 ]
