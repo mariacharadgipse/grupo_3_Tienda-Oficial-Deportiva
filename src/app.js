@@ -3,6 +3,7 @@ const path = require('path')
 const app = express()
 const port = 5000
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const cookieParser = require('cookie-parser')
 
 
 
@@ -27,7 +28,7 @@ saveUninitialized: true,
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
-//app.use(cookieParser())
+app.use(cookieParser())
 //
 
 app.use('/', indexRoutes)

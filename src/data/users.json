@@ -134,5 +134,23 @@
   "last_name": "lombardo",
   "password": "$2a$10$TtIRTTTRL0sLEdMjLbguMOTTnv7Lqu78oweT.aqhewxA7lvqVSsyK",
   "category": "cliente"
+ },
+ {
+  "id": "e76ef69a-baab-40a2-9122-eac39101018d",
+  "email": "mariayo@gmail.com",
+  "image": "",
+  "first_name": "maria",
+  "last_name": "yo",
+  "password": "$2a$10$33KeYl.tIwKbUIE/fqEUvu.TZGRMGPMOsIS9pTUWeo16I2tfQ3O3.",
+  "category": ""
+ },
+ {
+  "id": "2dad9e24-0c20-4236-af2c-853d167ef2f1",
+  "email": "maria@gmail.com",
+  "image": "image4.png",
+  "first_name": "maria",
+  "last_name": "maria",
+  "password": "$2a$10$gl1o8hB3bC6mLwWelMt/n.5CW0QIGyZZBTUudz27/IHa5LML1mhpC",
+  "category": ""
  }
 ]

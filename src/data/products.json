@@ -188,5 +188,25 @@
   "colors": "Indigo",
   "price": 2267,
   "size": 4
+ },
+ {
+  "id": "2b8534db-9da2-45d4-911e-0d96f9809f38",
+  "image": "1705182262783-img-topper-rosa.jpg",
+  "name": "Prueba",
+  "price": "100",
+  "discount": "10",
+  "description": "moi",
+  "category": "indumentaria",
+  "colors": "pio"
+ },
+ {
+  "id": "84c9a289-3303-413c-8bb8-620701dc2254",
+  "image": "1705345238454-img-default.png",
+  "name": "Probando",
+  "price": "123",
+  "discount": "1",
+  "description": "lll",
+  "category": "indumentaria",
+  "colors": "ppp"
  }
 ]
