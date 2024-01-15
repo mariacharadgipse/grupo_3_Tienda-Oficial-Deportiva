@@ -36,6 +36,26 @@ Semana 2
 -Domingo 26/11/2023
    Resumen: Commit finales con la finalización del SPRINT 3.
    Inconvenientes: No hubo dudas.
-   Participantes: Ardilez Natalia, Chara Maria, D'Arcangelo Carolina y Molina Jose.   
+   Participantes: Ardilez Natalia, Chara Maria, D'Arcangelo Carolina y Molina Jose.
+
+-Domingo 03/12/2023
+   Resumen: Creamos archivos Json de productos y usuarios a través de mockaroo.com.
+   Inconvenientes: Dudas para elegir los tipos (type) de los nombre de campos (field name), por lo que se generaron varias veces ambos archivos.
+   Participantes: Ardilez Natalia, Chara María, D'Arcangelo Carolina y Molina José.
+
+-Domingo 17/12/2023
+   Resumen: Comenzamos leyendo el Sprint para saber las tareas a realizar, comenzamos verificando las carpetas. Realizamos la división de tareas.
+   Inconvenientes: No tuvimos.
+   Participantes: Ardilez Natalia, Chara María, D'Arcangelo Carolina y Molina José.
+
+-Domingo 07/01/2024
+   Resumen: Comenzamos a armar el login para nuestra página.
+   Inconvenientes: No pudimos hacer funcionar el login, por lo que buscamos distintas alternativas de solución.
+   Participantes: Ardilez Natalia, Chara María, D'Arcangelo Carolina y Molina José.   
+
+-Sábado 13/01/2024
+   Resumen: Vimos los temas que estaban incompletos para finalizar el Sprint 5.
+   Inconvenientes: Problemas para subir al repositorio los cambios, que debíamos completar para continuar con los temas siguientes.
+   Participantes: Chara María, D'Arcangelo Carolina y Molina José.
 
 ver el weekly en su contexto: https://app.mural.co/t/tiendaoficialdeportiva1545/m/tiendaoficialdeportiva1545/1700682602599/19b655146e74af58e117e08e45ea4536528c158e?sender=uba9d0c1dc7efe41329ec7445
