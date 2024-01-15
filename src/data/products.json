@@ -2,9 +2,9 @@
  {
   "id": 2,
   "name": "nisl venenatis",
-  "description": "primis in faucibus orci luctus et ultrices posuere",
+  "description": " nisl venenatis ",
   "image": "image2.png",
-  "category": "accesorio",
+  "category": "calzados",
   "colors": "Turquoise",
   "price": 8800,
   "size": 4
@@ -21,7 +21,7 @@
  },
  {
   "id": 4,
-  "name": "diam cras",
+  "name": "diam cras ASFDASD",
   "description": " diam cras ",
   "image": "1702668488032-img-image1.png",
   "category": "calzados",
@@ -41,13 +41,14 @@
  },
  {
   "id": 6,
-  "name": "in faucibus orci",
-  "description": "at lorem integer tincidunt ante",
+  "name": "   camiseta selección argentina",
+  "description": "    at lorem integer tincidunt ante    ",
   "image": "image6.png",
   "category": "indumentaria",
-  "colors": "Goldenrod",
-  "price": 6425,
-  "size": 3
+  "colors": "    Goldenrod",
+  "price": "10000",
+  "size": 3,
+  "discount": "10"
  },
  {
   "id": 7,
@@ -188,5 +189,45 @@
   "colors": "Indigo",
   "price": 2267,
   "size": 4
+ },
+ {
+  "id": "4020492c-15d9-4d99-b02c-051aae8f9a97",
+  "name": "Raquetas Yonex",
+  "description": " raqueta orientada al control combina la precisión de efectos con una potente velocidad. ",
+  "image": "1705198292077-img-raqueta_yonex.jpg",
+  "category": "accesorios",
+  "colors": "colorado tirando a bordó",
+  "price": "405000",
+  "discount": "10"
+ },
+ {
+  "id": "d0c8f47d-4f0b-4fa2-ad42-1f0be127bea3",
+  "name": "Canillera Puma Evoforce",
+  "description": "El modelo evoFORCE III es una canillera ligera y altamente protectora para entrenar y jugar partidos\r\nPosee ajuste de velcro.",
+  "image": "1705198887419-img-canilleras_futbol.jpg",
+  "category": "accesorios",
+  "colors": "blanca",
+  "price": "14000",
+  "discount": "10"
+ },
+ {
+  "id": "f00875d5-93d5-43e8-a1a6-8b5263ff350f",
+  "name": "   Colchon Inflable 2 Plazas con Almohadas Inflador Portátil",
+  "description": "   Este colchón inflable de dos plazas es ideal para acampar o para recibir visitas en casa. Viene con dos almohadas para mayor comodidad y un inflador portátil para facilitar su uso. Su color azul le da un toque de estilo y modernidad.   ",
+  "image": "1705199741445-img-colchÃ³n_inflable.jpg",
+  "category": "accesorios",
+  "colors": "   azul",
+  "price": "34000",
+  "discount": "10"
+ },
+ {
+  "id": "9d445c46-fb7e-4fd3-89d8-9e7416cbb979",
+  "name": "Kit Entrenamiento Futbol Conos Vallas Aros Escalera",
+  "description": "Se entrega:\r\n\r\n-2 CONOS 30 CM EF-A110\r\n-1 VALLA SALTO EF-A121\r\n-1 ESCALERA COORDINACION EF-A102\r\n-2 AROS PLANOS 60 CM EF-A117\r\n-2 VALLAS SALTO 15 CM EF-A114\r\n-1 VALLA SALTO 30 CM EF-A115\r\n-4 CONOS 23 CM EF-A107\r\n-12 CONOS TORTUGA EF-A103\r\n-6 CONOS SLALOM EF-A106",
+  "image": "1705270340422-img-kit_entrenamiento.jpg",
+  "category": "accesorios",
+  "colors": "varios",
+  "price": "50000",
+  "discount": "0"
  }
 ]

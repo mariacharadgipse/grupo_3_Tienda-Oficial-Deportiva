@@ -12,12 +12,18 @@
 
                     <div class="elementForm">
                         <label for="name" class="label-form">Nombre del Producto</label>
-                        <input type="text" id="name" name="name" class="control" placeholder="Nombre del producto" value="<%= pToEdit.name %>">
+                        <input type="text" id="name" name="name" class="control" placeholder="Nombre del producto" value=" <%= pToEdit.name  || (locals.oldData && oldData.name ? oldData.name : null )%>">
+                        <% if (locals.errors && errors.name) { %>
+                            <p class="mensajeError"><%= errors.name.msg %></p>
+                            <% } %>                        
                     </div>
 
                     <div class="elementForm">
                         <label for="price">Precio</label>
-                        <input type="text" id="price" name="price" class="control" placeholder="$2789" value="<%= pToEdit.price %>"></input>
+                        <input type="text" id="price" name="price" class="control" placeholder="$2789" value="<%= pToEdit.price  || (locals.oldData && oldData.price ? oldData.price : null )%>"></input>
+                        <% if (locals.errors && errors.price) { %>
+                            <p class="mensajeError"><%= errors.price.msg %></p>
+                            <% } %>                        
                     </div>
 
                     <div class="elementForm">
@@ -36,12 +42,15 @@
 
                     <div class="elementForm">
                         <label for="description">Descripción</label>
-                        <textarea name="description" id="description" class="control"> <%= pToEdit.name %> </textarea>
+                        <textarea name="description" id="description" class="control"> <%= pToEdit.description %> </textarea>
                     </div>
 
                     <div class="elementForm">
                         <label>Colores</label>
-                        <input type="text" name="Colores" class="control"></input>
+                        <input type="text" name="colors" class="control" value=" <%= pToEdit.colors  || (locals.oldData && oldData.colors ? oldData.colors : null )%>"></input>
+                        <% if (locals.errors && errors.colors) { %>
+                            <p class="mensajeError"><%= errors.colors.msg %></p>
+                            <% } %>                         
                     </div>
 
                     <div class="elementForm">
