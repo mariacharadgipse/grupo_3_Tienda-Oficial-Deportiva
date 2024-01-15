@@ -44,8 +44,13 @@ const controller = {
 			const newProduct = {
 				// id: products.length + 1,
 				id: uuidv4(), //id unico uuid
+				name: req.body.name || pToEdit.name,
+				description: req.body.description || pToEdit.description,
 				image: req.file?.filename || 'default.png', //imagen por defecto
-				...req.body // spread operator
+				category: req.body.category || pToEdit.category,
+				colors:  req.body.colors || pToEdit.colors,				
+				price: req.body.price || pToEdit.price,
+				discount: req.body.discount || pToEdit.discount,
 			}
 			// Agrego nuevo producto al listado
 			products.push(newProduct)
@@ -68,6 +73,11 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
+		let results = validationResult(req)
+		console.log('1- errors', results);
+		console.log('-------------------------------');
+		console.log('2- errors mapped', results.mapped());
+		if (results.isEmpty()) {
 		// JSON de productos
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		// Buscar el producto a editar
@@ -79,9 +89,16 @@ const controller = {
 		pToEdit.category = req.body.category || pToEdit.category
 		pToEdit.description = req.body.description || pToEdit.description
 		pToEdit.image = req.file?.filename || pToEdit.image
+		pToEdit.colors = req.body.colors || pToEdit.colors		
 		// Escribe el nuevo JSON de productos
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
 		res.redirect('/products')
+	} else {
+		console.log(results),
+		// res.render('productEdit.ejs', {errors: results.errors, oldData: req.body})
+		res.render('products/productEdit.ejs', { errors: results.mapped(), oldData: req.body })
+	}
+
 	},
 
 

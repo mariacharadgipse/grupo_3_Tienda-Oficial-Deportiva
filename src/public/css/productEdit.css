@@ -61,3 +61,7 @@
     justify-content: center
 }
 
+.mensajeError {
+    font-size: 12px;
+    color: red;
+  }

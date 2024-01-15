@@ -13,22 +13,20 @@ const upload = require('../middlewares/multer')
 // ************ Controller Require ************
 let productController=require('../controllers/productController.js');
 
-/*** GET ALL PRODUCTS http://localhost:5000/products ***/
+/*** GET ALL PRODUCTS http://localhost:3000/products ***/
 router.get('/', productController.getProducts);
 
-/*** CREATE ONE PRODUCT http://localhost:5000/products/create ***/
+/*** CREATE ONE PRODUCT http://localhost:3000/products/create ***/
 router.get('/create', productController.getCreate);
 router.post('/create', upload.single('images'),validateProducts, productController.postStore);
 
 
 router.get('/detail/:id', productController.getDetail);
-router.get('/cart', productController.getCart);
+router.get('/cart/:id', productController.getCart);
 
-/*** EDIT ONE PRODUCT http://localhost:5000/products/edit/1 ***/
+/*** EDIT ONE PRODUCT http://localhost:3000/products/edit/1 ***/
 router.get('/edit/:id', productController.edit);
-router.put('/edit/:id', upload.single('images'), validateProducts, productController.update);
-
-router.delete('/delete/:id', productController.deleDestroy)
+router.put('/edit/:id', upload.single('images'), productController.update);
 
 
 module.exports=router;
