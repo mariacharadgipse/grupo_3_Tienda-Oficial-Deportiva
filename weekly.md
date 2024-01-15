@@ -48,14 +48,19 @@ Semana 2
    Inconvenientes: No tuvimos.
    Participantes: Ardilez Natalia, Chara María, D'Arcangelo Carolina y Molina José.
 
+-Jueves 04/01/2024
+   Resumen: Nos dividimos las tareas nuevamente: Formulario register: Ardilez, Natalia y Molina, José. Formulario login: D'Arcangelo, Carolina y Chara, María.
+   Inconvenientes: Luego del receso, percibimos que estábamos atrasados con el avance del sprint.
+   Participantes: Ardilez Natalia, Chara María, D'Arcangelo Carolina y Molina José.   
+
 -Domingo 07/01/2024
-   Resumen: Comenzamos a armar el login para nuestra página.
-   Inconvenientes: No pudimos hacer funcionar el login, por lo que buscamos distintas alternativas de solución.
+   Resumen: Ya veníamos trabajando, pero teníamos 2 alternativas a la hora de trabajar: basarnos en el video de 2 horas o en el video de la clase 32. Comenzamos a armar el login para nuestra página. 
+   Inconvenientes: No pudimos hacer funcionar el login, por lo que buscamos distintas alternativas de solución. Se llegó a un punto muerto en el desarrollo del register al basarnos en el video de 2 horas. Decidimos cambiar al video de la clase 32.
    Participantes: Ardilez Natalia, Chara María, D'Arcangelo Carolina y Molina José.   
 
 -Sábado 13/01/2024
    Resumen: Vimos los temas que estaban incompletos para finalizar el Sprint 5.
-   Inconvenientes: Problemas para subir al repositorio los cambios, que debíamos completar para continuar con los temas siguientes.
+   Inconvenientes: Debido a que no utilizamos ramas, tuvimos problemas para subir al repositorio algunos cambios, que debíamos completar para continuar con los temas siguientes. Eso nos atrasó en la finalización del sprint.
    Participantes: Chara María, D'Arcangelo Carolina y Molina José.
 
 ver el weekly en su contexto: https://app.mural.co/t/tiendaoficialdeportiva1545/m/tiendaoficialdeportiva1545/1700682602599/19b655146e74af58e117e08e45ea4536528c158e?sender=uba9d0c1dc7efe41329ec7445
