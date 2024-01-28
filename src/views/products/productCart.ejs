@@ -24,6 +24,12 @@
             <section class="productDescription">
               <h3><%= pSelected.name %></h3>
               <p> <%= pSelected.description %></p>
+              <span> $ <%= pSelected.price %></span>
+              <% if (pSelected.discount > 0) { %>
+                <span> <%= pSelected.discount %> % OFF</span>
+                <% } else { %>
+                  <span> 0 % OFF</span>
+              <% } %>
             </section>
             
             <section class="quantity">

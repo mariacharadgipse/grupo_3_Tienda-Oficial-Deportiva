@@ -27,9 +27,13 @@
 
                             <p class="product-detail-price small">
                                 <span>$<%= pSelected.price %></span>
+                                <% if (pSelected.discount > 0) { %>
                                 <b>
                                     <%= pSelected.discount %>% OFF
                                 </b>
+                                <% } else { %>
+                                    <b> 0 % OFF</b>
+                                <% } %>
                             </p>
                             <p class="product-detail-price">
                                 $<%= pSelected.price %>

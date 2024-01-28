@@ -102,12 +102,12 @@
  },
  {
   "id": 11,
-  "name": "elit",
-  "description": "donec quis orci eget orci vehicula condimentum",
+  "name": "campera negra newells",
+  "description": " donec quis orci eget orci vehicula condimentum ",
   "image": "image11.png",
-  "category": "indumentaria",
-  "colors": "Orange",
-  "price": 6594,
+  "category": "calzados",
+  "colors": " Orange",
+  "price": "6594",
   "visit": "visited",
   "size": 5
  },
@@ -241,7 +241,7 @@
   "colors": "  colorado tirando a bordó",
   "price": "405000",
   "visit": "in-sale",
-  "discount": "10"
+  "discount": "0"
  },
  {
   "id": "d0c8f47d-4f0b-4fa2-ad42-1f0be127bea3",
