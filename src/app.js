@@ -3,8 +3,7 @@ const path = require('path')
 const app = express()
 const port = 5000
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
-const cookieParser = require ('cookie-parser')
-
+const cookieParser = require('cookie-parser')
 
 const remembermeMiddleware = require('./middlewares/remembermeMiddleware')
 
@@ -27,7 +26,7 @@ resave: false,
 saveUninitialized: true,
 }));
 
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false}));  //ver si se pone app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
 //app.use(cookieParser())

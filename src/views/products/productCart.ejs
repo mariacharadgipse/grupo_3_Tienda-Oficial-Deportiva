@@ -18,13 +18,12 @@
         <div class="container">
           <div class="products">
             <article class="productImage">
-              <img src="/img/img-mistery.jpg" alt="product image" width="200px" height="200px">
+              <img src="/img/products/<%= pSelected.image %>" alt="product image" width="200px" height="200px">
             </article>
 
             <section class="productDescription">
-              <h3>Producto Misterioso</h3>
-              <p>Caja misteriosa con elementos de origen Argentino. Cada caja contiene 10 productos, amplia
-              variedad de categorías.</p>
+              <h3><%= pSelected.name %></h3>
+              <p> <%= pSelected.description %></p>
             </section>
             
             <section class="quantity">
@@ -32,24 +31,34 @@
               <form id="quantity" method="post">
                 <label for="cantidad">Cantidad:</label>
                 <select type="number">
-                  <option value="1"></option>
-                  <option value="2"></option>
-                  <option value="3"></option>
-                  <option value="4"></option>
-                  <option value="5"></option>
-                  <option value="6"></option>
-                  <option value="7"></option>
-                  <option value="8"></option>
-                  <option value="9"></option>
-                  <option value="10"></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
                 </select>
               </form>
             </section>
           </div>
           <div class="calculations">
 
+            <section class="price">
+              <h3>Precio</h3>
+              <h4>$<%= pSelected.price %></h4>
+                <% if (pSelected.discount > 0 ){ %> 
+                    <span><%= pSelected.discount %> % OFF</span>
+                <%}else { %>
+                <span> 0 % OFF </span>
+              <% } %>
+            </section>
+
             <h4>Subtotal</h4>
-            <div class="formulario">
+            <!--<div class="formulario">
               <h4>Código de descuento y código postal</h4>
               <form id="formularioEnvio">
                 <label for="codigoDescuento">Código de Descuento:</label>
@@ -60,8 +69,14 @@
                 <input type="text" id="codigoPostal" name="codigoPostal">
 
                 <button type="button" onclick="calcularCostoEnvio()">Calcular Costo de Envío</button>
-              </form>
+              </form>-->
+
               <h3>Total</h3>
+              <h3>Total</h3>
+              <p class="totalPrice">
+              </span> Precio Total$<span= "precioTotal">
+                <%= pSelected.price %></span></p>
+            </div>
 
             </div>
 

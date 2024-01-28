@@ -22,7 +22,7 @@ router.post('/create', upload.single('images'),validateProducts, productControll
 
 
 router.get('/detail/:id', productController.getDetail);
-router.get('/cart', productController.getCart);
+router.get('/cart/:id', productController.getCart);
 
 /*** EDIT ONE PRODUCT http://localhost:5000/products/edit/1 ***/
 router.get('/edit/:id', productController.edit);

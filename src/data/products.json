@@ -1,12 +1,12 @@
 [
  {
   "id": 2,
-  "name": "    nisl venenatisss12",
-  "description": "     nisl venenatis     ",
+  "name": "nisl venenatis",
+  "description": " nisl venenatis ",
   "image": "image2.png",
   "category": "calzados",
-  "colors": "    Turquoise",
-  "price": "8800",
+  "colors": "Turquoise",
+  "price": 8800,
   "size": 4
  },
  {
@@ -17,6 +17,7 @@
   "category": "calzados",
   "colors": "Puce",
   "price": "2376",
+  "visit": "in-sale",
   "size": 2
  },
  {
@@ -27,7 +28,9 @@
   "category": "calzados",
   "colors": " Aquamarine",
   "price": "5000",
-  "size": 2
+  "size": 2,
+  "visit": "visited",
+  "discount": 10
  },
  {
   "id": 5,
@@ -37,6 +40,7 @@
   "category": "calzado",
   "colors": "Teal",
   "price": 3633,
+  "visit": "in-sale",
   "size": 1
  },
  {
@@ -48,6 +52,7 @@
   "colors": "    Goldenrod",
   "price": "10000",
   "size": 3,
+  "visit": "visited",
   "discount": "10"
  },
  {
@@ -58,6 +63,7 @@
   "category": "accesorio",
   "colors": "Maroon",
   "price": 6124,
+  "visit": "in-sale",
   "size": 3
  },
  {
@@ -68,6 +74,7 @@
   "category": "indumentaria",
   "colors": "Mauv",
   "price": 6347,
+  "visit": "visited",
   "size": 1
  },
  {
@@ -78,6 +85,7 @@
   "category": "accesorio",
   "colors": "Orange",
   "price": 9346,
+  "visit": "in-sale",
   "size": 1
  },
  {
@@ -88,6 +96,7 @@
   "category": "calzado",
   "colors": "Purple",
   "price": 1390,
+  "visit": "in-sale",
   "size": 4
  },
  {
@@ -98,6 +107,7 @@
   "category": "indumentaria",
   "colors": "Orange",
   "price": 6594,
+  "visit": "visited",
   "size": 5
  },
  {
@@ -107,6 +117,7 @@
   "image": "image12.png",
   "category": "calzado",
   "colors": "Khaki",
+  "visit": "in-sale",
   "price": 2533,
   "size": 5
  },
@@ -117,6 +128,7 @@
   "image": "image13.png",
   "category": "calzado",
   "colors": "Maroon",
+  "visit": "visited",
   "price": 5470,
   "size": 3
  },
@@ -127,6 +139,7 @@
   "image": "image14.png",
   "category": "indumentaria",
   "colors": "Puce",
+  "visit": "in-sale",
   "price": 1222,
   "size": 5
  },
@@ -137,6 +150,7 @@
   "image": "image15.png",
   "category": "indumentaria",
   "colors": "Khaki",
+  "visit": "in-sale",
   "price": 7400,
   "size": 5
  },
@@ -147,6 +161,7 @@
   "image": "image16.png",
   "category": "indumentaria",
   "colors": "Purple",
+  "visit": "in-sale",
   "price": 4802,
   "size": 3
  },
@@ -157,6 +172,7 @@
   "image": "image17.png",
   "category": "indumentaria",
   "colors": "Purple",
+  "visit": "in-sale",
   "price": 5236,
   "size": 1
  },
@@ -167,6 +183,7 @@
   "image": "image18.png",
   "category": "calzado",
   "colors": "Khaki",
+  "visit": "in-sale",
   "price": 2429,
   "size": 5
  },
@@ -178,6 +195,7 @@
   "category": "indumentaria",
   "colors": "Khaki",
   "price": 8711,
+  "visit": "in-sale",
   "size": 2
  },
  {
@@ -188,6 +206,7 @@
   "category": "accesorio",
   "colors": "Indigo",
   "price": 2267,
+  "visit": "in-sale",
   "size": 4
  },
  {
@@ -198,6 +217,7 @@
   "discount": "10",
   "description": "moi",
   "category": "indumentaria",
+  "visit": "in-sale",
   "colors": "pio"
  },
  {
@@ -208,16 +228,18 @@
   "discount": "1",
   "description": "lll",
   "category": "indumentaria",
+  "visit": "in-sale",
   "colors": "ppp"
  },
  {
   "id": "4020492c-15d9-4d99-b02c-051aae8f9a97",
-  "name": "Raquetas Yonex",
-  "description": " raqueta orientada al control combina la precisión de efectos con una potente velocidad. ",
+  "name": "  Raquetas Yonex",
+  "description": "   raqueta orientada al control. Combina la precisión de efectos con una potente velocidad.   ",
   "image": "1705198292077-img-raqueta_yonex.jpg",
-  "category": "accesorios",
-  "colors": "colorado tirando a bordó",
+  "category": "calzados",
+  "colors": "  colorado tirando a bordó",
   "price": "405000",
+  "visit": "in-sale",
   "discount": "10"
  },
  {
@@ -228,6 +250,7 @@
   "category": "accesorios",
   "colors": "blanca",
   "price": "14000",
+  "visit": "in-sale",
   "discount": "10"
  },
  {
@@ -238,6 +261,7 @@
   "category": "accesorios",
   "colors": "   azul",
   "price": "34000",
+  "visit": "in-sale",
   "discount": "10"
  },
  {
@@ -248,6 +272,7 @@
   "category": "accesorios",
   "colors": "varios",
   "price": "50000",
+  "visit": "in-sale",
   "discount": "0"
  }
 ]
