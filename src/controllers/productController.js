@@ -102,10 +102,19 @@ const controller = {
 	},
 
 
-	getCart: (req, res) => {
+	/*getCart: (req, res) => {
 		// Lógica del controlador para la página de inicio
 		res.render('products/productCart'); // Renderiza la plantilla 'productCart.ejs' en la carpeta 'views'
+	},*/	
+
+	getCart: (req, res) => {
+		// Lógica del controlador para la página de inicio
+		const pSelected = products.find(product => product.id == req.params.id)
+		console.log(pSelected)
+		res.render('products/productCart.ejs', { pSelected }); // Renderiza la plantilla 'productCart.ejs' en la carpeta 'views'
+		//res.render('/products/productCart'); 
 	},
+
 	deleDestroy: (req, res) => {
 		const id = req.params.id;
 		let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

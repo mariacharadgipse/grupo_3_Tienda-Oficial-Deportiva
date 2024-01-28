@@ -18,13 +18,12 @@
         <div class="container">
           <div class="products">
             <article class="productImage">
-              <img src="/img/img-mistery.jpg" alt="product image" width="200px" height="200px">
+              <img src="/img/products/<%= pSelected.image %>" alt="product image" width="200px" height="200px">
             </article>
 
             <section class="productDescription">
-              <h3>Producto Misterioso</h3>
-              <p>Caja misteriosa con elementos de origen Argentino. Cada caja contiene 10 productos, amplia
-              variedad de categorías.</p>
+              <h3><%= pSelected.name %></h3>
+              <p> <%= pSelected.description %></p>
             </section>
             
             <section class="quantity">
@@ -32,16 +31,16 @@
               <form id="quantity" method="post">
                 <label for="cantidad">Cantidad:</label>
                 <select type="number">
-                  <option value="1"></option>
-                  <option value="2"></option>
-                  <option value="3"></option>
-                  <option value="4"></option>
-                  <option value="5"></option>
-                  <option value="6"></option>
-                  <option value="7"></option>
-                  <option value="8"></option>
-                  <option value="9"></option>
-                  <option value="10"></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
                 </select>
               </form>
             </section>

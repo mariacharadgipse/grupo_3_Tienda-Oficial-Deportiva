@@ -1,0 +1,102 @@
+/*====== Variables ======*/
+:root {
+  --yellow: #EAC926;
+  --dark-blue: #03264C;
+  --light-blue: #1259c3;
+  --gray: #666666;
+  --light-gray: #ebebeb;
+  --green: #39b54a;
+  --base-font-family: 'Roboto', sans-serif
+}
+
+
+/*====== Basics ======*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+
+body {
+  min-height: 100vh;
+  margin: 0 px;
+  font-size: 10px;
+}
+
+.main {
+  display: flex;
+  width: 98vw;
+  margin: 10px auto;
+  border: 10px;
+  height: max-content 450px;
+
+}
+
+.tituloGeneral {
+  color: black;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.contGeneral{
+  display: block;
+  width: 100%;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.contProducts {
+  width: 100%;
+  justify-content: space-around
+}
+
+.product {
+  display: block;
+  padding: 5px;
+  background-color: var(--light-gray);
+  width: 300px;
+  height: auto;
+  align-items: center;
+  border: solid 5px red;
+  border-radius: 8px;
+  margin: 10px
+}
+
+.fa-truck{
+  color:green;
+  border-radius: 100%;
+  border: 1px #39b54a;
+  background-color: solid #ebebeb;
+  font-size: 20px;
+}
+
+
+
+/*====== Media-Queries ======*/
+
+
+@media (min-width:770px) {
+  .product {
+    width: 22%;
+  }
+
+  .contProducts {
+    display: flex;
+flex-wrap: wrap;
+  }
+
+  }  
+  
+  
+  @media (max-width:440px) {
+  .logoCompletoSinFondo {
+    margin-left: 0;
+    padding: 0%;
+    width: 150px;
+    height: 80px;
+  }
+  }

@@ -3,7 +3,7 @@ const router=express.Router();
 
 //REGISTER
 
-const {getRegister, register, postRegister} = require('../controllers/userController.js')
+const {getRegister, postRegister} = require('../controllers/userController.js')
 
 router.get('/register', getRegister);
 

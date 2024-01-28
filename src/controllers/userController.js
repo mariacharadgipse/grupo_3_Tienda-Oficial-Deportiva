@@ -29,7 +29,7 @@ const controller = {
 		// debemos guardar ese nuevo usuario
 		let newUser = {
 			id: uuidv4(),
-			email: email,
+			email: req.body.email,
 		
 			image: req.file?.filename || 'default.png', //imagen por defecto
 			...req.body, // spread operator
