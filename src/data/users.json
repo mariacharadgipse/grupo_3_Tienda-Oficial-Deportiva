@@ -152,5 +152,14 @@
   "last_name": "maria",
   "password": "$2a$10$gl1o8hB3bC6mLwWelMt/n.5CW0QIGyZZBTUudz27/IHa5LML1mhpC",
   "category": ""
+ },
+ {
+  "id": "ee5c3364-1f32-4145-9c79-6145b1cd19dc",
+  "email": "yo@correo.com",
+  "image": "default.png",
+  "first_name": "maria",
+  "last_name": "yo",
+  "password": "$2a$10$xbOvKkMVy/IWkEBL7rc.QOjd0Gc4z5q63HyQmi4kb4zR8vwfllInS",
+  "category": "cliente"
  }
 ]

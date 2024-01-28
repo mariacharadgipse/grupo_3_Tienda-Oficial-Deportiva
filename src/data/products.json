@@ -1,12 +1,12 @@
 [
  {
   "id": 2,
-  "name": "nisl venenatis",
-  "description": " nisl venenatis ",
+  "name": "    nisl venenatisss12",
+  "description": "     nisl venenatis     ",
   "image": "image2.png",
   "category": "calzados",
-  "colors": "Turquoise",
-  "price": 8800,
+  "colors": "    Turquoise",
+  "price": "8800",
   "size": 4
  },
  {
@@ -21,11 +21,11 @@
  },
  {
   "id": 4,
-  "name": "diam cras ASFDASD",
-  "description": " diam cras ",
+  "name": " diam cras",
+  "description": "  diam cras  ",
   "image": "1702668488032-img-image1.png",
   "category": "calzados",
-  "colors": "Aquamarine",
+  "colors": " Aquamarine",
   "price": "5000",
   "size": 2
  },
