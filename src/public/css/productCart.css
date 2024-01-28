@@ -11,6 +11,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial;
+  
+  
 }
 body {
     font-family: Arial, sans-serif;
@@ -21,6 +23,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+   
 }    
 
 main {

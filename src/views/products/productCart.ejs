@@ -47,8 +47,18 @@
           </div>
           <div class="calculations">
 
+            <section class="price">
+              <h3>Precio</h3>
+              <h4>$<%= pSelected.price %></h4>
+                <% if (pSelected.discount > 0 ){ %> 
+                    <span><%= pSelected.discount %> % OFF</span>
+                <%}else { %>
+                <span> 0 % OFF </span>
+              <% } %>
+            </section>
+
             <h4>Subtotal</h4>
-            <div class="formulario">
+            <!--<div class="formulario">
               <h4>Código de descuento y código postal</h4>
               <form id="formularioEnvio">
                 <label for="codigoDescuento">Código de Descuento:</label>
@@ -59,8 +69,14 @@
                 <input type="text" id="codigoPostal" name="codigoPostal">
 
                 <button type="button" onclick="calcularCostoEnvio()">Calcular Costo de Envío</button>
-              </form>
+              </form>-->
+
               <h3>Total</h3>
+              <h3>Total</h3>
+              <p class="totalPrice">
+              </span> Precio Total$<span= "precioTotal">
+                <%= pSelected.price %></span></p>
+            </div>
 
             </div>
 
