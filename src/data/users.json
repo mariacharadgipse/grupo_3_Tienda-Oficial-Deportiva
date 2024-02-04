@@ -154,6 +154,15 @@
   "category": ""
  },
  {
+  "id": "ee5c3364-1f32-4145-9c79-6145b1cd19dc",
+  "email": "yo@correo.com",
+  "image": "default.png",
+  "first_name": "maria",
+  "last_name": "yo",
+  "password": "$2a$10$xbOvKkMVy/IWkEBL7rc.QOjd0Gc4z5q63HyQmi4kb4zR8vwfllInS",
+  "category": "cliente"
+ },
+ {
   "id": "219de60c-bda9-4223-8354-c84407de8730",
   "email": "josejjj@gmail.com",
   "image": "",
