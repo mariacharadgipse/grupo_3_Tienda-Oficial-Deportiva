@@ -152,5 +152,14 @@
   "last_name": "maria",
   "password": "$2a$10$gl1o8hB3bC6mLwWelMt/n.5CW0QIGyZZBTUudz27/IHa5LML1mhpC",
   "category": ""
+ },
+ {
+  "id": "219de60c-bda9-4223-8354-c84407de8730",
+  "email": "josejjj@gmail.com",
+  "image": "",
+  "first_name": "jose",
+  "last_name": "molina",
+  "password": "$2a$10$M76skR4XLVBjhWB1a33YteyMX5nY1QfLVTLpXsMIaL.WgwvmgSduq",
+  "category": "administrador"
  }
 ]
