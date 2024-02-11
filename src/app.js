@@ -11,6 +11,7 @@ const remembermeMiddleware = require('./middlewares/remembermeMiddleware')
 // Config static folder
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
+
 let indexRoutes= require('./routes/index')
 
 let productsRoutes= require('./routes/products')
