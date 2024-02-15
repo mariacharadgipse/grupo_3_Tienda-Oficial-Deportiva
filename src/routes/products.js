@@ -1,6 +1,6 @@
 // ************ Require's ************
 const express = require('express');
-const router=express.Router();
+const router = express.Router();
 
 const validateProducts = require('../middlewares/validateProducts')
 
@@ -11,17 +11,18 @@ const upload = require('../middlewares/multer')
 
 
 // ************ Controller Require ************
-let productController=require('../controllers/productController.js');
+let productController = require('../controllers/productController.js');
 
 /*** GET ALL PRODUCTS http://localhost:5000/products ***/
-router.get('/', productController.getProducts);
+//router.get('/', productController.getProducts);
+router.get('/', productController.list);
 
 /*** CREATE ONE PRODUCT http://localhost:5000/products/create ***/
-router.get('/create', productController.getCreate);
-router.post('/create', upload.single('images'),validateProducts, productController.postStore);
+//router.get('/create', productController.getCreate);
+//router.post('/create', upload.single('images'), validateProducts, productController.postStore);
 
 
-router.get('/detail/:id', productController.getDetail);
+//router.get('/detail/:id', productController.getDetail);
 router.get('/cart/:id', productController.getCart);
 
 /*** EDIT ONE PRODUCT http://localhost:5000/products/edit/1 ***/
@@ -31,4 +32,4 @@ router.put('/edit/:id', upload.single('images'), validateProducts, productContro
 router.delete('/delete/:id', productController.deleDestroy)
 
 
-module.exports=router;
+module.exports = router;
