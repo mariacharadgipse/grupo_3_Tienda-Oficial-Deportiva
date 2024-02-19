@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         name: {
             type: DataTypes.STRING,
-            allowNull: false,            
+            allowNull: false,
         },
         description: {
             type: DataTypes.STRING,
@@ -19,19 +19,19 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        idCategoryProduct : {
+        idCategoryProduct: {
             type: DataTypes.INTEGER,
-            allowNull: false,            
-        },   
-        price : {
-            type: DataTypes.DECIMAL(6,2).UNSIGNED,
-            allowNull: false,            
-        },  
+            allowNull: false,
+        },
+        price: {
+            type: DataTypes.DECIMAL(6, 2).UNSIGNED,
+            allowNull: false,
+        },
         discount: {
             type: DataTypes.DECIMAL(2, 1).UNSIGNED,
             allowNull: false,
         },
-        idcolor: {
+        idColor: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
@@ -41,8 +41,8 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
         /*createdAt: 'created_at',
         updatedAt: 'updated_at',*/
-        deletedAt: false        
-    }    
+        deletedAt: false
+    }
 
     const Product = sequelize.define(alias, cols, config)
     return Product;

@@ -9,48 +9,79 @@
             <main class="formContenedor">
                 <h1 class="tituloCreate"><strong>Nuevo Producto</strong></h1>
                 <form action="/products/create" method="POST" enctype="multipart/form-data">
-                   
+
                     <label for="name" class="elementForm">Nombre del Producto</label>
-                    <input type="text" id="name" name="name" class="control" value="<%= locals.oldData && oldData.name ? oldData.name : null %>">
+                    <input type="text" id="name" name="name" class="control"
+                        value="<%= locals.oldData && oldData.name ? oldData.name : null %>">
                     <% if (locals.errors && errors.name) { %>
-                    <p class="mensajeError"><%= errors.name.msg %></p>
-                    <% } %>
-
-
-                    <label for="price" class="elementForm">Precio</label>
-                    <input type="text" id="price" name="price" class="control" value="<%= locals.oldData && oldData.price ? oldData.price : null %>">
-                    <% if (locals.errors && errors.price) { %>
-                        <p class="mensajeError"><%= errors.price.msg %></p>
+                        <p class="mensajeError">
+                            <%= errors.name.msg %>
+                        </p>
                         <% } %>
 
 
-                    <label for="discount" class="form-label">Descuento:</label>
-                    <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="control" value="<%= locals.oldData && oldData.discount ? oldData.discount : null %>">
-                    <% if (locals.errors && errors.discount) { %>
-                        <p class="mensajeError"><%= errors.discount.msg %></p>
-                        <% } %> 
+                            <label for="price" class="elementForm">Precio</label>
+                            <input type="text" id="price" name="price" class="control"
+                                value="<%= locals.oldData && oldData.price ? oldData.price : null %>">
+                            <% if (locals.errors && errors.price) { %>
+                                <p class="mensajeError">
+                                    <%= errors.price.msg %>
+                                </p>
+                                <% } %>
 
-                    <label for="description" class="elementForm">Descripción</label>
-                    <textarea id="description" name="description" class="control"></textarea>
 
-                    <label for="category" class="elementForm">Categoría</label>
-                    <select id="category" name="category" class="control">
-                        <option value="calzados">Calzados</option>
-                        <option value="indumentaria">Indumentaria</option>
-                        <option value="accesorios">Accesorios</option>
-                    </select>
+                                    <label for="discount" class="form-label">Descuento:</label>
+                                    <input type="text" id="discount" name="discount" placeholder="Ej: 15"
+                                        class="control"
+                                        value="<%= locals.oldData && oldData.discount ? oldData.discount : null %>">
+                                    <% if (locals.errors && errors.discount) { %>
+                                        <p class="mensajeError">
+                                            <%= errors.discount.msg %>
+                                        </p>
+                                        <% } %>
 
-                    <label for="colors" class="elementForm">Colores</label>
-                    <input type="text" id="colors" name="colors" class="control" value="<%= locals.oldData && oldData.colors ? oldData.colors : null %>">
-                    <% if (locals.errors && errors.colors) { %>
-                        <p class="mensajeError"><%= errors.colors.msg %></p>
-                        <% } %>                     
+                                            <label for="description" class="elementForm">Descripción</label>
+                                            <textarea id="description" name="description" class="control"></textarea>
 
-                    <label for="images" class="elementForm">Imágenes del producto</label>
-                    <input type="file" id="images" name="images" class="control" accept=".jpg, .png" multiple></input>
+                                            <label for="idCategoryProduct" class="elementForm">Categoría</label>
+                                            <select id="idCategoryProduct" name="idCategoryProduct" class="control">
+                                                <option value="1" selected>Calzados</option>
+                                                <option value="2">Accesorios</option>
+                                                <option value="3">Indumentaria</option>
+                                            </select>
 
-                    <button type="reset" class="botonForm">Borrar</button>
-                    <button type="submit" class="botonForm">Guardar</button>
+                                            <label for="idColor" class="elementForm">Colores</label>
+                                            <select id="idColor" name="idColor" class="control">
+                                                <option value="1" selected>blanco</option>
+                                                <option value="2">Negro</option>
+                                                <option value="3">Gris</option>
+                                                <option value="4">Rojo</option>
+                                                <option value="5">Azul</option>
+                                                <option value="6">Verde</option>
+                                                <option value="7">Amarillo</option>
+                                                <option value="8">Naranja</option>
+                                                <option value="9">Morado</option>
+                                                <option value="10">Rosa</option>
+                                                <option value="11">Marrón</option>
+                                                <option value="12">Beige</option>
+                                            </select>
+
+                                            <!-- <label for="idColor" class="elementForm">Colores</label>
+                                            <input type="text" id="idColor" name="idColor" class="control"
+                                                value="<#%= locals.oldData && oldData.idColor ? oldData.idColor : null %>">
+                                            <#% if (locals.errors && errors.idColor) { %>
+                                                <p class="mensajeError">
+                                                    <#%= errors.idColor.msg %>
+                                                </p>
+                                                <#% } %> -->
+
+                                            <label for="images" class="elementForm">Imágenes del
+                                                producto</label>
+                                            <input type="file" id="images" name="images" class="control"
+                                                accept=".jpg, .png" multiple></input>
+
+                                            <button type="reset" class="botonForm">Borrar</button>
+                                            <button type="submit" class="botonForm">Guardar</button>
 
                 </form>
             </main>

@@ -1,8 +1,8 @@
 const { validationResult } = require('express-validator');
 // const fs = require('fs');
 // const path = require('path');
-// const { v4: uuidv4 } = require('uuid');
-// const { filter } = require('../middlewares/validateProducts');
+const { v4: uuidv4 } = require('uuid');
+const { filter } = require('../middlewares/validateProducts');
 
 // const productsFilePath = path.join(__dirname, '../data/products.json');
 // let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -63,50 +63,16 @@ module.exports = {
 	// 		})
 	// 		.catch(error => console.log(error))
 	// },
-	//===============
 
-	// module.exports = {
-	// 	list: (req, res) => {
-	// 		db.Products.findAll()
-	// 			.then(function (products) {
-	// 				res.json(products);
-	// 			}
-	// 			)
-	// 			.catch(error => console.log(error))
-
-	// 	},
-	// list: async (req, res) => {
-	// 	try {
-	// 		const products = await db.Products.findAll();
-	// 		//res.json('products');
-	// 		console.log(products);
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-
-
-	//}
-	// }
-
-	// list: async (req, res) => {
-	// 	const genres = await db.Genre.findAll();
-	// 	res.render('genresList.ejs', { genres });
-	// },
-
-	// 	newArtist: async (req, res) => {
-	// 		try {
-	// 			const result = await db.Artists.create({ nombre: "Maluma" })
-	// 			res.json("Se creó correctamente")
-	// 		} catch (error) {
-	// 			console.log(error);
-	// 		}
-	// 	}
-
-	// //==========
-	//Create - Form to create
+	//Create - Form to create - BD JSON
 	// getCreate: (req, res) => {
 	// 	res.render('products/productCreate.ejs')
 	// },
+
+	//Create - Form to create - bd Mysql2 Sequelize
+	getCreate: (req, res) => {
+		res.render('products/productCreate.ejs')
+	},
 
 	// Create -  Method to store
 	// postStore: (req, res) => {
@@ -141,14 +107,65 @@ module.exports = {
 	// 			// res.render('product-create-form.ejs', {errors: results.errors, oldData: req.body})
 	// 			res.render('products/productCreate.ejs', { errors: results.mapped(), oldData: req.body })
 	// 	}
-
 	// },
 
+	// Update - Method to update - BD Mysql y JSON
+	// postStore: async (req, res) => {
+	// 	const results = validationResult(req);
+	// 	// 	// console.log('1- errors', results);
+	// 	// 	// console.log('-------------------------------');
+	// 	// 	// console.log('2- errors mapped', results.mapped());
+	// 	if (results.isEmpty()) {
+	// 		console.log(results)
+	// 		const newProduct = await db.Products.create({
+	// 			id: uuidv4(), //id unico uuid
+	// 			name: req.body.name,
+	// 			description: req.body.description,
+	// 			image: req.file?.filename || 'default.png',
+	// 			idCategoryProduct: req.body.category,
+	// 			price: req.body.price,
+	// 			discount: req.body.discount,
+	// 			idColor: req.body.color,
+
+	// 		});
+
+	// 		await newProduct.save();
+	// 		res.redirect('/products');
+	// 	} else {
+	// 		console.log(results)
+	// 		res.render('products/productCreate.ejs', {
+	// 			errors: results.mapped(),
+	// 			oldData: req.body,
+	// 		});
+	// 	}
+	// },
+
+	// Nuevo producto
+	postStore: async (req, res) => {
+		const { name, description, images, idCategoryProduct, price, discount, idColor } = req.body;
+
+		try {
+			const newProduct = await db.Products.create({
+				name,
+				description,
+				images,
+				idCategoryProduct,
+				price,
+				discount,
+				idColor
+			});
+			console.log(newProduct)
+			res.render('products/productCreate.ejs', { newProduct });
+		} catch (error) {
+			console.log(error);
+		}
+	},
 	// Update - Form to edit - BD JSON
 	// edit: (req, res) => {
 	// 	const pToEdit = products.find(product => product.id == req.params.id)
 	// 	res.render('products/productEdit.ejs', { pToEdit })
 	// },
+
 
 	// Update - Form to edit - BD Mysql con Sequelize
 	edit: async (req, res) => {
@@ -169,7 +186,7 @@ module.exports = {
 	},
 
 
-	// Update - Method to update
+	// Update - Method to update - BD JSON
 	// update: (req, res) => {
 	// 	let results = validationResult(req)
 	// 	console.log('1- errors', results);
@@ -198,8 +215,6 @@ module.exports = {
 	// 	}
 
 	// },
-
-
 
 	// Update - Method to update
 	update: async (req, res) => {
@@ -245,13 +260,24 @@ module.exports = {
 	// 	//res.render('/products/productCart');
 	// },
 
-	// deleDestroy: (req, res) => {
+	// deleDestroy1: (req, res) => {
 	// 	const id = req.params.id;
 	// 	let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 	// 	products = products.filter(product => product.id != id)
 	// 	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
 	// 	res.redirect('/products')
 	// },
+
+	// Elminar producto por id
+	deleDestroy: async (req, res) => {
+		const { id } = req.params;
+		try {
+			await db.Products.destroy({ where: { id: id } });
+			res.json({ message: `El producto con id ${id} se eliminó` });
+		} catch (error) {
+			console.log(error);
+		}
+	},
 };
 
 // module.exports = controller;

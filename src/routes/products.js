@@ -17,8 +17,8 @@ let productController = require('../controllers/productController.js');
 router.get('/', productController.getProducts);
 
 /*** CREATE ONE PRODUCT http://localhost:5000/products/create ***/
-// router.get('/create', productController.getCreate);
-// router.post('/create', upload.single('images'), validateProducts, productController.postStore);
+router.get('/create', productController.getCreate);
+router.post('/create', upload.single('images'), validateProducts, productController.postStore);
 
 
 router.get('/detail/:id', productController.getDetail);
@@ -28,7 +28,7 @@ router.get('/detail/:id', productController.getDetail);
 router.get('/edit/:id', productController.edit);
 router.put('/edit/:id', upload.single('images'), validateProducts, productController.update);
 
-// router.delete('/delete/:id', productController.deleDestroy)
+router.delete('/delete/:id', productController.deleDestroy)
 
 
 module.exports = router;
