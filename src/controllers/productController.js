@@ -142,22 +142,24 @@ module.exports = {
 
 	// Nuevo producto
 	postStore: async (req, res) => {
-		const { name, description, images, idCategoryProduct, price, discount, idColor } = req.body;
+		const { name, description, image, idCategoryProduct, price, discount, idColor } = req.body;
 
 		try {
 			const newProduct = await db.Products.create({
 				name,
 				description,
-				images,
+				image,
 				idCategoryProduct,
 				price,
 				discount,
 				idColor
 			});
 			console.log(newProduct)
-			res.render('products/productCreate.ejs', { newProduct });
+			res.redirect('/products');
+
 		} catch (error) {
 			console.log(error);
+			res.render('products/productCreate.ejs', { newProduct });
 		}
 	},
 	// Update - Form to edit - BD JSON
