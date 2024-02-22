@@ -11,21 +11,21 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-                                        
+
     }
     const config = {
         tableName: 'categoryusers',
         timestamps: false,
         /*createdAt: 'created_at',
         updatedAt: 'updated_at',*/
-        deletedAt: false        
-    }    
+        deletedAt: false
+    }
 
     const Categoryuser = sequelize.define(alias, cols, config)
 
     Categoryuser.associate = function (models) {
         Categoryuser.belongsTo(models.User, {
-            as: "Categoryuser_tieneMuchos_User",
+            as: "Categoryuser_perteneceA_User",
             foreignKey: "idcategoryUser"
         })
     }

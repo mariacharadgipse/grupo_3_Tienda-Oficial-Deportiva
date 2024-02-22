@@ -10,18 +10,25 @@ module.exports = (sequelize, DataTypes) => {
         nameColor: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,            
+            unique: true,
         },
-                                        
+
     }
     const config = {
         tableName: 'colors',
         timestamps: false,
         /*createdAt: 'created_at',
         updatedAt: 'updated_at',*/
-        deletedAt: false        
-    }    
+        deletedAt: false
+    }
 
     const Color = sequelize.define(alias, cols, config)
+
+    Color.associate = function (models) {
+        Color.hasMany(models.Product, {
+            as: "Color_tieneMuchos_Product",
+            foreignKey: "idColor"
+        })
+    }
     return Color;
 }
