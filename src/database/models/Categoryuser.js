@@ -22,5 +22,13 @@ module.exports = (sequelize, DataTypes) => {
     }    
 
     const Categoryuser = sequelize.define(alias, cols, config)
+
+    Categoryuser.associate = function (models) {
+        Categoryuser.belongsTo(models.User, {
+            as: "Categoryuser_tieneMuchos_User",
+            foreignKey: "idcategoryUser"
+        })
+    }
+
     return Categoryuser;
 }
