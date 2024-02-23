@@ -21,14 +21,14 @@ module.exports = (sequelize, DataTypes) => {
         deletedAt: false
     }
 
-    const Categoryproduct = sequelize.define(alias, cols, config)
+    const Categoryproduct = sequelize.define(alias, cols, config);
 
     Categoryproduct.associate = function (models) {
         Categoryproduct.hasMany(models.Product, {
             as: "Categoryproduct_tieneMuchos_Product",
             foreignKey: "idCategoryProduct"
-        })
-    }
+        });
+    };
 
     return Categoryproduct;
-}
+};

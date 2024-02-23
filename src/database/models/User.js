@@ -10,20 +10,20 @@ module.exports = (sequelize, DataTypes) => {
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,            
+            unique: true,
         },
         imageUser: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        firstName : {
+        firstName: {
             type: DataTypes.STRING,
-            allowNull: false,            
-        },   
-        lastName : {
+            allowNull: false,
+        },
+        lastName: {
             type: DataTypes.STRING,
-            allowNull: false,            
-        },  
+            allowNull: false,
+        },
         discount: {
             type: DataTypes.DECIMAL(2, 1).UNSIGNED,
             allowNull: false,
@@ -32,27 +32,27 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        idcategoryUser : {
+        idcategoryUser: {
             type: DataTypes.INTEGER,
             allowNull: false,
-        },                                           
+        },
     }
     const config = {
         tableName: 'users',
         timestamps: false,
         /*createdAt: 'created_at',
         updatedAt: 'updated_at',*/
-        deletedAt: false        
-    }    
-
-    const User = sequelize.define(alias, cols, config)
-
-    User.associate = function (models) {
-        User.hasMany(models.Categoryuser, { 
-            as: "User_tieneUna_Categoryuser",
-            foreignKey: "idcategoryUser"
-        })
+        deletedAt: false
     }
 
+    const User = sequelize.define(alias, cols, config);
+
+    User.associate = function (models) {
+        User.hasMany(models.Categoryuser, {
+            as: "User_tieneUna_Categoryuser",
+            foreignKey: "idcategoryUser"
+        });
+    };
+
     return User;
-}
+};

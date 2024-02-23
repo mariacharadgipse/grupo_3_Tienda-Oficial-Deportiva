@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         deletedAt: false
     }
 
-    const Product = sequelize.define(alias, cols, config)
+    const Product = sequelize.define(alias, cols, config);
 
     Product.associate = function (models) {
         Product.belongsTo(models.Categoryproduct, {
@@ -57,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
         Product.belongsTo(models.Color, {
             as: "Product_perteneceA_Color",
             foreignKey: "idColor",
-        })
-    }
+        });
+    };
     return Product;
-}
+};

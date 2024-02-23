@@ -22,13 +22,13 @@ module.exports = (sequelize, DataTypes) => {
         deletedAt: false
     }
 
-    const Color = sequelize.define(alias, cols, config)
+    const Color = sequelize.define(alias, cols, config);
 
     Color.associate = function (models) {
         Color.hasMany(models.Product, {
             as: "Color_tieneMuchos_Product",
             foreignKey: "idColor"
-        })
-    }
+        });
+    };
     return Color;
-}
+};
