@@ -20,9 +20,9 @@ module.exports = {
 		res.render('users/register'); // Renderiza la plantilla 'register.ejs' en la carpeta 'views'
 	},
 
-	register: (req, res) => {
-		res.render('users/register.ejs')
-	},
+	// register: (req, res) => {
+	// 	res.render('users/register.ejs')
+	// },
 
 	//Nuevo usuario
 	// postRegister: async (req, res) => {
@@ -73,13 +73,15 @@ module.exports = {
 		try {
 			// obtener la info del formulario
 			const { email, password } = req.body;
-
+			console.log(email)
+			console.log(password)
 			// el usuario no tiene que estar registrado
-			const userFound = await User.findOne({ where: { email } });
+			const userFound = await db.User.findOne({ where: { email } });
+			console.log(userFound)
 			if (userFound) {
 				return res.send('El usuario ya está registrado con ese email');
 			}
-			imageUser, firstName, lastName, password, idcategoryUser
+
 			// debemos guardar ese nuevo usuario
 			const newUser = await User.create({
 				id: uuidv4(),
@@ -90,7 +92,7 @@ module.exports = {
 				password: bcryptjs.hashSync(password, 10),
 				idcategoryUser
 			});
-
+			console.log(newUser)
 			// redirigir a home
 			res.redirect('/');
 		} catch (error) {

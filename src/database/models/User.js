@@ -24,10 +24,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        discount: {
-            type: DataTypes.DECIMAL(2, 1).UNSIGNED,
-            allowNull: false,
-        },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -47,12 +43,12 @@ module.exports = (sequelize, DataTypes) => {
 
     const User = sequelize.define(alias, cols, config);
 
-    User.associate = function (models) {
-        User.hasMany(models.Categoryuser, {
-            as: "User_tieneUna_Categoryuser",
-            foreignKey: "idcategoryUser"
-        });
-    };
+    // User.associate = function (models) {
+    //     User.hasMany(models.Categoryuser, {
+    //         as: "User_tieneUna_Categoryuser",
+    //         foreignKey: "idcategoryUser"
+    //     });
+    // };
 
     return User;
 };
