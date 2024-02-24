@@ -1,33 +1,32 @@
-module.exports = (sequelize, DataTypes) => {
-    const alias = 'Colors'
-    const cols = {
+module.exports = (sequelize, dataTypes) => {
+    let alias = 'Colors'
+    let cols = {
         id: {
-            type: DataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true,
         },
         nameColor: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: false,
             unique: true,
         },
-
-    }
-    const config = {
+    };
+    let config = {
         tableName: 'colors',
         timestamps: false,
         /*createdAt: 'created_at',
         updatedAt: 'updated_at',*/
-        deletedAt: false
-    }
+        deletedAt: false,
+    };
 
     const Color = sequelize.define(alias, cols, config);
 
-    Color.associate = function (models) {
-        Color.hasMany(models.Product, {
-            as: "Color_tieneMuchos_Product",
-            foreignKey: "idColor"
+    Color.associate = (models) => {
+        Color.hasMany(models.Products, {
+            as: 'Products',
+            foreignKey: 'idColor',
         });
     };
     return Color;
