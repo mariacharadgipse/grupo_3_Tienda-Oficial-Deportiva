@@ -1,63 +1,64 @@
-module.exports = (sequelize, DataTypes) => {
-    const alias = 'Products'
-    const cols = {
+module.exports = (sequelize, dataTypes) => {
+    let alias = 'Products';
+    let cols = {
         id: {
-            type: DataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true,
         },
         name: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: false,
         },
         description: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: false,
         },
         image: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: true,
         },
         idCategoryProduct: {
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
         price: {
-            type: DataTypes.DECIMAL(6, 2).UNSIGNED,
+            type: dataTypes.DECIMAL(6, 2).UNSIGNED,
             allowNull: false,
         },
         discount: {
-            type: DataTypes.DECIMAL(2, 1).UNSIGNED,
+            type: dataTypes.DECIMAL(2, 1).UNSIGNED,
             allowNull: false,
         },
         idColor: {
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
-    }
-    const config = {
+    };
+    let config = {
         tableName: 'products',
         timestamps: false,
         /*createdAt: 'created_at',
         updatedAt: 'updated_at',*/
-        deletedAt: false
-    }
+        deletedAt: false,
+    };
 
     const Product = sequelize.define(alias, cols, config);
 
-    // Product.associate = function (models) {
-    //     Product.belongsTo(models.Categoryproduct, {
-    //         as: "Product_perteneceA_Categoryproduct",
-    //         foreignKey: "idCategoryProduct"
-    //     })
-    // }
+    Product.associate = function (models) {
+        Product.belongsTo(models.Categoryproduct, {
+            as: "Product_perteneceA_Categoryproduct",
+            foreignKey: "idCategoryProduct"
+        })
 
-    // Product.associate = function (models) {
-    //     Product.belongsTo(models.Color, {
-    //         as: "Product_perteneceA_Color",
-    //         foreignKey: "idColor",
-    //     });
-    // };
+        Product.belongsTo(models.Colors, {
+            as: 'Color',
+            foreignKey: 'idColor',
+        });
+
+    }
     return Product;
 };
+
+

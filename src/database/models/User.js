@@ -1,54 +1,54 @@
-module.exports = (sequelize, DataTypes) => {
-    const alias = 'Users'
-    const cols = {
+module.exports = (sequelize, dataTypes) => {
+    let alias = 'Users';
+    let cols = {
         id: {
-            type: DataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true,
         },
         email: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: false,
             unique: true,
         },
         imageUser: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: false,
         },
         firstName: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: false,
         },
         lastName: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: false,
         },
         password: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: false,
         },
         idcategoryUser: {
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
-    }
-    const config = {
+    };
+    let config = {
         tableName: 'users',
         timestamps: false,
         /*createdAt: 'created_at',
         updatedAt: 'updated_at',*/
-        deletedAt: false
-    }
+        deletedAt: false,
+    };
 
     const User = sequelize.define(alias, cols, config);
 
-    // User.associate = function (models) {
-    //     User.hasMany(models.Categoryuser, {
-    //         as: "User_tieneUna_Categoryuser",
-    //         foreignKey: "idcategoryUser"
-    //     });
-    // };
+    User.associate = (models) => {
+        User.belongsTo(models.Categoryusers, {
+            as: 'categoryuser',
+            foreignKey: 'idcategoryUser',
+        });
+    };
 
     return User;
 };

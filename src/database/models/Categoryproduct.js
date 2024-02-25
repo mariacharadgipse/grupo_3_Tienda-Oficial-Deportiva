@@ -1,34 +1,33 @@
-module.exports = (sequelize, DataTypes) => {
-    const alias = 'Categoryproducts'
-    const cols = {
+module.exports = (sequelize, dataTypes) => {
+    let alias = 'Categoryproducts';
+    let cols = {
         id: {
-            type: DataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true,
         },
         nameCategoryProduct: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull: false,
         },
-
-    }
-    const config = {
+    };
+    let config = {
         tableName: 'categoryproducts',
         timestamps: false,
         /*createdAt: 'created_at',
         updatedAt: 'updated_at',*/
-        deletedAt: false
-    }
+        deletedAt: false,
+    };
 
     const Categoryproduct = sequelize.define(alias, cols, config);
 
-    // Categoryproduct.associate = function (models) {
-    //     Categoryproduct.hasMany(models.Product, {
-    //         as: "Categoryproduct_tieneMuchos_Product",
-    //         foreignKey: "idCategoryProduct"
-    //     });
-    // };
+    Categoryproduct.associate = function (models) {
+        Categoryproduct.hasMany(models.Products, {
+            as: 'products',
+            foreignKey: 'idCategoryProduct'
+        });
+    };
 
     return Categoryproduct;
 };
