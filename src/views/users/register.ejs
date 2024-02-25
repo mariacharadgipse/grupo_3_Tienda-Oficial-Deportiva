@@ -13,24 +13,33 @@
                         <h2>Creá una nueva cuenta</h2>
                         </p>
 
-                        <form action="/users/register" method="POST">
+                        <form action="/users/register" method="POST" enctype="multipart/form-data">
                             <label for="labelNombre">Nombre:</label>
-                            <input type="text" name="first_name" id="first_name" placeholder="Nombre" class="color-input equal-size">
+                            <input type="text" name="firstName" id="firstName" placeholder="Nombre"
+                                class="color-input equal-size">
 
                             <label for="labelApellido">Apellido:</label>
-                            <input type="text" name="last_name" id="last_name" placeholder="Apellido" class="color-input equal-size">
+                            <input type="text" name="lastName" id="lastName" placeholder="Apellido"
+                                class="color-input equal-size">
 
                             <label for="labelEmail">Correo electrónico:</label>
-                            <input type="text" name="email" id="email" placeholder="Correo electrónico" class="color-input equal-size">
+                            <input type="text" name="email" id="email" placeholder="Correo electrónico"
+                                class="color-input equal-size">
 
                             <label for="labelContraseña">Contraseña:</label>
-                            <input type="password" name="password" id="password" placeholder="Contraseña" class="color-input equal-size">
+                            <input type="password" name="password" id="password" placeholder="Contraseña"
+                                class="color-input equal-size">
 
-                            <label for="labelDireccion">Categoria:</label>
-                            <input type="text" name="category" id="category" placeholder="administrador, vendedor o cliente" class="color-input equal-size">
+                            <label for="idcategoryUser" class="elementForm">Categoria:</label>
+                            <select id="idcategoryUser" name="idcategoryUser" class="control">
+                                <option value="1" selected>administrador</option>
+                                <option value="2">vendedor</option>
+                                <option value="3">cliente</option>
+                            </select>
 
-                            <label for="images" class="elementForm">Foto de perfil</label>
-                            <input type="file" id="image" name="image" class="color-input equal-size" accept=".jpg, .png"></input>
+                            <label for="imageUser" class="elementForm">Foto de perfil</label>
+                            <input type="file" id="imageUser" name="imageUser" class="color-input equal-size"
+                                accept=".jpg, .png" multiple></input>
 
                             <button type="submit">Crear Cuenta</button>
                         </form>

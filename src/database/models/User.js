@@ -5,32 +5,32 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
-            autoIncrement: true,
+            autoIncrement: true
         },
         email: {
             type: dataTypes.STRING,
             allowNull: false,
-            unique: true,
+            unique: true
         },
         imageUser: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         firstName: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         lastName: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         password: {
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         idcategoryUser: {
             type: dataTypes.INTEGER,
-            allowNull: false,
+            allowNull: false
         },
     };
     let config = {

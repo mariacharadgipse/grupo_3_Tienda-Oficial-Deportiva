@@ -148,7 +148,7 @@ module.exports = {
 			const newProduct = await db.Products.create({
 				name,
 				description,
-				image,
+				image: req.file?.filename || 'default.png', // imagen por defecto
 				idCategoryProduct,
 				price,
 				discount,

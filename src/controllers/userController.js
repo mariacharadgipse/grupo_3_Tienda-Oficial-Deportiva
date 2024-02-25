@@ -20,55 +20,6 @@ module.exports = {
 		res.render('users/register'); // Renderiza la plantilla 'register.ejs' en la carpeta 'views'
 	},
 
-	// register: (req, res) => {
-	// 	res.render('users/register.ejs')
-	// },
-
-	//Nuevo usuario
-	// postRegister: async (req, res) => {
-	// 	// obtener la info del formulario
-	// 	const email = req.body.email
-	// 	const userFound = await db.User.findOne({ where: { email } });
-	// 	if (userFound) {
-	// 		return res.send('El usuario ya está registado con ese email')
-	// 	}
-	// 	const { imageUser, firstName, lastName, password, idcategoryUser } = req.body;
-
-	// 	try {
-	// 		const newUser = await db.User.create({
-	// 			id: uuidv4(),
-	// 			email,
-	// 			imageUser,
-	// 			firstName,
-	// 			lastName,
-	// 			password,
-	// 			idcategoryUser,
-
-	// 		});
-	// 		console.log(newUser)
-	// 		res.redirect('/');
-
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 		res.render('products/register.ejs', { newUser });
-	// 	}
-
-	// 	// debemos guardar ese nuevo usuario
-	// 	let newUser = {
-	// 		id: uuidv4(),
-	// 		email: req.body.email,
-
-	// 		image: req.file?.filename || 'default.png', //imagen por defecto
-	// 		...req.body, // spread operator
-	// 		password: bcryptjs.hashSync(password, 10),
-	// 	}
-
-	// 	users.push(newUser)
-	// 	fs.writeFileSync(usersPath, JSON.stringify(users, null, ' '))
-	// 	// redirigir a home
-	// 	res.redirect('/')
-	// },
-
 	postRegister: async (req, res) => {
 		try {
 			// obtener la info del formulario
@@ -76,17 +27,18 @@ module.exports = {
 			console.log(email)
 			console.log(password)
 			// el usuario no tiene que estar registrado
-			const userFound = await db.User.findOne({ where: { email } });
+			const userFound = await db.Users.findOne({ where: { email: email } });
+			//const userFound = await db.Users.findByPk(4);
 			console.log(userFound)
 			if (userFound) {
 				return res.send('El usuario ya está registrado con ese email');
 			}
-
+			const { imageUser, firstName, lastName, idcategoryUser } = req.body;
+			console.log('image:', imageUser);
 			// debemos guardar ese nuevo usuario
-			const newUser = await User.create({
-				id: uuidv4(),
+			const newUser = await db.Users.create({
 				email,
-				imageUser: req.file?.filename || 'default.png', // imagen por defecto
+				imageUser: req.file?.filename || 'default.jpg', // imagen por defecto
 				firstName,
 				lastName,
 				password: bcryptjs.hashSync(password, 10),
@@ -99,7 +51,51 @@ module.exports = {
 			console.error(error);
 			res.status(500).send('Error al registrar el usuario');
 		}
-	}
+	},
+
+	// 	//LOGIN//
+	getLogin: (req, res) => {
+		// Lógica del controlador para la página de inicio
+		res.render('users/login'); // Renderiza la plantilla 'login.ejs' en la carpeta 'views'
+	},
+
+	postLogin: async (req, res) => {
+		try {
+			// obtener los datos del form
+			let { email, password, rememberme } = req.body
+
+			// buscar usuario en la base de datos
+			const userFound = await db.Users.findOne({ where: { email: email } });
+
+			if (userFound && bcryptjs.compareSync(password, userFound.password)) {
+				// si existe, guardalo en session
+				req.session.userLogged = userFound
+				// el usuario puso recordarme?
+				if (rememberme == 'on') {
+					res.cookie('rememberme', userFound.email, { maxAge: 60000 * 60 })
+				}
+				// redireccione al home
+				console.log('Todo salió ok, estas logueado');
+				res.redirect('/users/profile')
+			} else {
+				res.send('El password o email es incorrecto')
+			}
+		} catch (error) {
+			console.error(error);
+			res.status(500).send('Error al procesar la autenticación');
+		}
+	},
+
+	profile: (req, res) => {
+		res.render('users/profile.ejs', { user: req.session.userLogged })
+	},
+
+	logout: (req, res) => {
+		req.session.userLogged = undefined
+		// req.session.destroy()
+		res.clearCookie('rememberme')
+		res.redirect('/')
+	},
 }
 // const controller = {
 
