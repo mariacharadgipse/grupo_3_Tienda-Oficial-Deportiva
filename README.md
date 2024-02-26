@@ -41,10 +41,7 @@ Nos emociona ser tu destino deportivo en línea, donde la pasión por el deporte
 - [CA Central Córdoba](https://www.cacentralcordoba.com/): Enfoque creativo y moderno en banners y exhibición de productos.
 
 **Integrantes:**
-- Alustiza Fernando
-- Alvarez Ivan, estudiante de Programación en el ITSE. Experiencia en HTML, CSS, JavaScript, Git.
 - Ardilez Natalia, profesora de Matemáticas con interés en programación y nuevas tecnologías.
-- Chapa Elizabeth, estudiante de la carrera Contador Publico Nacional en la UNSE, con interes en la programacion.
 - Chara Maria, Ingeniera apasionada por la programación, trabajando en proyectos del sector público.
 - D'Arcangelo Carolina, Contadora y profesora de escuela primaria, interesada en administración pública.
 - Molina José Luis, Profesor de Informática y trabajador en la administración pública.
