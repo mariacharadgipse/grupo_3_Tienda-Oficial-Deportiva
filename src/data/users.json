@@ -170,5 +170,14 @@
   "last_name": "molina",
   "password": "$2a$10$M76skR4XLVBjhWB1a33YteyMX5nY1QfLVTLpXsMIaL.WgwvmgSduq",
   "category": "administrador"
+ },
+ {
+  "id": "80b1f1ba-beaa-49b8-8837-49a7f5ea6f86",
+  "email": "damianlombardo@gmail.com",
+  "image": "damianlombardo.jpg",
+  "first_name": "damian",
+  "last_name": "lombardo",
+  "password": "$2a$10$r3CqTglSV1tEunw/cYhYoe2.eR4i3VlYZGid/bxFVTIBZudSDXxvW",
+  "category": "cliente"
  }
 ]
