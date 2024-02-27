@@ -1,4 +1,4 @@
-INSERT INTO categoryproducts (id, nameCategoryProduct) VALUES (1,'calzados'), (2,'accesorios'), (3,'indumentaria');
+ INSERT INTO categoryproducts (id, nameCategoryProduct) VALUES (1,'calzados'), (2,'accesorios'), (3,'indumentaria');
 
 INSERT INTO colors (id, nameColor) VALUES (1, 'blanco'), (2, 'Negro'), (3, 'Gris'), (4, 'Rojo'), (5, 'Azul'), (6, 'Verde'), (7, 'Amarillo'), (8, 'Naranja'), (9, 'Morado'), (10, 'Rosa'), (11, 'Marrón'), (12, 'Beige');
 
