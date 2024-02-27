@@ -7,61 +7,76 @@
         <%- include('../partials/header') %>
 
             <main class="formContenedor">
-                <h2 class="tituloEdit"><strong>Editar el producto:</strong> <i><%= pToEdit.name %></i></h1>
-                <form action="/products/edit/<%= pToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <h2 class="tituloEdit"><strong>Editar el producto:</strong> <i>
+                        <%= pToEdit.name %>
+                    </i></h1>
+                    <form action="/products/edit/<%= pToEdit.id %>?_method=PUT" method="POST"
+                        enctype="multipart/form-data">
 
-                    <div class="elementForm">
-                        <label for="name" class="label-form">Nombre del Producto</label>
-                        <input type="text" id="name" name="name" class="control" placeholder="Nombre del producto" value=" <%= pToEdit.name  || (locals.oldData && oldData.name ? oldData.name : null )%>">
-                        <% if (locals.errors && errors.name) { %>
-                            <p class="mensajeError"><%= errors.name.msg %></p>
-                            <% } %>                        
-                    </div>
+                        <div class="elementForm">
+                            <label for="name" class="label-form">Nombre del Producto</label>
+                            <input type="text" id="name" name="name" class="control" placeholder="Nombre del producto"
+                                value=" <%= pToEdit.name  || (locals.oldData && oldData.name ? oldData.name : null )%>">
+                            <% if (locals.errors && errors.name) { %>
+                                <p class="mensajeError">
+                                    <%= errors.name.msg %>
+                                </p>
+                                <% } %>
+                        </div>
 
-                    <div class="elementForm">
-                        <label for="price">Precio</label>
-                        <input type="text" id="price" name="price" class="control" placeholder="$2789" value="<%= pToEdit.price  || (locals.oldData && oldData.price ? oldData.price : null )%>"></input>
-                        <% if (locals.errors && errors.price) { %>
-                            <p class="mensajeError"><%= errors.price.msg %></p>
-                            <% } %>                        
-                    </div>
+                        <div class="elementForm">
+                            <label for="price">Precio</label>
+                            <input type="text" id="price" name="price" class="control" placeholder="$2789"
+                                value="<%= pToEdit.price  || (locals.oldData && oldData.price ? oldData.price : null )%>"></input>
+                            <% if (locals.errors && errors.price) { %>
+                                <p class="mensajeError">
+                                    <%= errors.price.msg %>
+                                </p>
+                                <% } %>
+                        </div>
 
-                    <div class="elementForm">
-                        <label for="discount">Descuento</label>
-                        <input type="text" id="discount" name="discount" class="control" placeholder="20%" value="<%= pToEdit.discount %>"></input>
-                    </div>
+                        <div class="elementForm">
+                            <label for="discount">Descuento</label>
+                            <input type="text" id="discount" name="discount" class="control" placeholder="20%"
+                                value="<%= pToEdit.discount %>"></input>
+                        </div>
 
-                    <div class="elementForm">
-                        <label for="category" >Categoría</label>
-                        <select name="category" id="category" class="control">
-                            <option value="calzados">Calzados</option>
-                            <option value="indumentaria">Indumentaria</option>
-                            <option value="accesorios">Accesorios</option>
-                        </select>
-                    </div>
+                        <div class="elementForm">
+                            <label for="category">Categoría</label>
+                            <select name="category" id="category" class="control">
+                                <option value="1" selected>Calzados</option>
+                                <option value="2">Accesorios</option>
+                                <option value="3">Indumentaria</option>
+                            </select>
+                        </div>
 
-                    <div class="elementForm">
-                        <label for="description">Descripción</label>
-                        <textarea name="description" id="description" class="control"> <%= pToEdit.description %> </textarea>
-                    </div>
+                        <div class="elementForm">
+                            <label for="description">Descripción</label>
+                            <textarea name="description" id="description"
+                                class="control"> <%= pToEdit.description %> </textarea>
+                        </div>
 
-                    <div class="elementForm">
-                        <label>Colores</label>
-                        <input type="text" name="colors" class="control" value=" <%= pToEdit.colors  || (locals.oldData && oldData.colors ? oldData.colors : null )%>"></input>
-                        <% if (locals.errors && errors.colors) { %>
-                            <p class="mensajeError"><%= errors.colors.msg %></p>
-                            <% } %>                         
-                    </div>
+                        <div class="elementForm">
+                            <label>Colores</label>
+                            <input type="text" name="idColor" class="control"
+                                value=" <%= pToEdit.idColor  || (locals.oldData && oldData.idColor ? oldData.idColor : null )%>"></input>
+                            <% if (locals.idColor && errors.idColor) { %>
+                                <p class="mensajeError">
+                                    <%= errors.idColor.msg %>
+                                </p>
+                                <% } %>
+                        </div>
 
-                    <div class="elementForm">
-                        <label for="image" >Imágenes del producto</label>
-                        <input type="file" name="images" id="images" class="control" accept=".jpg, .png" multiple></input>
-                    </div>
+                        <div class="elementForm">
+                            <label for="image">Imágenes del producto</label>
+                            <input type="file" name="images" id="images" class="control" accept=".jpg, .png"
+                                multiple></input>
+                        </div>
 
-                    <button type="reset" class="botonForm">Restablecer</button>
-                    <button type="submit" class="botonForm">Guardar</button>
+                        <button type="reset" class="botonForm">Restablecer</button>
+                        <button type="submit" class="botonForm">Guardar</button>
 
-                </form>
+                    </form>
             </main>
 
     </body>

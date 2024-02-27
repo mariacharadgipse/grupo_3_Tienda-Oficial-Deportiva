@@ -54,6 +54,14 @@ body {
   justify-content: space-around
 }
 
+.titulo {
+  font-size: 20px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  background-color: var(--bg-secundario);
+  padding: 10px 50px;
+}
+
 .product {
   display: block;
   padding: 5px;
@@ -61,7 +69,8 @@ body {
   width: 300px;
   height: auto;
   align-items: center;
-  border: solid 5px red;
+  justify-content: center;
+  border: solid 1px #e6b223;
   border-radius: 8px;
   margin: 10px
 }

@@ -1,12 +1,22 @@
 [
  {
   "id": 2,
+<<<<<<< HEAD
   "name": "nisl venenatis",
   "description": " nisl venenatis ",
   "image": "image2.png",
   "category": "calzados",
   "colors": "Turquoise",
   "price": 8800,
+=======
+  "name": " nisl  venenatis",
+  "description": "    nisl venenatis  pelota  ",
+  "image": "image2.png",
+  "category": "calzados",
+  "colors": "   Turquoise",
+  "price": "8800",
+  "visit": "visited",
+>>>>>>> dev
   "size": 4
  },
  {

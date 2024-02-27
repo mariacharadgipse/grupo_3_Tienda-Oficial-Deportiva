@@ -63,4 +63,35 @@ Semana 2
    Inconvenientes: Debido a que no utilizamos ramas, tuvimos problemas para subir al repositorio algunos cambios, que debíamos completar para continuar con los temas siguientes. Eso nos atrasó en la finalización del sprint.
    Participantes: Chara María, D'Arcangelo Carolina y Molina José.
 
+-Domingo 04/02/2024
+   Resumen: Terminamos de armar el diagrama relacional y lo importamos a base de datos.
+   Armamos una nueva rama en Github.
+   Utilizamos Mockaroo, exportando desde SQL.
+   Inconvenientes: Tuvimos que ver en qué tipo de formato hacer la importación.
+   Participantes: Ardilez, Chara María, D'Arcangelo Carolina y Molina José.
+
+-Viernes 09/02/2024
+   Resumen: Trabajamos en el archivo structure.sql.
+   Realizamos las configuraciones de sequelize.
+   Inconvenientes: no tuvimos.
+   Participantes: Ardilez Natalia, Chara María, D'Arcangelo Carolina y Molina José.
+
+-Domingo 11/02/2024
+   Resumen: Armamos el archivo data.sql.
+   Comenzamos a crear los modelos. Y realizamos commits de lo realizado.
+   Inconvenientes: No tuvimos.
+   Participantes: Ardilez Natalia, Chara María, D'Arcangelo Carolina y Molina José.
+
+-Miércoles 14/02/2024
+   Resumen: Trabajamos con los CRUD de productos en productController para base de datos y en rutas.
+   Inconvenientes: No tuvimos.
+   Participantes: Ardilez Natalia, Chara María, D'Arcangelo Carolina y Molina José.
+
+-Sábado 24/02/2024
+   Resumen: Trabajamos con multer para subir las imágenes de usuarios.
+   También con las asociaciones.
+   Inconvenientes: No lográbamos que se cargue la imagen en la carpeta public.
+   Participantes: Ardilez Natalia, Chara María, D'Arcangelo Carolina y Molina José.
+
+
 ver el weekly en su contexto: https://app.mural.co/t/tiendaoficialdeportiva1545/m/tiendaoficialdeportiva1545/1700682602599/19b655146e74af58e117e08e45ea4536528c158e?sender=uba9d0c1dc7efe41329ec7445

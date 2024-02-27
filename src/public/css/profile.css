@@ -5,7 +5,7 @@
     --bg-primario: #424242;
     --bg-secundario: #101010;
 }
-
+/*-------- M A I N --------*/
 .titulo {
     font-size: 20px;
     text-align: left;
@@ -14,17 +14,18 @@
     padding: 10px 50px;
 }
 
-
 .boton {
-    background-color: #800080;
+    background-color:rgb(255, 204, 34);
     width: 100px;
     color: #eeeeee;
     align-items: right;
-    justify-content: center
+    justify-content: center;
+    border-radius: 5%;
 }
 
 .enlaces {
     text-decoration: none;
+    color:#101010;
 }
 
 
@@ -43,6 +44,66 @@
     text-align: center;
 }
 
+.conteinerProfile {
+    display: flex;
+    padding: 15px;
+    background-color: #800080;
+    align-items: flex-start;
+}
+
+.imageProfile {
+    background-color: aqua;
+    width: 50%;
+    border-radius: 5%;
+    border-color: solid 5px #eeeeee;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+}
+
+
+.datosProfile {
+background-color:#800080;
+width: 50%;
+display: block;
+align-items:flex-start;
+justify-content: center;
+position: relative;
+padding: 10px 30px;
+border-radius: 5%;
+border-color: #eeeeee;
+height: auto;
+margin: auto;
+}
+
+.titulo{
+    color:#eeeeee;
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.datosEstandar{
+    color:#eeeeee;
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mostrarDatos {
+    background-color:#ada9a9;
+    margin-bottom: 20px;
+    border-radius: 5%;
+    border: solid 1px  #424242;
+    padding: 10px;
+}
 .contPerfil {
     background-color: #800080;
     margin: 5px auto;
@@ -53,6 +114,10 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
+
+/*-------- M E D I A   Q U E R I E S ---------*/
 
 @media (max-width: 768px) {
     .contenedorGris {

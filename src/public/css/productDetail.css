@@ -14,8 +14,6 @@
     padding: 10px 50px;
 }
 
-
-
 .des {
     font-size: 15px;
     height: 25px;
@@ -25,12 +23,38 @@
     width: 98%;
 }
 
+.conteinerBoton {
+    padding: 10px;
+}
+
 .boton {
-    background-color: #800080;
+    background-color: #006909;
     width: 100px;
+    margin:auto;
     color: #eeeeee;
-    align-items: right;
-    justify-content: center
+    align-items: center;
+    justify-content: center;
+    border-top: 20px;
+}
+
+.botonED {
+    background-color:#fdec00;
+    width: 100px;
+    margin:auto;
+    color:#101010;
+    align-items: center;
+    justify-content: center;
+    border-top: 20px;
+}
+
+.botonEL {
+    background-color:#db0034;
+    width: 100px;
+    margin:auto;
+    color: #eeeeee;
+    align-items: center;
+    justify-content: center;
+    border-top: 20px;
 }
 
 .enlaces {
@@ -55,39 +79,75 @@
 
 
 
-.contenedorGris {
-    background-color: var(--links);
+.conteinerMain {
+    background-color:#ffffff;
     margin: 5px auto;
     padding: 10px;
     height: auto;
     width: 95%;
-    display: block;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.product-detail-img {
-    padding: 10px;
+.conteinerImage{
+    width: 45%;
     height: auto;
-    display: Block;
-    width: 100%;
-    background-color: #eeeeee;
-    border: solid 5px red;
-    border-radius: 8px;
+    margin: auto;
+    border: 10px;
 
 }
 
-.product-detail {
-    background-color: #eeeeee;
+.productImage {
+    padding: 20px;
+    height: auto;
     width: 100%;
+    margin: auto;
+    background-color: #eeeeee;
+    border: solid 5px #eeeeee;
+    border-radius: 8px;
+    display: Block;
+}
+
+.conteinerInfo{
+    background-color:#ffffff; 
+    width: 45%;
     height: auto;
     margin: 0px auto;
     text-align: center;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: center;
-    display: block;
     padding: 10px;
-    border: solid 5px #ffffff 
+    border-radius: 5%;
+}
+
+.product-detail-info {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.product-detail-title {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.product-detail-info {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.product-detail-description {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.product-detail-price small {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.product-detail-price {
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 ul li {

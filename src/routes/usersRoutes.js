@@ -1,19 +1,23 @@
 const express = require('express');
-const router=express.Router();
+const router = express.Router();
+
+// multer middleware
+const uploadUser = require('../middlewares/multer').uploadUser;
 
 //REGISTER
 
-const {getRegister, postRegister} = require('../controllers/userController.js')
+const { getRegister, postRegister } = require('../controllers/userController.js')
 
 router.get('/register', getRegister);
 
-router.post('/register', postRegister)
+router.post('/register', uploadUser.single('imageUser'), postRegister)
+
 
 
 
 //LOGIN
 
-//let userController=require('../controllers/userController.js');
+let userController = require('../controllers/userController.js');
 const { getLogin, postLogin, profile, logout } = require('../controllers/userController.js')
 const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware.js')
 
@@ -27,6 +31,6 @@ router.post('/login', postLogin);
 router.get('/profile', userLoggedMiddleware, profile)
 
 // Logout
-//router.get('/logout', userController.logout);
+router.get('/logout', userController.logout);
 router.get('/logout', userLoggedMiddleware, logout)
-module.exports=router;
+module.exports = router;

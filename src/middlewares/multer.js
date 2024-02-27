@@ -1,7 +1,7 @@
 const multer = require('multer');
 const path = require('path')
 
-const storage = multer.diskStorage({
+const productStorage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, '../public/img/products'))
   },
@@ -10,6 +10,17 @@ const storage = multer.diskStorage({
     cb(null, name)
   }
 })
+
+const userStorage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, path.join(__dirname, '../public/img/users'))
+  },
+  filename: function (req, file, cb) {
+    let name = `${Date.now()}-img-${file.originalname}`
+    cb(null, name)
+  }
+})
+
 
 const fileFilter = function (req, file, cb) {
   // Verifica si el archivo es una imagen
@@ -21,9 +32,15 @@ const fileFilter = function (req, file, cb) {
   }
 };
 
-const upload = multer({
-  storage: storage,
+const uploadProduct = multer({
+  storage: productStorage,
   fileFilter: fileFilter
-})
+});
 
-module.exports = upload
+
+const uploadUser = multer({
+  storage: userStorage,
+  fileFilter: fileFilter
+});
+
+module.exports = { uploadProduct, uploadUser };
