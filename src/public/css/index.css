@@ -23,6 +23,7 @@ body {
   min-height: 100vh;
   margin: 0 px;
   font-size: 10px;
+  overflow: none;
 }
 
 .main {
@@ -32,6 +33,16 @@ body {
   border: 10px;
   height: max-content 450px;
 
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
 }
 
 .tituloGeneral {
