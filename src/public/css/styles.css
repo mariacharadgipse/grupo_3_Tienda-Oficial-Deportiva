@@ -65,7 +65,6 @@ i {
 header .logo {
   flex: 1;
   color: #fff;
-
   margin-left: 50px;
   text-transform: uppercase;
   font-size: 15px;
@@ -136,17 +135,6 @@ header .menu {
   display: none;
 }
 
-
-.carrusel {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: scroll;
-  margin: 10px;
-  position: relative;
-  width: 95vw;
-}
-
-
 .elemento {
   flex: 1 0 auto;
   margin: 0 50px;
@@ -155,9 +143,9 @@ header .menu {
   height: auto;
   align-items: center;
   justify-content: center;
-  border: solid 5px var(--primario);
+  border: solid 1px #977916;
   padding: 10px 12px;
-  border-radius: 5%;
+  border-radius: 1%;
 }
 
 
@@ -347,6 +335,40 @@ footer {
 .footer-links a:hover {
   color: #3f71ea;
 }
+/*------------NUEVO 26-02-97---------------*/
+
+.product {
+  border-color: #2e963c;
+}
+
+.product-box-info {
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  border-top: solid 0.5px #69676b;
+}
+
+
+.enlaces {
+  text-decoration: none;
+}
+
+.nameProd{
+text-decoration: none;
+}
+
+.priceProd {
+  text-decoration: none;
+  color: #000000;
+}
+
+.discountProd {
+  color:#2e963c;
+  font-size: 15px;
+}
+
+/*------------MEDIA QUERYES----------------*/
 @media (max-width: 1000px) {
   .search-box button {
     position: absolute;
