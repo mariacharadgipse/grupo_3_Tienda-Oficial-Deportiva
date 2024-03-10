@@ -23,30 +23,36 @@ module.exports = {
 	postRegister: async (req, res) => {
 		try {
 			// obtener la info del formulario
-			const { email, password } = req.body;
-			console.log(email)
-			console.log(password)
-			// el usuario no tiene que estar registrado
-			const userFound = await db.Users.findOne({ where: { email: email } });
-			//const userFound = await db.Users.findByPk(4);
-			console.log(userFound)
-			if (userFound) {
-				return res.send('El usuario ya está registrado con ese email');
-			}
-			const { imageUser, firstName, lastName, idcategoryUser } = req.body;
-			console.log('image:', imageUser);
-			// debemos guardar ese nuevo usuario
-			const newUser = await db.Users.create({
-				email,
-				imageUser: req.file?.filename || 'default.jpg', // imagen por defecto
-				firstName,
-				lastName,
-				password: bcryptjs.hashSync(password, 10),
-				idcategoryUser
-			});
-			console.log(newUser)
-			// redirigir a home
-			res.redirect('/');
+			let errors = validationResult(req);
+			if (errors.isEmpty()) {
+				const { email, password } = req.body;
+				//console.log(email)
+				//console.log(password)
+				// el usuario no tiene que estar registrado
+				const userFound = await db.Users.findOne({ where: { email: email } });
+				//const userFound = await db.Users.findByPk(4);
+				console.log(userFound)
+				if (userFound) {
+					return res.send('El usuario ya está registrado con ese email');
+				}
+				const { imageUser, firstName, lastName, idcategoryUser } = req.body;
+				console.log('image:', imageUser);
+				// debemos guardar ese nuevo usuario
+				const newUser = await db.Users.create({
+					email,
+					imageUser: req.file?.filename || 'default.jpg', // imagen por defecto
+					firstName,
+					lastName,
+					password: bcryptjs.hashSync(password, 10),
+					idcategoryUser
+				});
+				console.log(newUser)
+				// redirigir a home
+				res.redirect('/');
+			} else {
+				console.log('entra'),
+				res.render('/register', { errors: errors.mapped() })
+			};
 		} catch (error) {
 			console.error(error);
 			res.status(500).send('Error al registrar el usuario');

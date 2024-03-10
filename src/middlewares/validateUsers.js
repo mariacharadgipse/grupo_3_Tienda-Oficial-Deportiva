@@ -1,15 +1,12 @@
 const { body } = require('express-validator')
 
 module.exports = [
-    body('firstname')
+    body('firstName')
         .notEmpty().withMessage('Debes ingresar un nombre').bail(),
-    body('lastname')
+    body('lastName')
         .notEmpty().withMessage('Debes ingresar un apellido').bail(),
-
-
     body('email')
-        .notEmpty().withMessage('Ingresa un email').bail(),
-
+        .isEmail().withMessage('Ingresa un email').bail(),  
     body('password')
         .notEmpty().withMessage('Ingresa una contraseña').bail(),
 
