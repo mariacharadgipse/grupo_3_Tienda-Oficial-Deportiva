@@ -50,8 +50,11 @@ module.exports = {
 				// redirigir a home
 				res.redirect('/');
 			} else {
-				console.log('entra'),
-				res.render('/register', { errors: errors.mapped() })
+				res.render('users/register', {
+					errors: errors.array(),
+					old: req.body
+
+				});
 			};
 		} catch (error) {
 			console.error(error);

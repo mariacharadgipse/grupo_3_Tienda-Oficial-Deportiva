@@ -13,36 +13,46 @@
                         <h2>Creá una nueva cuenta</h2>
                         </p>
 
-                        <form action="/users/register" method="POST" enctype="multipart/form-data">
-                            <label for="labelNombre">Nombre:</label>
-                            <input type="text" name="firstName" id="firstName" placeholder="Nombre"
-                                class="color-input equal-size">
+                        <% if (locals.errors) { errors.forEach(error=> { %>
+                            <p class="feedback is-danger">
+                                <%= error.msg %>
+                            </p>
+                            <% }) } %>
 
-                            <label for="labelApellido">Apellido:</label>
-                            <input type="text" name="lastName" id="lastName" placeholder="Apellido"
-                                class="color-input equal-size">
 
-                            <label for="labelEmail">Correo electrónico:</label>
-                            <input type="text" name="email" id="email" placeholder="Correo electrónico"
-                                class="color-input equal-size">
+                                <form action="/users/register" method="POST" enctype="multipart/form-data">
+                                    <label for="labelNombre">Nombre:</label>
+                                    <input type="text" name="firstName" id="firstName" placeholder="Nombre"
+                                        class="color-input equal-size" value="<%= locals.old &&
+                                        old.firstName ? old.firstName : '' %> ">
 
-                            <label for="labelContraseña">Contraseña:</label>
-                            <input type="password" name="password" id="password" placeholder="Contraseña"
-                                class="color-input equal-size">
+                                    <label for="labelApellido">Apellido:</label>
+                                    <input type="text" name="lastName" id="lastName" placeholder="Apellido"
+                                        class="color-input equal-size"
+                                        value="<%= locals.old && old.lastName  ? old.lastName : '' %>">
 
-                            <label for="idcategoryUser" class="elementForm">Categoria:</label>
-                            <select id="idcategoryUser" name="idcategoryUser" class="control">
-                                <option value="1" selected>administrador</option>
-                                <option value="2">vendedor</option>
-                                <option value="3">cliente</option>
-                            </select>
+                                    <label for="labelEmail">Correo electrónico:</label>
+                                    <input type="text" name="email" id="email" placeholder="Correo electrónico"
+                                        class="color-input equal-size"
+                                        value="<%= locals.old && old.email  ? old.email : '' %>">
 
-                            <label for="imageUser" class="elementForm">Foto de perfil</label>
-                            <input type="file" id="imageUser" name="imageUser" class="color-input equal-size"
-                                accept=".jpg, .png" multiple></input>
+                                    <label for="labelContraseña">Contraseña:</label>
+                                    <input type="password" name="password" id="password" placeholder="Contraseña"
+                                        class="color-input equal-size">
 
-                            <button type="submit">Crear Cuenta</button>
-                        </form>
+                                    <label for="idcategoryUser" class="elementForm">Categoria:</label>
+                                    <select id="idcategoryUser" name="idcategoryUser" class="control">
+                                        <option value="1" selected>administrador</option>
+                                        <option value="2">vendedor</option>
+                                        <option value="3">cliente</option>
+                                    </select>
+
+                                    <label for="imageUser" class="elementForm">Foto de perfil</label>
+                                    <input type="file" id="imageUser" name="imageUser" class="color-input equal-size"
+                                        accept=".jpg, .png" multiple></input>
+
+                                    <button type="submit">Crear Cuenta</button>
+                                </form>
                     </div>
                 </div>
             </main>
