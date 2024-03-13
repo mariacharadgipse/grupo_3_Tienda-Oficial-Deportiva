@@ -42,9 +42,14 @@
 
                                     <label for="idcategoryUser" class="elementForm">Categoria:</label>
                                     <select id="idcategoryUser" name="idcategoryUser" class="control">
-                                        <option value="1" selected>administrador</option>
-                                        <option value="2">vendedor</option>
-                                        <option value="3">cliente</option>
+                                        <option value="1" selected <%=locals.old && old.idcategoryUser==='1'
+                                            ? 'selected' : '' ; %>>administrador</option>
+                                        <option value="2" <%=locals.old && old.idcategoryUser==='2' ? 'selected' : '' ;
+                                            %>
+                                            >vendedor</option>
+                                        <option value="3" <%=locals.old && old.idcategoryUser==='3' ? 'selected' : '' ;
+                                            %>
+                                            >cliente</option>
                                     </select>
 
                                     <label for="imageUser" class="elementForm">Foto de perfil</label>
