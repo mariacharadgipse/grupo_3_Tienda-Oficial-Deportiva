@@ -142,21 +142,33 @@ module.exports = {
 
 	// Nuevo producto
 	postStore: async (req, res) => {
-		const { name, description, image, idCategoryProduct, price, discount, idColor } = req.body;
 
 		try {
-			const newProduct = await db.Products.create({
-				name,
-				description,
-				image: req.file?.filename || 'default.png', // imagen por defecto
-				idCategoryProduct,
-				price,
-				discount,
-				idColor
-			});
-			console.log(newProduct)
-			res.redirect('/products');
+			let results = validationResult(req);
+			// console.log('1- errors', results);
+			// console.log('-------------------------------');
+			// console.log('2- errors mapped', results.mapped());
+			if (results.isEmpty()) {
+				const { name, description, image, idCategoryProduct, price, discount, idColor } = req.body;
+				const newProduct = await db.Products.create({
+					name,
+					description,
+					image: req.file?.filename || 'default.png', // imagen por defecto
+					idCategoryProduct,
+					price,
+					discount,
+					idColor
+				});
+				console.log(newProduct)
+				res.redirect('/products');
+			} else {
+				res.render('products/productCreate', {
+					errors: results.mapped(),
+					old: req.body
 
+				});
+
+			};
 		} catch (error) {
 			console.log(error);
 			res.render('products/productCreate.ejs', { newProduct });

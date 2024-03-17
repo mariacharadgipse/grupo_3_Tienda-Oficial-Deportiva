@@ -8,11 +8,12 @@
 
             <main class="formContenedor">
                 <h1 class="tituloCreate"><strong>Nuevo Producto</strong></h1>
+
                 <form action="/products/create" method="POST" enctype="multipart/form-data">
 
                     <label for="name" class="elementForm">Nombre del Producto</label>
                     <input type="text" id="name" name="name" class="control"
-                        value="<%= locals.oldData && oldData.name ? oldData.name : null %>">
+                        value="<%= locals.old && old.name ? old.name : '' %>">
                     <% if (locals.errors && errors.name) { %>
                         <p class="mensajeError">
                             <%= errors.name.msg %>
@@ -45,9 +46,12 @@
 
                                             <label for="idCategoryProduct" class="elementForm">Categoría</label>
                                             <select id="idCategoryProduct" name="idCategoryProduct" class="control">
-                                                <option value="1" selected>Calzados</option>
-                                                <option value="2">Accesorios</option>
-                                                <option value="3">Indumentaria</option>
+                                                <option value="1" selected<%=locals.old && old.idCategoryProduct==='1'
+                                                    ? 'selected' : '' ; %>>Calzados</option>
+                                                <option value="2" <%=locals.old && old.idCategoryProduct==='2'
+                                                    ? 'selected' : '' ; %>>Accesorios</option>
+                                                <option value="3" <%=locals.old && old.idCategoryProduct==='3'
+                                                    ? 'selected' : '' ; %>>Indumentaria</option>
                                             </select>
 
                                             <label for="idColor" class="elementForm">Colores</label>

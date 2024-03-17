@@ -6,6 +6,5 @@ module.exports = [
     body('price')
         .notEmpty().withMessage('Ingresa un precio').bail()
         .isNumeric().withMessage('El precio debe ser un numero'),
-    // body('idColor')
-    //     .notEmpty().withMessage('Ingresa un color'),
+
 ]

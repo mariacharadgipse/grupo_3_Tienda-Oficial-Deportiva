@@ -6,11 +6,9 @@ module.exports = [
     body('lastName')
         .notEmpty().withMessage('Debes ingresar un apellido').bail(),
     body('email')
-        .isEmail().withMessage('Ingresa un email').bail(),  
+        .isEmail().withMessage('Ingresa un email').bail(),
     body('password')
         .notEmpty().withMessage('Ingresa una contraseña').bail(),
 
 
-    // body('idColor')
-    //     .notEmpty().withMessage('Ingresa un color'),
 ]
