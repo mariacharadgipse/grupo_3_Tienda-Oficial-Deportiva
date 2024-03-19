@@ -262,6 +262,18 @@ module.exports = {
 	// 	//res.render('/products/productCart');
 	// },
 
+// Root - Show productCart - Sequelize
+getCart: async (req, res) => {
+	try {
+		const pSelected = await db.Products.findByPk(req.params.id);
+		res.render('products/productCart.ejs', { pSelected });
+
+	} catch (error) {
+		console.error(error);
+	}
+},
+
+
 	// deleDestroy1: (req, res) => {
 	// 	const id = req.params.id;
 	// 	let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

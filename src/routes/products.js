@@ -22,7 +22,7 @@ router.post('/create', uploadProduct.single('image'), validateProducts, productC
 
 
 router.get('/detail/:id', productController.getDetail);
-// router.get('/cart/:id', productController.getCart);
+router.get('/cart/:id', productController.getCart);
 
 /*** EDIT ONE PRODUCT http://localhost:5000/products/edit/1 ***/
 router.get('/edit/:id', productController.edit);
@@ -32,3 +32,4 @@ router.delete('/delete/:id', productController.deleDestroy)
 
 
 module.exports = router;
+
