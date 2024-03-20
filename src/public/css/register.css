@@ -111,16 +111,41 @@ input {
     border-style: solid;
 }
 
+
 .color-input {
     background-color: var(--links); 
     padding: 8px;
     border: 1px solid var(--bg-primario);
+    margin: auto;
 }
 
 .equal-size {
     padding: 8px;
     border: 1px solid #ccc;
     width: 300px; /* Establece el ancho */
+    margin: auto;
+}
+
+.formR button {
+    width:300px;
+    margin:auto
+}
+
+.formR input {
+    margin-bottom: 12px;
+}
+
+.error-input-firstName,
+.error-input-lastName,
+.error-input-email,
+.error-input-email2,
+.error-input-password,
+.error-input-image {
+color: #db0034;
+font-size: 12px;
+margin: auto;
+padding: 2px;
+border: 2px;
 }
 
 .contenedor-checkbox label{
@@ -157,6 +182,14 @@ form {
     display: flex;
     flex-direction: column;
 }
+
+
+.validation-message {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+  }
 
 
 /* Media queries */

@@ -4,13 +4,15 @@ const router = express.Router();
 // multer middleware
 const uploadUser = require('../middlewares/multer').uploadUser;
 
+const validateUsers = require('../middlewares/validateUsers');
+
 //REGISTER
 
 const { getRegister, postRegister } = require('../controllers/userController.js')
 
 router.get('/register', getRegister);
 
-router.post('/register', uploadUser.single('imageUser'), postRegister)
+router.post('/register', uploadUser.single('imageUser'), validateUsers, postRegister)
 
 
 
