@@ -7,8 +7,13 @@
         <%- include('../partials/header') %>
 
             <main class="formContenedor">
-                <h1 class="tituloCreate"><strong>Nuevo Producto</strong></h1>
-                <form action="/products/create" method="POST" enctype="multipart/form-data">
+
+<div>
+    <h5 class="tituloExtra" id="pruebaV">texto de prueba</h5> 
+</div>
+
+                <h2 class="tituloCreate"><strong>Nuevo Producto</strong></h2>
+                <form action="/products/create" method="POST" enctype="multipart/form-data" class="formRegister">
 
                     <label for="name" class="elementForm">Nombre del Producto</label>
                     <input type="text" id="name" name="name" class="control"
@@ -86,7 +91,11 @@
                 </form>
             </main>
 
+<%- include('../partials/footer')%>
+
+<script src="/js/validator.js"></script>
+
     </body>
-    <%- include('../partials/footer')%>
+    
 
 </html>
