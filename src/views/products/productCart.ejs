@@ -102,17 +102,12 @@
             <button onclick="realizarCompra()">Comprar</button>
           </div>
 
-        </div>
-
-        <button onclick="realizarCompra()">Comprar</button>
-
-        </div>
-        </div>
+              </div>
       </main>
       <%- include('../partials/footer') %>
 
   </body>
-
+<script>
     quantityOnChange = (e) => {
       const price = '<%= pSelected.price %>';
       const quantity = document.getElementById('quantity').value;
