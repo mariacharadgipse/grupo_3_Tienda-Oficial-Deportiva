@@ -1,6 +1,5 @@
 window.onload = function () {
 
-  let formularioCont = document.querySelector('#registerContenedor');
   const formulario = document.querySelector(".formR");
 
   const nameInput = document.querySelector('.nameRegister');
@@ -16,47 +15,55 @@ window.onload = function () {
   formulario.addEventListener('submit', (e) => {
 
     if ((formulario.firstName.value.length) < 2) {
+      e.preventDefault();
       pError1.innerHTML = 'Debe tener al menos 2 caracteres'
     } else {
-      e.preventDefault();
+      pError1.innerHTML = ''
     }
   }),
 
     formulario.addEventListener('submit', (e) => {
 
       if ((formulario.lastName.value.length) < 2) {
+        e.preventDefault();
         pError2.innerHTML = 'El apellido debe tener al menos 2 caracteres'
       } else {
-        e.preventDefault();
+        pError2.innerHTML = ''
       }
     }),
 
-
+//Email
     formulario.addEventListener('submit', (e) => {
-
+      const emailV = formulario.email.value;
+      console.log(emailV);
+      
       if (formulario.email.value === '') {
         pError3.innerHTML = 'No puede ser vacio'
-      }
-
-
-      const emailR = /^[^\s@]+@[^\s@]+\.[$$@]+$/;
-
-      const emailV= formulario.email.value;
-      console.log(emailV);
-  
-      if (emailR.test(emailV)){
-        pError31.innerHTML = 'Por favor, introduce un correo electrónio válido'
-      } else {
         e.preventDefault();
       }
-    }),
+
+      function validarEmail(emailV) {
+        var expresionRegular = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/;
+        return expresionRegular.test(emailV);
+      }
+
+      if(validarEmail(emailV) === false) {
+      pError31.innerHTML = 'Email invalido'
+      e.preventDefault();
+        } else {
+          formulario.submit();
+          pError31.innerHTML = ''
+        }   
+});
+
 
     formulario.addEventListener('submit', (e) => {
 
       if ((formulario.password).value === '') {
         alert(pError4.innerHTML = 'Debes colocar una contraseña')
-      } else {
         e.preventDefault();
+      } else {
+        alert(pError4.innerHTML = '')
       }
     }),
 
@@ -64,8 +71,14 @@ window.onload = function () {
 
       if (formulario.imageUser.value && !/\.(jpg|jpeg|png|gif)$/i.test(formulario.imageUser.value)) {
         pError5.innerHTML = 'Formato de imagen no válido. Puedes utilizar JPG, JPEG, PNG o GIF'
-      } else {
         e.preventDefault();
+      } else {
+        pError5.innerHTML = ''
       }
-    })}
+    })
+}
+
+
+
+
 

@@ -6,9 +6,13 @@
     --bg-secundario: #101010;
 }
 
+.formContenedor i {
+    color: #800080;
+}
 .tituloEdit{
     color:#424242;
     font-style: oblique;
+    margin-bottom: 20px;
 }
 .formContenedor {
     display: flex;
@@ -35,10 +39,24 @@
     align-items: center;
 }
 
-.elementForm {
+.formCE input {
     margin-bottom: 15px;
+    margin: auto;
+    max-width: 500px;
+}
 
-
+.error-input-name,
+.error-input-price,
+.error-input-price2,
+.error-input-discount,
+.error-input-description,
+.error-input-description2,
+.error-input-image {
+color: #db0034;
+font-size: 14px;
+margin: auto;
+padding: 2px;
+border: 2px;
 }
 
 .elementForm label {
@@ -53,12 +71,20 @@
     align-items: center;
 }
 
-.botonForm {
-    background-color: #800080;
-    width: 50px;
+.botonR{
+    background-color:#db0034;
+    width: 49%;
     color: #eeeeee;
-    align-items: right;
-    justify-content: center
+    justify-content:space-between;
+    margin-top: 20px;
+}
+
+.botonG {
+    background-color: #800080;
+    width: 49%;
+    color: #eeeeee;
+    justify-content:space-between;
+    margin-top: 20px;
 }
 
 .mensajeError {

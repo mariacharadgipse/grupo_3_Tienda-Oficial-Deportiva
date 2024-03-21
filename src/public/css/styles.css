@@ -200,6 +200,20 @@ footer {
 
 /* Footer links */
 
+.enlace {
+   text-decoration: none;
+   font-size: 15px;
+   color:#800080;
+   background-color: white;
+   padding-right: 10px;
+   border: solid 1px #2d2a30;
+}
+
+.tituloCatalogo {
+  display:flex;
+  justify-content: space-between;
+ 
+}
 
 .footer-distributed .footer-links {
   color: #ffffff;

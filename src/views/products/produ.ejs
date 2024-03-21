@@ -2,7 +2,7 @@
 <html lang="es">
 <!-- Include Head -->
 
-<%- include('../partials/head', { title: 'producto' , stylesheet: ['/css/styles.css','/css/produ.css']}) %>
+<%- include('../partials/head', { title: 'producto' , stylesheet: ['/css/styles.css','/css/index.css','/css/produ.css']}) %>
 
     <body>
         <!-- Header -->
@@ -12,36 +12,36 @@
             <!-- todos los productos -->
             <main class="main">
                 <div class="contGeneral">
-                    <div class="col-12">
+                    <div class="tituloCatalogo">
                         <h2 class="tituloGeneral"><strong> Todos los productos</strong></h2>
+                        <h3><a href="/products/create" class="enlace">Sube un producto</a></h3>
                     </div>
                     <div class="contProducts">
                         
                         <% products.forEach(product=> { %>
                             <section class="product">
-                                <a href="/products/detail/<%= product.id %>">
+                                <a class="enlaces" href="/products/detail/<%= product.id %>">
                                     <figure class="product-box_image">
                                         <img src="/img/products/<%= product.image %>" alt="imagen de producto"
                                             width="90%" height="300px auto">
                                     </figure>
-                                    <article>
-                                        <h2>$<%= product.price %>
+                                    <article class="product-box-info">
+
+                                        <h2 class="priceProd">
+                                            <stong><%= product.name %>
+                                            </stong>
                                         </h2>
-                                        <p>
-                                            <%= product.description %>
-                                        </p>
-                                        <p>
-                                            <%= product.name %>
-                                        </p>
-                                        <p>
-                                            <%= product.category %>
-                                        </p>
-                                        <p>
-                                            <%= product.colors %>
-                                        </p>
-                                        
+
+                                        <h2 class="nameProd">
+                                            <stong>$<%= product.price %>
+                                            </stong>
+                                        </h2>
+
+                                        <span class="discountProd">
+                                            <%= product.discount %>% OFF
+                                        </span>
+
                                     </article>
-                                    <div class="envio"><i class="fa-solid fa-truck"></i></div>
                                 </a>
                             </section>
                             <% }) %>

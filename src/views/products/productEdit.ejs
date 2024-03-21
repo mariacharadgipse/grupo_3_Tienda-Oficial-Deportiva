@@ -9,9 +9,9 @@
             <main class="formContenedor">
                 <h2 class="tituloEdit"><strong>Editar el producto:</strong> <i>
                         <%= pToEdit.name %>
-                    </i></h1>
+                    </i></h2>
                     <form action="/products/edit/<%= pToEdit.id %>?_method=PUT" method="POST"
-                        enctype="multipart/form-data">
+                        enctype="multipart/form-data" class="formCE">
 
                         <div class="elementForm">
                             <label for="name" class="label-form">Nombre del Producto</label>
@@ -22,6 +22,7 @@
                                     <%= errors.name.msg %>
                                 </p>
                                 <% } %>
+                                <p class="error-input-name"></p>
                         </div>
 
                         <div class="elementForm">
@@ -33,12 +34,15 @@
                                     <%= errors.price.msg %>
                                 </p>
                                 <% } %>
+                                <p class="error-input-price"></p>
+                                <p class="error-input-price2"></p>
                         </div>
 
                         <div class="elementForm">
                             <label for="discount">Descuento</label>
                             <input type="text" id="discount" name="discount" class="control" placeholder="20%"
                                 value="<%= pToEdit.discount %>"></input>
+                                <p class="error-input-discount"></p>
                         </div>
 
                         <div class="elementForm">
@@ -50,11 +54,12 @@
                             </select>
                         </div>
 
-                        <div class="elementForm">
                             <label for="description">Descripción</label>
                             <textarea name="description" id="description"
                                 class="control"> <%= pToEdit.description %> </textarea>
-                        </div>
+                                <p class="error-input-description"></p>
+                                <p class="error-input-description2"></p>
+
 
                         <div class="elementForm">
                             <label>Colores</label>
@@ -67,19 +72,19 @@
                                 <% } %>
                         </div>
 
-                        <div class="elementForm">
                             <label for="image">Imágenes del producto</label>
                             <input type="file" name="images" id="images" class="control" accept=".jpg, .png"
                                 multiple></input>
-                        </div>
+                                <p class="error-input-imageCE"></p>
 
-                        <button type="reset" class="botonForm">Restablecer</button>
-                        <button type="submit" class="botonForm">Guardar</button>
+                        <button type="reset" class="botonR">Restablecer</button>
+                        <button type="submit" class="botonG">Guardar</button>
 
                     </form>
             </main>
-
-    </body>
     <%- include('../partials/footer')%>
 
+
+    <script src="/js/validatorCreateEdit.js"></script>
+    </body>
 </html>

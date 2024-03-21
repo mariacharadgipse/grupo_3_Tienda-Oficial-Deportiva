@@ -54,17 +54,7 @@ body {
   justify-content: space-around
 }
 
-.product {
-  display: block;
-  padding: 5px;
-  background-color: var(--light-gray);
-  width: 300px;
-  height: auto;
-  align-items: center;
-  border: solid 5px red;
-  border-radius: 8px;
-  margin: 10px
-}
+
 
 .fa-truck{
   color:green;
