@@ -302,6 +302,13 @@ footer {
   width: 30%;
 }
 
+.footer-left h4 {
+  color: white;
+}
+.tituloFooter span{
+  color: #EAC926;
+}
+
 .footer-distributed .footer-company-about {
   line-height: 20px;
   color: #92999f;
@@ -357,10 +364,16 @@ footer {
 
 .product-box-info {
   display: flex;
-  align-items: center;
-  justify-content:space-around;
+  border-top: solid 1px #69676b;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
   flex-wrap: wrap;
-  border-top: solid 0.5px #69676b;
+  align-items: center;
+  justify-content: center;
+  border-top: solid 1px #69676b
 }
 
 
@@ -368,18 +381,24 @@ footer {
   text-decoration: none;
 }
 
-.nameProd{
-text-decoration: none;
+.product-box-info h2{
+text-align: justify;
+padding: 10px;
+
+
+
 }
 
 .priceProd {
   text-decoration: none;
   color: #000000;
+  display: inline-flex;
 }
 
 .discountProd {
   color:#2e963c;
   font-size: 15px;
+  display: inline-flex;
 }
 
 /*------------MEDIA QUERYES----------------*/

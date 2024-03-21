@@ -9,7 +9,7 @@
             <main>
 
                 <div class="banner">
-                    <a href="/"><img src="img/bannerTOD1.jpg" width="400px" alt="banner1"></a> 
+                    <a href="/products"><img src="img/bannerTOD1.jpg" width="400px" alt="banner1"></a>
                 </div>
 
                 <!-- ultima visita -->
@@ -61,7 +61,7 @@
                         <div class="contProducts">
                             <% inDiscount.forEach(product=> { %>
                                 <section class="product">
-                                    
+
                                     <a class="enlaces" href="/products/detail/<%= product.id %>">
                                         <figure class="product-box_image">
                                             <img src="/img/products/<%= product.image %>" alt="imagen de producto"
@@ -71,11 +71,6 @@
                                         <article class="product-box-info">
 
                                             <h2 class="priceProd">
-                                                <stong><%= product.name %>
-                                                </stong>
-                                            </h2>
-
-                                            <h2 class="nameProd">
                                                 <stong>$<%= product.price %>
                                                 </stong>
                                             </h2>
@@ -84,15 +79,23 @@
                                                 <%= product.discount %>% OFF
                                             </span>
 
+                                            <h3 class="priceProd">
+                                                <stong>
+                                                    <%= product.name %>
+                                                </stong>
+                                            </h3>
+
+
+
                                         </article>
                                     </a>
                                 </section>
                                 <% }) %>
                         </div>
-                </main>
-                <!-- /Ofertas -->
 
             </main>
+
+            <div id="contatoFooter"></div>
             <%- include('partials/footer') %>
     </body>
 
