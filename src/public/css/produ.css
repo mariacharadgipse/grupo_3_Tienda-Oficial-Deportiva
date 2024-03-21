@@ -1,12 +1,18 @@
 /*====== Variables ======*/
 :root {
-  --yellow: #EAC926;
-  --dark-blue: #03264C;
-  --light-blue: #1259c3;
-  --gray: #666666;
-  --light-gray: #ebebeb;
-  --green: #39b54a;
-  --base-font-family: 'Roboto', sans-serif
+  --primario:  #db0034 ;
+  --secundario: #eeeeee;
+  --links: #ada9a9;
+  --bg-primario:  #424242;
+  --bg-secundario: #101010;
+  --Negro: #000000;
+  --Blanco: #FFFFFF;
+  --GrisOscuro: #333333;
+  --Gris: #808080;
+  --GrisClaro: #CCCCCC;
+  --Rojo: #FF0000;
+  --Violeta: #800080;
+  --Amarillo: #FFFF00;
 }
 
 
@@ -35,9 +41,31 @@ body {
 }
 
 .tituloGeneral {
-  color: black;
+  color: white;
+  background-color: black;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 20px;
+  display: block;
+  align-items: center;
+  padding-left: 5px  20px;
+  margin: auto;
+}
+
+.tituloCatalogo {
+  background-color: black;
+}
+
+.link-a-create{
+  display: flex;
+  justify-content: right;
+  margin: 20px 0px;
+}
+
+.link-a-create a {
+  text-decoration: none;
+  background-color:#800080;
+  color: #ebebeb;
+  padding: 8px 16px;
 }
 
 .contGeneral{
@@ -54,17 +82,7 @@ body {
   justify-content: space-around
 }
 
-.product {
-  display: block;
-  padding: 5px;
-  background-color: var(--light-gray);
-  width: 300px;
-  height: auto;
-  align-items: center;
-  border: solid 5px red;
-  border-radius: 8px;
-  margin: 10px
-}
+
 
 .fa-truck{
   color:green;

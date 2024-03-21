@@ -5,13 +5,16 @@
 
   <body>
     <%- include('../partials/header') %>
+
       <main>
         <ul type="none">
           <li>
             <h2 class="title">Mi Carrito de Compras</h2>
           </li>
           <li>
-            <a href="/"><h3 class="subtitle">Seguir Comprando</h3></a>
+            <a href="/">
+              <h3 class="subtitle">Seguir Comprando</h3>
+            </a>
           </li>
         </ul>
 
@@ -22,16 +25,22 @@
             </article>
 
             <section class="productDescription">
-              <h3><%= pSelected.name %></h3>
-              <p> <%= pSelected.description %></p>
+              <h3>
+                <%= pSelected.name %>
+              </h3>
+              <p>
+                <%= pSelected.description %>
+              </p>
               <span> $ <%= pSelected.price %></span>
-              <% if (pSelected.discount > 0) { %>
-                <span> <%= pSelected.discount %> % OFF</span>
+              <% if (pSelected.discount> 0) { %>
+                <span>
+                  <%= pSelected.discount %> % OFF
+                </span>
                 <% } else { %>
                   <span> 0 % OFF</span>
-              <% } %>
+                  <% } %>
             </section>
-            
+
             <section class="quantity">
               <h4>Cantidad</h4>
               <form id="quantityForm" method="post">
@@ -55,12 +64,15 @@
 
             <section class="price">
               <h3>Precio</h3>
-              <h4>$<%= pSelected.price %></h4>
-                <% if (pSelected.discount > 0 ){ %> 
-                    <span><%= pSelected.discount %> % OFF</span>
+              <h4>$<%= pSelected.price %>
+              </h4>
+              <% if (pSelected.discount> 0 ){ %>
+                <span>
+                  <%= pSelected.discount %> % OFF
+                </span>
                 <%}else { %>
-                <span> 0 % OFF </span>
-              <% } %>
+                  <span> 0 % OFF </span>
+                  <% } %>
             </section>
 
             <h4>Subtotal</h4>
@@ -89,14 +101,17 @@
 
             <button onclick="realizarCompra()">Comprar</button>
           </div>
+
+        </div>
+
+        <button onclick="realizarCompra()">Comprar</button>
+
+        </div>
         </div>
       </main>
+      <%- include('../partials/footer') %>
+
   </body>
-  <%- include('../partials/footer') %>
-  <script>
-    const realizarCompra = () => {
-      console.log('AGREGAR AL CARRITO')
-    }
 
     quantityOnChange = (e) => {
       const price = '<%= pSelected.price %>';

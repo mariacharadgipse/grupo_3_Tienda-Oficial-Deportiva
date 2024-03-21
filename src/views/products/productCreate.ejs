@@ -7,8 +7,10 @@
         <%- include('../partials/header') %>
 
             <main class="formContenedor">
-                <h1 class="tituloCreate"><strong>Nuevo Producto</strong></h1>
-                <form action="/products/create" method="POST" enctype="multipart/form-data">
+
+                <h2 class="tituloCreate"><strong>Nuevo Producto</strong></h2>
+
+                <form action="/products/create" method="POST" enctype="multipart/form-data" class="formCE">
 
                     <label for="name" class="elementForm">Nombre del Producto</label>
                     <input type="text" id="name" name="name" class="control"
@@ -18,6 +20,7 @@
                             <%= errors.name.msg %>
                         </p>
                         <% } %>
+                        <p class="error-input-name"></p>
 
 
                             <label for="price" class="elementForm">Precio</label>
@@ -28,6 +31,8 @@
                                     <%= errors.price.msg %>
                                 </p>
                                 <% } %>
+                                <p class="error-input-price"></p>
+                                <p class="error-input-price2"></p>
 
 
                                     <label for="discount" class="form-label">Descuento:</label>
@@ -39,16 +44,19 @@
                                             <%= errors.discount.msg %>
                                         </p>
                                         <% } %>
+                                        <p class="error-input-discount"></p>
+
+                                        <label for="idCategoryProduct" class="elementForm">Categoría</label>
+                                        <select id="idCategoryProduct" name="idCategoryProduct" class="control">
+                                            <option value="1">Calzados</option>
+                                            <option value="2">Accesorios</option>
+                                            <option value="3">Indumentaria</option>
+                                        </select>
 
                                             <label for="description" class="elementForm">Descripción</label>
                                             <textarea id="description" name="description" class="control"></textarea>
-
-                                            <label for="idCategoryProduct" class="elementForm">Categoría</label>
-                                            <select id="idCategoryProduct" name="idCategoryProduct" class="control">
-                                                <option value="1" selected>Calzados</option>
-                                                <option value="2">Accesorios</option>
-                                                <option value="3">Indumentaria</option>
-                                            </select>
+                                            <p class="error-input-description"></p>
+                                            <p class="error-input-description2"></p>
 
                                             <label for="idColor" class="elementForm">Colores</label>
                                             <select id="idColor" name="idColor" class="control">
@@ -79,6 +87,8 @@
                                                 producto</label>
                                             <input type="file" id="image" name="image" class="control"
                                                 accept=".jpg, .png" multiple></input>
+                                            
+                                                <p class="error-input-imageCE"></p>
 
                                             <button type="reset" class="botonForm">Borrar</button>
                                             <button type="submit" class="botonForm">Guardar</button>
@@ -86,7 +96,11 @@
                 </form>
             </main>
 
+
+            <%- include('../partials/footer')%>
+
+                <script src="/js/validatorCreateEdit.js"></script>
     </body>
-    <%- include('../partials/footer')%>
+
 
 </html>

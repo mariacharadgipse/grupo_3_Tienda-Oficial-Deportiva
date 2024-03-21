@@ -17,19 +17,22 @@
 .des {
     font-size: 15px;
     height: 25px;
-    padding: 5px;
-    margin: 5px;
+    padding: 10px;
+    margin: 10px;
     text-align: center;
     width: 98%;
 }
 
+.conteinerInfo p {
+    margin-bottom: 10px;
+}
 .conteinerBoton {
     padding: 10px;
 }
 
 .boton {
     background-color: #006909;
-    width: 100px;
+    width: 120px;
     margin:auto;
     color: #eeeeee;
     align-items: center;
@@ -39,7 +42,7 @@
 
 .botonED {
     background-color:#fdec00;
-    width: 100px;
+    width: 120px;
     margin:auto;
     color:#101010;
     align-items: center;
@@ -49,7 +52,7 @@
 
 .botonEL {
     background-color:#db0034;
-    width: 100px;
+    width: 120px;
     margin:auto;
     color: #eeeeee;
     align-items: center;
@@ -110,6 +113,13 @@
     display: Block;
 }
 
+.conteinerImage img {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .conteinerInfo{
     background-color:#ffffff; 
     width: 45%;
@@ -141,6 +151,7 @@
     margin-bottom: 10px;
 }
 .product-detail-price small {
+    color:#006909;
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -169,7 +180,7 @@ ul li {
 }
 
 .adm {
-    margin-left: 35px;
+    margin-left: 30px;
 }
 
 
