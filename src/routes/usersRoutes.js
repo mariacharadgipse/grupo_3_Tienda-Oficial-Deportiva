@@ -6,6 +6,9 @@ const uploadUser = require('../middlewares/multer').uploadUser;
 
 const validateUsers = require('../middlewares/validateUsers');
 
+
+const validateUsersLogin = require('../middlewares/validateUsersLogin');
+
 //REGISTER
 
 const { getRegister, postRegister } = require('../controllers/userController.js')

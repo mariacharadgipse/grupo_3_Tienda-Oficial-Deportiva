@@ -70,6 +70,7 @@ module.exports = {
 
 	postLogin: async (req, res) => {
 		try {
+
 			// obtener los datos del form
 			let { email, password, rememberme } = req.body
 
@@ -87,24 +88,25 @@ module.exports = {
 				console.log('Todo salió ok, estas logueado');
 				res.redirect('/users/profile')
 			} else {
-				res.send('El password o email es incorrecto')
-			}
-		} catch (error) {
-			console.error(error);
-			res.status(500).send('Error al procesar la autenticación');
+				res.send('El password o email es incorrecto');
+
 		}
-	},
+	} catch(error) {
+		console.error(error);
+		res.status(500).send('Error al procesar la autenticación');
+	}
+},
 
 	profile: (req, res) => {
 		res.render('users/profile.ejs', { user: req.session.userLogged })
 	},
 
-	logout: (req, res) => {
-		req.session.userLogged = undefined
-		// req.session.destroy()
-		res.clearCookie('rememberme')
-		res.redirect('/')
-	},
+		logout: (req, res) => {
+			req.session.userLogged = undefined
+			// req.session.destroy()
+			res.clearCookie('rememberme')
+			res.redirect('/')
+		},
 }
 // const controller = {
 
