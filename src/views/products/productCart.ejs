@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <%- include('../partials/head', { title: 'Cart' , stylesheet: ['/css/styles.css','/css/productCart.css']}) %>
 
   <body>
@@ -34,9 +34,9 @@
             
             <section class="quantity">
               <h4>Cantidad</h4>
-              <form id="quantity" method="post">
+              <form id="quantityForm" method="post">
                 <label for="cantidad">Cantidad:</label>
-                <select type="number">
+                <select id="quantity" type="number" onchange="quantityOnChange()">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -78,20 +78,30 @@
               </form>-->
 
               <h3>Total</h3>
-              <h3>Total</h3>
               <p class="totalPrice">
-              </span> Precio Total$<span= "precioTotal">
-                <%= pSelected.price %></span></p>
+              </span> Precio Total $<span= " precioTotal" id="totalPrice"> 
+                <%=  pSelected.price  %>
+              </span>
+              </p> 
             </div>
 
             </div>
 
             <button onclick="realizarCompra()">Comprar</button>
-
           </div>
         </div>
       </main>
   </body>
   <%- include('../partials/footer') %>
+  <script>
+    const realizarCompra = () => {
+      console.log('AGREGAR AL CARRITO')
+    }
 
+    quantityOnChange = (e) => {
+      const price = '<%= pSelected.price %>';
+      const quantity = document.getElementById('quantity').value;
+      document.getElementById('totalPrice').innerHTML = price * quantity;
+    }
+  </script>
 </html>
