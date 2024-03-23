@@ -164,7 +164,7 @@ module.exports = {
 			} else {
 				res.render('products/productCreate', {
 					errors: results.mapped(),
-					old: req.body
+					oldData: req.body
 
 				});
 

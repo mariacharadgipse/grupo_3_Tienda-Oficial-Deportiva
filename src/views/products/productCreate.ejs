@@ -17,7 +17,7 @@
 
                     <label for="name" class="elementForm">Nombre del Producto</label>
                     <input type="text" id="name" name="name" class="control"
-                        value="<%= locals.old && old.name ? old.name : '' %>">
+                        value="<%= locals.oldData && oldData.name ? oldData.name : null %>">
                     <% if (locals.errors && errors.name) { %>
                         <p class="mensajeError">
                             <%= errors.name.msg %>
@@ -50,28 +50,41 @@
 
                                             <label for="idCategoryProduct" class="elementForm">Categoría</label>
                                             <select id="idCategoryProduct" name="idCategoryProduct" class="control">
-                                                <option value="1" selected<%=locals.old && old.idCategoryProduct==='1'
+                                                <option value="1" selected <%=locals.old && old.idCategoryProduct==='1'
                                                     ? 'selected' : '' ; %>>Calzados</option>
                                                 <option value="2" <%=locals.old && old.idCategoryProduct==='2'
                                                     ? 'selected' : '' ; %>>Accesorios</option>
                                                 <option value="3" <%=locals.old && old.idCategoryProduct==='3'
                                                     ? 'selected' : '' ; %>>Indumentaria</option>
+
                                             </select>
 
                                             <label for="idColor" class="elementForm">Colores</label>
                                             <select id="idColor" name="idColor" class="control">
-                                                <option value="1" selected>blanco</option>
-                                                <option value="2">Negro</option>
-                                                <option value="3">Gris</option>
-                                                <option value="4">Rojo</option>
-                                                <option value="5">Azul</option>
-                                                <option value="6">Verde</option>
-                                                <option value="7">Amarillo</option>
-                                                <option value="8">Naranja</option>
-                                                <option value="9">Morado</option>
-                                                <option value="10">Rosa</option>
-                                                <option value="11">Marrón</option>
-                                                <option value="12">Beige</option>
+                                                <option value="1" selected <%=locals.old && old.idColor==='1'
+                                                    ? 'selected' : '' ; %>>blanco</option>
+                                                <option value="2" <%=locals.old && old.idColor==='2' ? 'selected' : '' ;
+                                                    %>>Negro</option>
+                                                <option value="3" <%=locals.old && old.idColor==='3' ? 'selected' : '' ;
+                                                    %>>Gris</option>
+                                                <option value="4" <%=locals.old && old.idColor==='4' ? 'selected' : '' ;
+                                                    %>>Rojo</option>
+                                                <option value="5" <%=locals.old && old.idColor==='5' ? 'selected' : '' ;
+                                                    %>>Azul</option>
+                                                <option value="6" <%=locals.old && old.idColor==='6' ? 'selected' : '' ;
+                                                    %>>Verde</option>
+                                                <option value="7" <%=locals.old && old.idColor==='7' ? 'selected' : '' ;
+                                                    %>>Amarillo</option>
+                                                <option value="8" <%=locals.old && old.idColor==='8' ? 'selected' : '' ;
+                                                    %>>Naranja</option>
+                                                <option value="9" <%=locals.old && old.idColor==='9' ? 'selected' : '' ;
+                                                    %>>Morado</option>
+                                                <option value="10" <%=locals.old && old.idColor==='10' ? 'selected' : ''
+                                                    ; %>>Rosa</option>
+                                                <option value="11" <%=locals.old && old.idColor==='11' ? 'selected' : ''
+                                                    ; %>>Marrón</option>
+                                                <option value="12" <%=locals.old && old.idColor==='12' ? 'selected' : ''
+                                                    ; %>>Beige</option>
                                             </select>
 
                                             <!-- <label for="idColor" class="elementForm">Colores</label>
