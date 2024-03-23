@@ -46,7 +46,8 @@
                                         <% } %>
 
                                             <label for="description" class="elementForm">Descripción</label>
-                                            <textarea id="description" name="description" class="control"></textarea>
+                                            <textarea id="description" name="description"
+                                                class="control"><%= locals.oldData && oldData.description ? oldData.description : null %></textarea>
 
                                             <label for="idCategoryProduct" class="elementForm">Categoría</label>
                                             <select id="idCategoryProduct" name="idCategoryProduct" class="control">
