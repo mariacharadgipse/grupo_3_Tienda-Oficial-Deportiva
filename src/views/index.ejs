@@ -52,17 +52,20 @@
                 <!-- /ultima visita -->
 
                 <!-- Ofertas -->
-                <main class="main">
                     <div class="contGeneral">
+
                         <div class="col-12">
                             <h1 class="titulo"><strong> Ofertas</strong></h1>
                         </div>
+
                         <!-- Show the "in-sale" products -->
                         <div class="contProducts">
                             <% inDiscount.forEach(product=> { %>
-                                <section class="product">
+                                
+                                <div class="containerProduct">
 
                                     <a class="enlaces" href="/products/detail/<%= product.id %>">
+
                                         <figure class="product-box_image">
                                             <img src="/img/products/<%= product.image %>" alt="imagen de producto"
                                                 width="90%" height="300px auto">
@@ -79,23 +82,22 @@
                                                 <%= product.discount %>% OFF
                                             </span>
 
-                                            <h3 class="priceProd">
+                                            <h3 class="nameProd">
                                                 <stong>
                                                     <%= product.name %>
                                                 </stong>
                                             </h3>
 
-
-
                                         </article>
                                     </a>
-                                </section>
+                                    
+                                </div>
                                 <% }) %>
                         </div>
 
             </main>
 
-            <div id="contatoFooter"></div>
+            <div id="contactoFooter"></div>
             <%- include('partials/footer') %>
     </body>
 

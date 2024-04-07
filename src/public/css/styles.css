@@ -1,17 +1,17 @@
 :root {
-    --primario:  #db0034 ;
-    --secundario: #eeeeee;
-    --links: #ada9a9;
-    --bg-primario:  #424242;
-    --bg-secundario: #101010;
-    --Negro: #000000;
-    --Blanco: #FFFFFF;
-    --GrisOscuro: #333333;
-    --Gris: #808080;
-    --GrisClaro: #CCCCCC;
-    --Rojo: #FF0000;
-    --Violeta: #800080;
-    --Amarillo: #FFFF00;
+  --primario: #db0034;
+  --secundario: #eeeeee;
+  --links: #ada9a9;
+  --bg-primario: #424242;
+  --bg-secundario: #101010;
+  --Negro: #000000;
+  --Blanco: #FFFFFF;
+  --GrisOscuro: #333333;
+  --Gris: #808080;
+  --GrisClaro: #CCCCCC;
+  --Rojo: #FF0000;
+  --Violeta: #800080;
+  --Amarillo: #FFFF00;
 }
 
 .logoCompletoSinFondo {
@@ -26,7 +26,7 @@
   height: auto;
 }
 
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -53,7 +53,7 @@ header {
 }
 
 
-#search-1{
+#search-1 {
   display: none;
 }
 
@@ -62,6 +62,12 @@ i {
   color: #fff;
   cursor: pointer;
 }
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
 header .logo {
   flex: 1;
   color: #fff;
@@ -70,8 +76,11 @@ header .logo {
   font-size: 15px;
 }
 
+
+
+
 header .search-box {
-  flex: 1;
+  /*flex: 1;*/
   position: relative;
 }
 
@@ -104,7 +113,6 @@ header .search-box {
   color: #fff;
 }
 
-
 header ul {
   flex: 2;
   display: flex;
@@ -130,12 +138,15 @@ header ul li a:hover {
   border-bottom: 2px solid rgb(255, 255, 255);
 }
 
-header .menu {
-  font-size: 2.5em;
+.nav-bar {
   display: none;
 }
 
-.elemento {
+header .menu {
+  font-size: 2.5em;
+}
+
+elemento {
   flex: 1 0 auto;
   margin: 0 50px;
   background-color: #eeeeee;
@@ -154,14 +165,6 @@ footer {
   bottom: 0;
 }
 
-@media (max-height: 800px) {
-  footer {
-    position: static;
-  }
-  header {
-    padding-top: 40px;
-  }
-}
 
 .footer-distributed {
   background-color: #2d2a30;
@@ -174,16 +177,44 @@ footer {
 }
 
 
-.footer-distributed .footer-left,
+/*.footer-distributed .footer-left,
 .footer-distributed .footer-center,
 .footer-distributed .footer-right {
   display: inline-block;
   vertical-align: top;
+  text-align: justify;
+}*/
+
+footer {
+ margin: auto;
+ display: flex;
+ flex-direction: column;
+}
+
+.footerDiv h4 {
+  background-color: white;
+  margin-top: 20px;
+  padding: 10px;
+  border: 10px;
+}
+
+
+.footer-left h4 {
+  font-size: 20px;
+}
+
+.footer-center {
+  background-color: #ada9a9;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  padding: 10px;
+  justify-content: center;
 }
 
 /* Footer Left */
 
-.footer-distributed .footer-left {
+footer-distributedfooter-left {
   width: 30%;
 }
 
@@ -201,18 +232,18 @@ footer {
 /* Footer links */
 
 .enlace {
-   text-decoration: none;
-   font-size: 15px;
-   color:#800080;
-   background-color: white;
-   padding-right: 10px;
-   border: solid 1px #2d2a30;
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--primario);
+  background-color: white;
+  padding-right: 10px;
+  border: solid 1px #2d2a30;
 }
 
 .tituloCatalogo {
-  display:flex;
+  display: flex;
   justify-content: space-between;
- 
+
 }
 
 .footer-distributed .footer-links {
@@ -238,9 +269,7 @@ footer {
 
 /* Footer Center */
 
-.footer-distributed .footer-center {
-  width: 35%;
-}
+
 
 .footer-distributed .footer-center i {
   background-color: #33383b;
@@ -286,8 +315,8 @@ footer {
   color: green;
 }
 
-.fa-truck{
-  color:green;
+.fa-truck {
+  color: green;
   border-radius: 100%;
   background-color: #eeeeee;
   border: #000000;
@@ -299,13 +328,14 @@ footer {
 /* Footer Right */
 
 .footer-distributed .footer-right {
-  width: 30%;
+  width: 90%;
 }
 
 .footer-left h4 {
   color: white;
 }
-.tituloFooter span{
+
+.tituloFooter span {
   color: #EAC926;
 }
 
@@ -315,6 +345,7 @@ footer {
   font-size: 13px;
   font-weight: normal;
   margin: 0;
+  padding-top: 10px
 }
 
 .footer-distributed .footer-company-about span {
@@ -356,15 +387,12 @@ footer {
 .footer-links a:hover {
   color: #3f71ea;
 }
-/*------------NUEVO 26-02-97---------------*/
 
-.product {
-  border-color: #2e963c;
-}
+/*------------NUEVO 26-02/06-04---------------*/
 
 .product-box-info {
   display: flex;
-  border-top: solid 1px #69676b;
+  border-top: solid 1px var(--links);
   padding: 15px;
   width: 100%;
   height: auto;
@@ -372,39 +400,141 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  border-top: solid 1px #69676b
+  justify-content: space-around;
+  color: var(--bg-primario);
+  font-size: 15px;
 }
-
 
 .enlaces {
   text-decoration: none;
 }
 
-.product-box-info h2{
-text-align: justify;
-padding: 10px;
+.product-box-info h2 {
+  text-align: justify;
+  padding: 10px;
+}
 
-
-
+.nameProd {
+  color: var(--links)
 }
 
 .priceProd {
   text-decoration: none;
-  color: #000000;
+  color: var(--links);
   display: inline-flex;
 }
 
 .discountProd {
-  color:#2e963c;
+  color: #2e963c;
   font-size: 15px;
   display: inline-flex;
 }
 
 /*------------MEDIA QUERYES----------------*/
-@media (max-width: 1000px) {
+
+/*@media (min-width: 481px) {
+
+  .nav-bar {
+    display: none;
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .elemento {
+    width: 100%
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10 px;
+  }
+
+  footer-center {
+    display: none;
+  }
+
+  contactFoot {
+    display: none;
+  }
+
+  .logoCompletoSinFondo {
+    margin-left: 0;
+    padding: 0%;
+    width: 150px;
+    height: 80px;
+  }
+
+}*/
+
+
+@media (min-width: 700px) {
+
+  .elemento {
+    width: 25%;
+  }
+
+  .product-box {
+    width: 25%;
+  }
+
+  .contAllProducts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    justify-content: space-between;
+  }
+
   .search-box button {
     position: absolute;
+  }
+
+  .footer-company-name {
+    display: flex;
+    justify-content:flex-end;
+    padding-top: 20px;
+  }
+
+  .footerDiv {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+.footer-left {
+  display: none;
+}
+
+  .footer-left-new{
+    padding: 10px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 20px;
+    background-color: var(--links);
+  }
+
+  .footer-left-new h4{
+    color: var(--bg-secundario);
+    background-color: var(--links);
+
+  }
+  .footer-right {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    flex: 1;
   }
 
   header ul {
@@ -419,108 +549,28 @@ padding: 10px;
     transition: right 0.5s linear;
   }
 
+  header .nav-bar ul {
+    display: block;
+    background-color: #2e963c;
+  }
+
 
   header .menu {
-    display: block;
+    display: none;
     width: 100px;
     text-align: center;
   }
 
+  .nav-bar {
+    display: flex;
+  }
 
-  #search-1:checked ~ ul {
+  #search-1:checked~ul {
     right: 0;
   }
-}
-
-
-@media (max-width: 481px) {
-
-h3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-.elemento {
-  width: 100%
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 10 px;
-}
-
-.footer-distributed {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 10px;
-  }
-
-.footer-center {
-  display: none;
-}
-
-.contactFoot {
-  display: none;
-}
 
 }
 
+@media (min-width: 1200px) {
 
-
-@media (min-width:481px) and (max-width:769px) {
-  .elemento {
-    width: 40%;
-  }
-
-  .footer-center {
-    display: none;
-  }
-
-  .contactFoot {
-    display: none;
-  }
-
-  h3 {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-  }
- 
-  }
-
-
-  @media (min-width:770px) {
-    .elemento {
-      width: 25%;
-    }
-    
-    .product-box {
-      width:25%;
-     
-    
-    }
-    }
-    
-    .contAllProducts{
-       display: flex;
-       flex-wrap: wrap;
-       padding: 15px;
-       justify-content: space-between;
-    }
-    
-    
-    @media (max-width:440px) {
-    .logoCompletoSinFondo {
-      margin-left: 0;
-      padding: 0%;
-      width: 150px;
-      height: 80px;
-    }
-    }
+}

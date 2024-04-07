@@ -63,9 +63,14 @@ body {
 
 .link-a-create a {
   text-decoration: none;
-  background-color:#800080;
+  background-color: var(--bg-primario);
   color: #ebebeb;
   padding: 8px 16px;
+}
+
+
+.link-a-create a:hover {
+  background-color: var(--primario);
 }
 
 .contGeneral{
