@@ -101,25 +101,13 @@ body {
 
 /*====== Media-Queries ======*/
 
-
-@media (min-width:770px) {
-  .product {
-    width: 22%;
-  }
-
-  .contProducts {
-    display: flex;
-flex-wrap: wrap;
-  }
-
-  }  
   
   
-  @media (max-width:440px) {
-  .logoCompletoSinFondo {
+  /*@media (max-width:440px) {
+  logoCompletoSinFondo {
     margin-left: 0;
     padding: 0%;
     width: 150px;
     height: 80px;
   }
-  }
+  }*/

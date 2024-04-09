@@ -15,7 +15,7 @@
     padding: 10px 50px;
 }
 
-.boton {
+boton {
     background-color: rgb(255, 204, 34);
     width: 100px;
     color: #eeeeee;
@@ -23,6 +23,31 @@
     justify-content: center;
     border-radius: 5%;
 }
+
+.boton {
+    margin-top: 10%;
+    padding: 20px;
+    background-color: var(--bg-secundario);
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--bg-primario) 5px solid;
+  }
+
+  .boton a {
+    color: var(--links);
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .boton:hover {
+    background-color: var(--primario);
+  }
+  
 
 .enlaces {
     text-decoration: none;
@@ -149,16 +174,6 @@
 }
 .conteinerBoton {
     padding: 10px;
-}
-
-.boton {
-    background-color: #006909;
-    width: 100%;
-    margin:auto;
-    color: #eeeeee;
-    align-items: center;
-    justify-content: center;
-    border-top: 20px;
 }
 
 .botonED {

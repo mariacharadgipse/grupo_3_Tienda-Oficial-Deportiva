@@ -13,7 +13,7 @@
 .formContenedor {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
     margin: 15px auto;
     border: 0px 15px;
     background-color: #eeeeee;
@@ -56,12 +56,43 @@ border: 2px;
     align-items: center;
 }
 
-.botonForm {
-    background-color: var(--primario);
-    width: 20vw;
-    color: #eeeeee;
-    align-items: right;
+.botonFormB {
+    background-color: var(--bg-primario);
+    width: 50%;
+    color: var(--secundario);
+    padding: 10px;
+    display: flex;
+    align-items: center;
     justify-content: center
+}
+
+.botonFormB:hover{
+    background-color: var(--primario);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.botonFormG {
+    background-color: var(--bg-primario);
+    width: 50%;
+    color: var(--secundario);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.botonFormG:hover{
+    background-color: var(--bg-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.botonesCreate {
+    display: flex;
+    flex-direction: row;
 }
 
 .mensajeError {

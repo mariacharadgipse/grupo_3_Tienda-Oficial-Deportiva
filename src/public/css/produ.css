@@ -115,11 +115,11 @@ flex-wrap: wrap;
   }  
   
   
-  @media (max-width:440px) {
+  /*@media (max-width:440px) {
   .logoCompletoSinFondo {
     margin-left: 0;
     padding: 0%;
     width: 150px;
     height: 80px;
   }
-  }
+  }*/
