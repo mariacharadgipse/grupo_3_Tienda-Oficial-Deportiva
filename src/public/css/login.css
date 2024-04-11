@@ -61,6 +61,11 @@ body {
      height: 80vh;
 }
 
+form a {
+text-decoration: none;
+color: var(--bg-primario);
+}
+
 
 .login-container {
     display: flex;
@@ -81,7 +86,9 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
+    min-width: 340px;
+    margin: auto;
 }
 
 

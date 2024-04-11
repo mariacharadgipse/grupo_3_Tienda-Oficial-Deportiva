@@ -7,7 +7,7 @@
         <%- include('../partials/header') %>
 
             <main class="formContenedor">
-                <h2 class="tituloEdit"><strong>Editar el producto:</strong> <i>
+                <h2 class="tituloEdit"><strong>Editar:</strong> <i>
                         <%= pToEdit.name %>
                     </i></h2>
                     <form action="/products/edit/<%= pToEdit.id %>?_method=PUT" method="POST"
@@ -77,8 +77,10 @@
                                 multiple></input>
                                 <p class="error-input-imageCE"></p>
 
-                        <button type="reset" class="botonR">Restablecer</button>
-                        <button type="submit" class="botonG">Guardar</button>
+                    <div class="botonesCreate">
+                        <button type="reset" class="botonFormB">Restablecer</button>
+                        <button type="submit" class="botonFormG">Guardar</button>
+                    </div>
 
                     </form>
             </main>

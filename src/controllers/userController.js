@@ -53,7 +53,6 @@ module.exports = {
 				res.render('users/register', {
 					errors: errors.array(),
 					old: req.body
-
 				});
 			};
 		} catch (error) {
@@ -88,14 +87,17 @@ module.exports = {
 				console.log('Todo salió ok, estas logueado');
 				res.redirect('/users/profile')
 			} else {
-				res.send('El password o email es incorrecto');
+				//res.send('El password o email es incorrecto')//
 
+				req.session.errorMessage = 'El password o email es incorrecto';
+				res.redirect('/users/login');
+				
+			}
+		} catch (error) {
+			console.error(error);
+			res.status(500).send('Error al procesar la autenticación');
 		}
-	} catch(error) {
-		console.error(error);
-		res.status(500).send('Error al procesar la autenticación');
-	}
-},
+	},
 
 	profile: (req, res) => {
 		res.render('users/profile.ejs', { user: req.session.userLogged })

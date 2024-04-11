@@ -5,29 +5,26 @@
 
     <body>
         <%- include('../partials/header') %>
-            <h2 class="titulo">Producto Seleccionado</h2>
+            <h2 class="titulo">
+                <%= pSelected.name %>
+            </h2>
 
             <main>
 
-                <div class="conteinerMain">
-                    <section class="conteinerImage">
-                        <figure class="productImage">
-                            <img src="/img/products/<%= pSelected.image %>" alt="imagen de producto" width=80% height="300px auto">
+                <div class="containerMain">
+
+                    <section class="containerImage">
+                        <figure>
+                            <img src="/img/products/<%= pSelected.image %>" alt="imagen de producto" width=100%
+                                height="300px auto">
                         </figure>
                     </section>
 
-                    <section class="conteinerInfo">
+                    <section class="containerInfo">
+
                         <article class="product-detail-info">
 
-                            <h2 class="product-detail-title">
-                                <%= pSelected.name %>
-                            </h2>
-
-                            <p class="product-detail-description">
-                                <%= pSelected.description %>
-                            </p>
-
-                            <p class="product-detail-price small">
+                            <p class="product-detail-price-small">
                                 <span>$<%= pSelected.price %></span>
                                 <% if (pSelected.discount> 0) { %>
                                     <b>
@@ -38,59 +35,62 @@
                                         <% } %>
                             </p>
 
-                            <p class="product-detail-price">
+                            <!-- <p class="product-detail-price">
                                 $<%= pSelected.price %>
-                                    <!-- falta final price (Calculo) -->
-                            </p>
-
-                            <p class="descriptionProd">
-                                <%= pSelected.description %>
-                            </p>
-                            <p class="categoryProd">
-                                <%= pSelected.category %>
-                            </p>
-                            <p>
-                                <%= pSelected.colors %>
-                            </p>
+                            </p> -->
 
 
                             <ul class="actions-list">
                                 <li>
                                     <i class="fas fa-credit-card"></i>
-                                    <p><strong>Pagá en 12 cuotas sin interes</p></strong>
+                                    <p><strong>Pagá en 12 cuotas sin interes</strong></p>
                                 </li>
                                 <li>
                                     <i class="fas fa-store"></i>
-                                    <p><strong>Retiro gratis en sucursal</p></strong>
+                                    <p><strong>Retiro gratis en sucursal</strong></p>
                                 </li>
                             </ul>
 
-                            <div class="conteinerBoton">
-                                <a href="/products/cart/<%= pSelected.id %>" class="boton"><button type="submit"
+                            <div class="containerBoton">
+                                <a href="/products/cart/<%= pSelected.id %>"><button type="submit"
                                         class="boton">COMPRAR</button></a>
                             </div>
-
-
                         </article>
                     </section>
 
+                </div>
+
+                <div class="description-product-new">
+
+                    <button onclick="toggleDescriptionProduct()"><strong>DESCRIPCION COMPLETA DEL PRODUCTO</strong></button>
+                    <p class="product-detail-description" id="descriptionP" style="display: none;">
+                        <%= pSelected.description %>
+                    </p>
 
                 </div>
 
-                </div>
+
+
                 <div class="adm">
-                    
+
+                    <div>
+                        <a href="/products/edit/<%= pSelected.id %>"><button type="submit" class="botonED">
+                                <p><i class="fa-solid fa-pen-to-square"></i></p>
+                            </button></a>
+                    </div>
+
                     <form action="/products/delete/<%= pSelected.id %>?_method=DELETE" method="POST"
-                        style="display: inline-flex"> <button type="submit" class="botonEL">ELIMINAR</button>
+                        style="display: inline-flex"><button type="submit" class="botonEL">
+                            <p><i class="fa-solid fa-trash"></i></p>
+                        </button>
                     </form>
-                    
-                    <a href="/products/edit/<%= pSelected.id %>" class="enlace"><button type="submit"
-                            class="botonED">EDITAR</button></a>
 
                 </div>
             </main>
 
             <%- include('../partials/footer') %>
     </body>
+
+    <script src="/js/script.js"></script>
 
 </html>

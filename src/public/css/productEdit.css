@@ -7,7 +7,7 @@
 }
 
 .formContenedor i {
-    color: #800080;
+    color: var(--links);
 }
 .tituloEdit{
     color:#424242;
@@ -72,22 +72,61 @@ border: 2px;
 }
 
 .botonR{
-    background-color:#db0034;
+    background-color: var(--primario);
     width: 49%;
-    color: #eeeeee;
+    color: var(--secundario);
     justify-content:space-between;
     margin-top: 20px;
 }
 
 .botonG {
-    background-color: #800080;
+    background-color: var(--bg-secundario);
     width: 49%;
-    color: #eeeeee;
+    color: var(--secundario);
     justify-content:space-between;
     margin-top: 20px;
 }
 
+.botonFormB {
+    background-color: var(--bg-primario);
+    width: 50%;
+    color: var(--secundario);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.botonFormB:hover{
+    background-color: var(--primario);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.botonFormG {
+    background-color: var(--bg-primario);
+    width: 50%;
+    color: var(--secundario);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.botonFormG:hover{
+    background-color: var(--bg-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.botonesCreate {
+    display: flex;
+    flex-direction: row;
+}
+
 .mensajeError {
     font-size: 12px;
-    color: red;
+    color: var(--primario);
   }

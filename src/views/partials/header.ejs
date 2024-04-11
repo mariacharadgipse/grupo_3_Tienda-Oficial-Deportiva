@@ -1,5 +1,5 @@
 <header>
-    <a href="/" class="contendorDelLogo">
+  <a href="/" class="contendorDelLogo">
     <img class="logoCompletoSinFondo" src="/img/LogoCompletoSinFondo2.png" alt="logoCompleto">
   </a>
   <div class="search-box">
@@ -10,20 +10,43 @@
   </div>
   <nav class="nav-bar">
     <ul>
-      <li><a href="/products">Catalogo</a></li>
-      <li><a href="#">Contacto</a></li>
+      <li><a href="/products">Productos</a></li>
+      <li><a href="#contactoFooter">Contacto</a></li>
       <li>
         <a href="/users/login"><i class="fa fa-user"></i></a>
-        <a href="/products/cart"><i class="fa fa-shopping-cart"></i></a>
-        <a href="#"><i class="fa fa-heart"></i></a>
+        <!---<a href="/products/cart"><i class="fa fa-shopping-cart"></i></a>--->
       </li>
     </ul>
   </nav>
   <div class="menu">
-    <label for="search-1">
-      <i class="fa fa-bars"></i>
-    </label>
+
+ <!--
+  
+  <label for="search-1" class="burguerMenuNew"><i class="fa fa-bars"></i>
+      <select>
+        <option value="1">Catalogo</option>
+        <option value="2">Inicia Sesion</option>
+        <option value="3">Contactanos</option>
+      </select>
+  </label>
+
+  -->
+
+
+    <div class="menu">
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="options" id="options">
+          <a href="/products">Catalogo</a>
+          <a href="#contactoFooter">Contacto</a>
+          <a href="/users/login"><i class="fa fa-user"></i>Iniciar sesion</a>
+      </div>
+    </div>
+  
+
   </div>
 
-  
+    <script src="/js/script.js"></script>
+
 </header>

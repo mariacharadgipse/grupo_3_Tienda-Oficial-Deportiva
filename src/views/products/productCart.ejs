@@ -7,63 +7,72 @@
     <%- include('../partials/header') %>
 
       <main>
-        <ul type="none">
-          <li>
-            <h2 class="title">Mi Carrito de Compras</h2>
-          </li>
-          <li>
-            <a href="/">
-              <h3 class="subtitle">Seguir Comprando</h3>
-            </a>
-          </li>
-        </ul>
+
+        <h2 class="titulo">
+          CARRITO DE COMPRAS
+        </h2>
+
+        <h3 class="subtitle">
+          <a href="/">
+            <h3 class="subtitle">Seguir Comprando</h3>
+          </a>
+        </h3>
+
 
         <div class="container">
+
           <div class="products">
-            <article class="productImage">
-              <img src="/img/products/<%= pSelected.image %>" alt="product image" width="200px" height="200px">
+
+            <article class="containerImage">
+              <img src="/img/products/<%= pSelected.image %>" alt="product image" width="100%" height="300px auto">
             </article>
 
-            <section class="productDescription">
-              <h3>
-                <%= pSelected.name %>
-              </h3>
-              <p>
+            <div class="infoLateral">
+
+              <section class="nameProd">
+                <h3>
+                  <%= pSelected.name %>
+                </h3>
+              </section>
+
+              <section class="productDescription">
+                <!--<p>
                 <%= pSelected.description %>
-              </p>
-              <span> $ <%= pSelected.price %></span>
-              <% if (pSelected.discount> 0) { %>
-                <span>
-                  <%= pSelected.discount %> % OFF
-                </span>
-                <% } else { %>
-                  <span> 0 % OFF</span>
-                  <% } %>
-            </section>
+              </p>-->
+                <p> Precio: $<%= pSelected.price %>
+                </p>
+                <% if (pSelected.discount> 0) { %>
+                  <span>
+                    <%= pSelected.discount %> % OFF
+                  </span>
+                  <% } else { %>
+                    <span> 0 % OFF</span>
+                    <% } %>
+              </section>
 
-            <section class="quantity">
-              <h4>Cantidad</h4>
-              <form id="quantity" method="post">
-                <label for="cantidad">Cantidad:</label>
-                <select type="number">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </form>
-            </section>
-          </div>
-          <div class="calculations">
+              <section class="quantity">
+                <form id="quantityForm" method="post">
+                  <label for="cantidad">Unidades:</label>
+                  <select id="quantity" type="number" onchange="quantityOnChange()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </form>
+              </section>
 
-            <section class="price">
-              <h3>Precio</h3>
+              <section class="calculations">
+
+
+                <!--<section class="price">
+                <h3>Precio</h3>
               <h4>$<%= pSelected.price %>
               </h4>
               <% if (pSelected.discount> 0 ){ %>
@@ -72,11 +81,11 @@
                 </span>
                 <%}else { %>
                   <span> 0 % OFF </span>
-                  <% } %>
-            </section>
+                  <% } %> </section> -->
 
-            <h4>Subtotal</h4>
-            <!--<div class="formulario">
+
+                <!--<h4>Subtotal</h4>
+              <div class="formulario">
               <h4>Código de descuento y código postal</h4>
               <form id="formularioEnvio">
                 <label for="codigoDescuento">Código de Descuento:</label>
@@ -89,23 +98,40 @@
                 <button type="button" onclick="calcularCostoEnvio()">Calcular Costo de Envío</button>
               </form>-->
 
-            <h3>Total</h3>
-            <h3>Total</h3>
-            <p class="totalPrice">
-              </span> Precio Total$<span= "precioTotal">
-                <%= pSelected.price %></span></p>
+                <div class="totalPrice">
+                  <p>
+                    <span><strong>MONTO TOTAL:</strong> $</span>
+                    <span class="precioTotal" id="totalPrice" class="priceOfAll">
+                      <h4>
+                      </h4>
+                    </span>
+                  </p>
+                </div>
+
+              </section>
+
+            </div>
+
           </div>
 
-        </div>
+          <div class="buttonCart">
+            <button onclick="realizarCompra()" class="boton"> Finalizar Compra</button>
 
-        <button onclick="realizarCompra()">Comprar</button>
+            <button class="boton"><a href="/"></a> <h3 class="subtitleDown"></h3>Seguir Comprando</h3> </a></button>             
+           
+          </div>
 
-        </div>
-        </div>
       </main>
       <%- include('../partials/footer') %>
 
   </body>
-
+  <script>
+    
+    quantityOnChange = (e) => {
+      const price = '<%= pSelected.price %>';
+      const quantity = document.getElementById('quantity').value;
+      document.getElementById('totalPrice').innerHTML = price * quantity;
+    }
+  </script>
 
 </html>
