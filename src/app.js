@@ -4,6 +4,7 @@ const app = express()
 const port = 5000
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const cookieParser = require('cookie-parser')
+const listEndpoints = require('express-list-endpoints')
 
 const remembermeMiddleware = require('./middlewares/remembermeMiddleware')
 
@@ -18,6 +19,11 @@ let productsRoutes = require('./routes/products')
 
 let usersRoutes = require('./routes/usersRoutes')
 
+//rutas para la API
+
+let APIindex = require('./routes/API/APIindex')
+let APIproducts = require('./routes/API/APIproducts')
+
 //0912
 const session = require('express-session');
 
@@ -30,6 +36,8 @@ app.use(session({
 app.use(express.urlencoded({ extended: false }));  //ver si se pone app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
+console.log(listEndpoints(app))
+
 //app.use(cookieParser())
 //
 
@@ -40,6 +48,11 @@ app.use('/products', productsRoutes)
 // app.use('/productss', productsRoutes)
 
 app.use('/users', usersRoutes)
+
+
+app.use('/api/', APIindex)
+app.use('/api/products', APIproducts)
+
 
 app.set('view engine', 'ejs')
 
